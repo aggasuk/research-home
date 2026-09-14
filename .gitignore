@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+local-config.json
+validation-local.json
+.DS_Store

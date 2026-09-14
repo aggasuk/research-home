@@ -1,0 +1,109 @@
+{
+  "packagedAt": "2026-09-14T18:13:53.655379+00:00",
+  "libraryBuiltAt": "2026-09-14T18:27:41.091170+08:00",
+  "reports": 11,
+  "omittedResources": [
+    {
+      "report": "fx-carry",
+      "resource": "Reproducible model \u00b7 ZIP",
+      "reason": "Working archive or non-presentation input"
+    }
+  ],
+  "files": [
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "404.html",
+      "bytes": 172,
+      "sha256": "b4cf625353038684d208c7d6a5b7d29a4241c87679bdaf314d0323c6145e678f"
+    },
+    {
+      "path": "assets/fx-carry/independent_carry_evidence.png",
+      "bytes": 245456,
+      "sha256": "dfd25744012dd0592ba63b07be3c6095077be8de08ff25185c8dd080c22ce81d"
+    },
+    {
+      "path": "assets/fx-carry/independent_carry_screen.csv",
+      "bytes": 12283,
+      "sha256": "990710d46d9ad3fd1cdd44683bfc702a10187101d59b2d5bbcee0a14f2b0fb86"
+    },
+    {
+      "path": "assets/fx-carry/independent_trade_plan.csv",
+      "bytes": 1705,
+      "sha256": "b430df77011abf57061e7c87c28153731e7e91ac793370e44aa18aa283f41876"
+    },
+    {
+      "path": "index.html",
+      "bytes": 722965,
+      "sha256": "451fccb1633e2aa3ad7198c14f0bea554542987e9b2a4d4e0b062045b0861a75"
+    },
+    {
+      "path": "india.html",
+      "bytes": 69075,
+      "sha256": "24e9b0eb447fcc64f7383b684f78814290650b4893b2f8fb940c9dde1f4c0eda"
+    },
+    {
+      "path": "reports/brazil-election-2026-brief.html",
+      "bytes": 27425,
+      "sha256": "843639593565fc7c37df03f8358aab6cdd4c49e30ea6f05242d2b417c5e96e8a"
+    },
+    {
+      "path": "reports/daily-20260910.html",
+      "bytes": 16952,
+      "sha256": "f1dbf3f0be6f9b7b3d21033482e0def21e873b7e88e853436bf4765da3e7a630"
+    },
+    {
+      "path": "reports/daily-20260911.html",
+      "bytes": 12683,
+      "sha256": "2471089b06636be739f79923067c152adfba550ac5958240b129fd3abba40b28"
+    },
+    {
+      "path": "reports/daily-20260912.html",
+      "bytes": 17445,
+      "sha256": "a256a333c9346a71507aa13550a586b6e92ba91fff4b29b6fa87f709b1e27a81"
+    },
+    {
+      "path": "reports/daily-20260913.html",
+      "bytes": 18572,
+      "sha256": "0b07bea3836fd00b1e8ce848479d22bd7b514dbe13147eef559cc360ad49f017"
+    },
+    {
+      "path": "reports/fx-carry.html",
+      "bytes": 362457,
+      "sha256": "b76ef12418649d217ed36e3ce1f200d965134391ee9d46de8e6e611495554ce5"
+    },
+    {
+      "path": "reports/idr-fx-ndf-trade-views.html",
+      "bytes": 19509,
+      "sha256": "3bd782d7604c915120926ecbcdc8f914ba9ef67a4f0329564208da217d5610b5"
+    },
+    {
+      "path": "reports/momentum-study.html",
+      "bytes": 246779,
+      "sha256": "091ccb9be023228e99ce449315da3176806f4419ca161dcf4c887ed8807abf82"
+    },
+    {
+      "path": "reports/rates-protocol.html",
+      "bytes": 10546,
+      "sha256": "5b49304359490757078a89384f6a48b95c1a7e677c856482a7a75cc24e1b832e"
+    },
+    {
+      "path": "reports/rates-study.html",
+      "bytes": 17482,
+      "sha256": "10ddf5c924d912fb0d3866f7403e46edf7afffe05f03f27837003bc73085893a"
+    },
+    {
+      "path": "reports/tech-oil-rates.html",
+      "bytes": 22826,
+      "sha256": "b589444bc6f5ec922194c477dfef5b927e65ca1dbb0a280b8dd48051299a47f4"
+    },
+    {
+      "path": "tracker/index.html",
+      "bytes": 6564,
+      "sha256": "8cb47b4ea042e2ec331269db942c1551c7f9795c608a3078c60792b9ab1cf726"
+    }
+  ]
+}
