@@ -28,6 +28,7 @@ def check_bytes(files):
             data=json.loads(match.group(1));links.append(data['trackerUrl'])
             for r in data['reports']:
                 links.append(r['source']);links.extend(x['url'] for x in r.get('resources',[]))
+                if r.get('embeddedUrl'):links.append(r['embeddedUrl'])
                 report=Links();report.feed(r['html']);links.extend(report.links)
             if 'india.html' not in text:raise ValueError('India navigation missing')
         for url in links:

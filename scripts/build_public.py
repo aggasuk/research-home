@@ -47,6 +47,13 @@ def build(source):
     style=re.search(r'<style>(.*?)</style>',original,re.S).group(1)
     for report in data['reports']:
         report['html']=portable_body(report['html'])
+        if report.get('embeddedUrl'):
+            embedded=report['embeddedUrl']
+            if embedded not in ['rv/models.html','rv/trade-review.html']:
+                raise ValueError('Unexpected embedded research page: '+embedded)
+            files[embedded]=(source/embedded).read_bytes()
+            report['source']=embedded
+            continue
         report['source']='reports/'+report['id']+'.html'
         # The download is the rendered report, with embedded figures and working web links.
         body=re.sub(r'(href|src)="(assets/[^\"]+)"',r'\1="../\2"',report['html'])

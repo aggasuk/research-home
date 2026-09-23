@@ -30,6 +30,14 @@ Report downloads are standalone HTML copies of the rendered reports. Original lo
 
 Create public repository `aggasuk/research-home`, push this directory's tracked files to `main`, and set GitHub Pages build type to GitHub Actions. The workflow uploads only `site/`. GitHub CLI authentication is required for repository creation and pushing.
 
+## Rates RV daily publishing
+
+The Rates RV section contains daily discovery and persistent signals, plus the complete original interactive methodology/backtest and trade-ticket pages. The historical research remains dated 21 September 2026; discovery shows its own current source close. Model positions and P&L are simulations.
+
+After the authorized local RV run and Research Home rebuild, use `python scripts/update_rv.py --source "PATH/TO/research-home"`, then `python scripts/validate_site.py`. This scoped updater changes RV pages and navigation while preserving other already-published reports, India and the older tracker. It excludes local diagnostic/cache downloads. Commit these RV changes and push main to trigger the existing Pages workflow. Do not use the full-site packager for routine RV updates or publish unrelated local reports implicitly.
+
+The full `build_public.py` packager also understands the two embedded RV research pages when a full-site update is explicitly requested.
+
 ## Verification
 
 The validator checks relative targets, the embedded report resource links, India navigation, duplicate static IDs, common credential/local-path patterns, and per-file manifest hashes. JavaScript syntax and core saved-page rendering are checked locally before the first publish. Browser visual verification is separate.
