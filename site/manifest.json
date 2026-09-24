@@ -1,6 +1,6 @@
 {
-  "packagedAt": "2026-09-24T02:14:14.117826+00:00",
-  "libraryBuiltAt": "2026-09-24T10:13:40.576022+08:00",
+  "packagedAt": "2026-09-24T03:03:56.566652+00:00",
+  "libraryBuiltAt": "2026-09-24T11:03:35.243942+08:00",
   "reports": 14,
   "omittedResources": [
     {
@@ -37,8 +37,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 932029,
-      "sha256": "2384298873d90221168e320d7a1bc336bc63358b16a6779913081b57ff38c4e9"
+      "bytes": 939948,
+      "sha256": "4fd87a7c46ac95ac20d6cab353745c5bdba432785351321caeb72f9ce90f9f3b"
     },
     {
       "path": "india.html",
@@ -92,8 +92,8 @@
     },
     {
       "path": "reports/rates-rv.html",
-      "bytes": 137091,
-      "sha256": "d2cbb278143c8ab1398c906918b82a13664345eacab6b0995e71f61568613880"
+      "bytes": 142741,
+      "sha256": "6c1d4893bb4abf98d927b37b5f77ee021bd241e3c032b9be572f8d43f2946f20"
     },
     {
       "path": "reports/rates-study.html",
