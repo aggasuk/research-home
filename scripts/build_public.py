@@ -3,6 +3,7 @@ import argparse, copy, hashlib, html, json, re
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
+from navigation import render_navigation, render_tracker
 
 ROOT=Path(__file__).resolve().parents[1]
 SITE=ROOT/'site'
@@ -61,7 +62,7 @@ def build(source):
         doc='<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+title+' · Research Home</title><style>'+style+'main{max-width:1100px;margin:auto}</style></head><body><main><a href="../index.html#report/'+report['id']+'">← Research Home</a><h1>'+title+'</h1><p class="reader-meta">'+meta+'</p><div class="reader-card"><article class="article">'+body+'</article></div></main></body></html>'
         files[report['source']]=doc.encode('utf-8')
     tracker=source.parent/'rates-paper-tracker/index.html'
-    files['tracker/index.html']=read(tracker).encode('utf-8')
+    files['tracker/index.html']=render_tracker(read(tracker)).encode('utf-8')
     data['trackerUrl']='tracker/index.html'
     serialized=json.dumps(data,ensure_ascii=False).replace('<','\\u003c').replace('\u2028','\\u2028').replace('\u2029','\\u2029')
     page=original[:match.start(1)]+serialized+original[match.end(1):]
@@ -69,7 +70,7 @@ def build(source):
     page=page.replace('The existing daily process rebuilds this library from saved outputs; reload the page to see the latest build.','Saved updates are prepared locally and published on demand; reload to see the latest published version.')
     page=page.replace('This library build is over 24 hours old. Reload after the next scheduled update; the dates below describe the saved snapshot.','This saved library snapshot is over 24 hours old. The dates below describe its data; refreshing your browser does not fetch new observations.')
     page=page.replace('Bookmark this page for a stable way back.','Bookmark this page for a stable way back.')
-    files['index.html']=page.encode('utf-8')
+    files['index.html']=render_navigation(page).encode('utf-8')
     files['india.html']=(source/'india.html').read_bytes()
     files['.nojekyll']=b''
     # A simple static 404 keeps project-relative navigation correct under /research-home/.

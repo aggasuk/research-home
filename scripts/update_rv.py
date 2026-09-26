@@ -8,6 +8,7 @@ import json
 from pathlib import Path
 import re
 from validate_site import check_bytes
+from navigation import render_navigation
 
 ROOT=Path(__file__).resolve().parents[1]
 PATTERN=re.compile(r'const DATA = (.*?);\r?\nconst \$',re.S)
@@ -17,6 +18,8 @@ def build(source):
     site=ROOT/'site'
     old_html=(site/'index.html').read_text(encoding='utf-8')
     old=json.loads(PATTERN.search(old_html).group(1))
+    if old.get('rv',{}).get('version')=='3.0':
+        raise ValueError('This site uses RV v3. Use update_rv_v3.py --rv-root PATH; the legacy publisher cannot replace the consolidated workspace.')
     new_html=(source/'index.html').read_text(encoding='utf-8')
     match=PATTERN.search(new_html)
     local=json.loads(match.group(1))
@@ -42,7 +45,7 @@ def build(source):
     page=new_html[:match.start(1)]+packed+new_html[match.end(1):]
     page=page.replace('Original file ↗','Open report ↗')
     page=page.replace('The existing daily process rebuilds this library from saved outputs; reload the page to see the latest build.','RV is updated after the daily dashboard refresh and published here. Other reports retain their saved publication dates; reload to see the latest published version.')
-    files['index.html']=page.encode('utf-8')
+    files['index.html']=render_navigation(page).encode('utf-8')
     # Scope assertion: other published content and metadata are not refreshed.
     assert [r for r in data['reports'] if not r['id'].startswith('rates-rv')]==sorted([r for r in old['reports'] if not r['id'].startswith('rates-rv')],key=lambda r:r['date'],reverse=True)
     links=check_bytes(files)

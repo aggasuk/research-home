@@ -6,6 +6,16 @@ The `site/` directory is the complete publishable website. GitHub Actions valida
 
 ## Update the saved website
 
+### Navigation and RV workspace — 26 September 2026
+
+The canonical shell lives in `scripts/navigation.html` and is applied by both publishers through `navigation.py`. It has five sections: Rates RV, Rates Trend, Research, Frameworks and India. Overview is removed; `#home` remains a compatibility route to Research. Research combines daily and topic briefs with optional filters. Frameworks combines methods, protocols, studies and frameworks. Rates Trend embeds the saved tracker inside the same shell at `#rates-trend`; its historical metadata and ledger are unchanged.
+
+`python scripts/update_navigation.py` applies presentation changes to the existing package without importing new research or reading market caches. The v3 RV workspace has New today, Tracking and a persistent search across 246 structures. Signal rows and search open the same full model review; old review/model routes redirect to this workspace or the current methodology. The authorized 26 September v3 research run used completed 25 September closes. It evaluated 559 of 614 models, holding 55 for stale ESTR histories; no exact same-day model spot snapshots were available.
+
+The existing package contains four complete daily briefs (10–13 September), three topic briefs, and six framework/study reports, plus Rates RV. Notion is an additional destination where linked, not a prerequisite for reading the hosted reports. Later RV-only updates do not synchronize the daily archive or Rates Trend snapshot. The visible latest-daily date reflects that limitation.
+
+Validation: static-site validator, JavaScript syntax and browser checks pass. Non-RV report payloads and saved tracker metadata are preserved. The RV review supports model comparison, evidence period/direction filters, package expressions, targets, charts and episode history. Derived per-structure files load on demand.
+
 Refresh the desired local research/data first and run its existing builder. Then package the saved outputs:
 
 ```text
@@ -32,11 +42,11 @@ Create public repository `aggasuk/research-home`, push this directory's tracked 
 
 ## Rates RV daily publishing
 
-The Rates RV section contains daily discovery and persistent signals, plus the complete original interactive methodology/backtest and trade-ticket pages. The historical research remains dated 21 September 2026; discovery shows its own current source close. Model positions and P&L are simulations.
+The Rates RV section contains daily discovery and persistent signals, with one shared candidate review. The current methodology is under Frameworks. Original v2 studies remain explicitly historical archives. Model positions and P&L are simulations. A 5bp gross opportunity floor applies to new historical/current signals; no execution costs or investigate/paper tiers are applied.
 
-After the authorized local RV run and Research Home rebuild, use `python scripts/update_rv.py --source "PATH/TO/research-home"`, then `python scripts/validate_site.py`. This scoped updater changes RV pages and navigation while preserving other already-published reports, India and the older tracker. It excludes local diagnostic/cache downloads. Commit these RV changes and push main to trigger the existing Pages workflow. Do not use the full-site packager for routine RV updates or publish unrelated local reports implicitly.
+After the authorized local v3 run, use `python scripts/update_rv_v3.py --rv-root "PATH/TO/rates_rv_v3"`, then `python scripts/validate_site.py`. This scoped updater reads the committed result, verifies cache hashes for diagnostic chart construction, and preserves other already-published reports, India and the older tracker. It excludes raw source caches, local file paths and private holdings. Commit these RV changes and push main to trigger the existing Pages workflow. Verify the hosted observation date and deployment before saving the local publication receipt. Do not use the legacy RV updater or full-site packager for routine RV updates.
 
-The full `build_public.py` packager also understands the two embedded RV research pages when a full-site update is explicitly requested.
+The legacy `update_rv.py` rejects v3 sites to prevent an accidental downgrade. A separately authorized full research archive refresh must preserve the v3 workspace assets and metadata.
 
 ## Verification
 
