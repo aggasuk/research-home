@@ -1,7 +1,7 @@
 {
-  "packagedAt": "2026-09-26T08:33:10.217089+00:00",
-  "libraryBuiltAt": "2026-09-26T14:59:47.872478+08:00",
-  "reports": 13,
+  "packagedAt": "2026-09-26T09:42:49.217873+00:00",
+  "libraryBuiltAt": "2026-09-26T17:39:43.386171+08:00",
+  "reports": 14,
   "omittedResources": [
     {
       "report": "fx-carry",
@@ -37,8 +37,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 736135,
-      "sha256": "ec3ccb321dfc359edbe59b007347b1b3d9d4aff7f722d7927d45049a88a0578f"
+      "bytes": 738356,
+      "sha256": "0e9dc0a81fd84929f607e02b9894adac05834b23869ceab693265cb4c841efed"
     },
     {
       "path": "india.html",
@@ -104,6 +104,11 @@
       "path": "reports/rates-study.html",
       "bytes": 17482,
       "sha256": "10ddf5c924d912fb0d3866f7403e46edf7afffe05f03f27837003bc73085893a"
+    },
+    {
+      "path": "reports/rates-trend-methodology.html",
+      "bytes": 1992,
+      "sha256": "f928a8bbabddc51ea10f3cda27b0e52485531e77482a4622948a4918cf5ea9bc"
     },
     {
       "path": "reports/tech-oil-rates.html",
@@ -1372,8 +1377,13 @@
     },
     {
       "path": "tracker/index.html",
-      "bytes": 6539,
-      "sha256": "cff4023dcbb74a3985c9850232305a4f845d113a20cfa89498f340ed22b5769b"
+      "bytes": 9103,
+      "sha256": "9ee1e924af9c41df330759ec4a792a67a62f55d046d9f95571de8f0994028799"
+    },
+    {
+      "path": "tracker/status.json",
+      "bytes": 13144,
+      "sha256": "bcb074ad4271c9601929b58335d11b3c6629537b7b03b0925f39283be9fe80c5"
     }
   ]
 }
