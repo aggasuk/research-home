@@ -104,12 +104,19 @@ def build(rvroot):
     files['rv/index.json']=encode(index)
     for name in ['workspace.html','workspace.css','workspace.js']:
         files['rv/'+name]=(TEMPLATE/name).read_bytes()
+    # A changed script must not run against cached old markup. Version the whole
+    # embedded workspace and its assets by content; JSON fetches revalidate.
+    revision=hashlib.sha256(b''.join(files['rv/'+n] for n in ['workspace.html','workspace.css','workspace.js'])).hexdigest()[:16]
+    workspace=files['rv/workspace.html'].decode('utf-8')
+    for asset in ['workspace.css','workspace.js']:
+        workspace=workspace.replace('"'+asset+'"','"'+asset+'?v='+revision+'"')
+    files['rv/workspace.html']=workspace.encode('utf-8')
     page=files['index.html'].decode('utf-8');match=PAYLOAD.search(page); data=json.loads(match[1])
     before=[r for r in data['reports'] if not r['id'].startswith('rates-rv')]
     methodology=(TEMPLATE/'methodology.html').read_text(encoding='utf-8')
     rv={'id':'rates-rv','title':'Rates RV','category':'Monitors','date':result['observed_at'][:10],
         'dataDate':result['cutoff'],'badge':'v3 · gross · 5bp minimum','description':'Daily discovery, persistent tracking and searchable structure reviews.',
-        'html':'','source':'reports/rates-rv.html','embeddedUrl':'rv/workspace.html','resources':[]}
+        'html':'','source':'reports/rates-rv.html','embeddedUrl':'rv/workspace.html?v='+revision,'resources':[]}
     method={'id':'rates-rv-methodology','title':'Rates RV · framework and methodology','category':'Frameworks',
         'date':result['observed_at'][:10],'dataDate':result['cutoff'],'badge':'v3 · 246 structures / 614 models',
         'description':'Universe, calculated forwards, three models, entry rules, gross backtests and persistent tracking.',
