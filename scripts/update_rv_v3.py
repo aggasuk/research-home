@@ -53,6 +53,9 @@ def build(rvroot):
             observed=[e for e in records.values() if e['candidate_id']==r['id']]
             compact={k:r.get(k) for k in ['id','model','data_status','active_observed_signal']}
             compact['qualification']={str(d):qualify(r.get('evidence'),d) for d in [1,-1]}
+            compact['table_evidence']={period:{side:{key:sample.get(key) for key in ['trades','win_rate','gross_mean_bp']}
+                for side,sample in values.items() if side in ['long_quote','short_quote']}
+                for period,values in (r.get('evidence') or {}).items()}
             compact['admissions']={sid:a for sid,a in admissions.items() if a['candidate_id']==r['id']}
             compact.update(close={k:v for k,v in (close or {}).items() if k not in ['fit','scanner_fit']},
                 current={k:v for k,v in check.items() if k not in ['fit']},
