@@ -22,6 +22,13 @@ def build(rvroot):
     from outputs.rates_rv_v3.cache import HistoryReader, DEFAULT_CACHE
     from outputs.rates_rv_v3.universe import universe, frame
     from outputs.rates_rv_v3.models import Fit
+    from outputs.rates_rv_v3.qualification import qualify, reconcile_selection, POLICY
+    from zoneinfo import ZoneInfo
+    selection_path=rvroot/'selection_state.json'
+    previous_selection=json.loads(selection_path.read_text()) if selection_path.exists() else None
+    selection=reconcile_selection(result['rows'],state.get('ledger',{}),previous_selection,
+                                  datetime.now(ZoneInfo('Asia/Singapore')).isoformat())
+    admissions=selection['records']
     import numpy as np
     reader=HistoryReader(DEFAULT_CACHE,result['cutoff']); series={}
     for key,record in result['source_manifest'].items():
@@ -45,6 +52,8 @@ def build(rvroot):
             active=[e for e in per_candidate[r['id']] if e['status'] in ['open','entry_pending','exit_pending']]
             observed=[e for e in records.values() if e['candidate_id']==r['id']]
             compact={k:r.get(k) for k in ['id','model','data_status','active_observed_signal']}
+            compact['qualification']={str(d):qualify(r.get('evidence'),d) for d in [1,-1]}
+            compact['admissions']={sid:a for sid,a in admissions.items() if a['candidate_id']==r['id']}
             compact.update(close={k:v for k,v in (close or {}).items() if k not in ['fit','scanner_fit']},
                 current={k:v for k,v in check.items() if k not in ['fit']},
                 episodes=[{k:e.get(k) for k in ['signal_id','model_signal_date','first_observed_at','direction','status']} for e in active],
@@ -81,6 +90,12 @@ def build(rvroot):
     reader.verify()
     index={k:result[k] for k in ['version','accounting','observed_at','cutoff','mode','summary','specification']}
     index['structures']=summaries
+    index['selection_policy']=POLICY
+    index['selection_evaluated_at']=selection['last_evaluated_at']
+    index['selection_summary']={'admitted_episodes':len(admissions),
+        'qualified_close_readings':sum(bool((r.get('historical') or {}).get('current',{}).get('eligible') and
+             (r.get('historical') or {}).get('current',{}).get('state') in ['open','entry_pending'] and
+             qualify(r.get('evidence'),(r.get('historical') or {}).get('current',{}).get('direction'))['passed']) for r in result['rows'])}
     index['research_observed_at']=research['observed_at'] if research else None
     index['held_sources']=[{k:r.get(k) for k in ['ticker','status','last']} for r in result['source_manifest'].values() if r.get('last')!=result['cutoff']]
     files['rv/index.json']=encode(index)
@@ -115,6 +130,7 @@ def build(rvroot):
         if path.exists() and path.read_bytes()==blob:continue
         path.parent.mkdir(exist_ok=True,parents=True); tmp=path.with_suffix(path.suffix+'.tmp');tmp.write_bytes(blob);tmp.replace(path)
     (ROOT/'site/manifest.json').write_text(json.dumps(manifest,indent=2),encoding='utf-8',newline='\n')
+    tmp=selection_path.with_suffix('.tmp');tmp.write_text(json.dumps(selection,indent=2),encoding='utf-8');tmp.replace(selection_path)
     print(json.dumps({'packaged':True,'structures':len(summaries),'bytes':sum(map(len,files.values())),'largest_structure_bytes':max(len(files['rv/structures/'+s+'.json']) for s in details),'published':False}))
 
 if __name__=='__main__':

@@ -51,3 +51,7 @@ The legacy `update_rv.py` rejects v3 sites to prevent an accidental downgrade. A
 ## Verification
 
 The validator checks relative targets, the embedded report resource links, India navigation, duplicate static IDs, common credential/local-path patterns, and per-file manifest hashes. JavaScript syntax and core saved-page rendering are checked locally before the first publish. Browser visual verification is separate.
+
+## Single historical qualification screen (26 September correction)
+
+The v3 publisher now uses the model package's qualification.py: at least 8 full-history trades and 3 since 2022, positive gross means in both periods, and positive full-history gross mean in the proposed direction. No extra directional count requirement. Current statistical/5bp rules remain. Preserve the local selection_state.json: it records admission under the policy without backdating qualification or changing model fills. Only admitted signals populate New today/Tracking; every structure and raw history remains searchable. The same policy governs future daily observed entries. Original saved reference backtests were reused, not rerun or rewritten. Initial corrected screen: 46 model readings, 39 structures, 40 structure/direction groups.
