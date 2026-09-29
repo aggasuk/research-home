@@ -5,6 +5,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from navigation import render_navigation, PAYLOAD
 from validate_site import check_bytes
+from rv_lifecycle import lifecycle_rows
 
 ROOT=Path(__file__).resolve().parents[1]
 TEMPLATE=ROOT/'scripts'/'rv_workspace'
@@ -69,6 +70,7 @@ def build(rvroot):
             elif close and active:
                 d=active[0]['direction']; target=close['fair_bp']-d*result['specification']['exit_z']*close['sigma_bp']
                 compact['tracking']={**compact['close'],'direction':d,'target_bp':target,'opportunity_bp':d*(target-close['quote_bp'])}
+            compact['lifecycle'] = lifecycle_rows(compact['admissions'], episodes, records, result['specification'])
             item['models'].append(compact)
             research_row=research_rows.get(r['id'],{})
             model={**compact,'evidence':r.get('evidence'),'bootstrap':research_row.get('bootstrap'),
