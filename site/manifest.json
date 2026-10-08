@@ -1,5 +1,5 @@
 {
-  "packagedAt": "2026-10-07T02:11:52.660471+00:00",
+  "packagedAt": "2026-10-08T02:13:22.517208+00:00",
   "libraryBuiltAt": "2026-10-07T10:01:28.673238+08:00",
   "reports": 14,
   "omittedResources": [
@@ -37,8 +37,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 738356,
-      "sha256": "23e69fb8cacab629caa664018cad518f51c0446b4e19a00b21690ade2a8eeb02"
+      "bytes": 738351,
+      "sha256": "9bf0dd5af93221622b71f995285d17fd8436c503ce2251b95aac7bbf5ab15563"
     },
     {
       "path": "india.html",
@@ -118,7 +118,7 @@
     {
       "path": "rv/index.json",
       "bytes": 1518675,
-      "sha256": "b95281e0ec69fc9de39d31713ac26f80923c0b3db69c06dd00c2478a71d7d9fd"
+      "sha256": "89ec23bd2f351077ff3053d031b5461ad52c960026bcf6f449c1676301d13a9c"
     },
     {
       "path": "rv/models.html",
@@ -1377,13 +1377,13 @@
     },
     {
       "path": "tracker/index.html",
-      "bytes": 9729,
-      "sha256": "a15248df965b19a71008bd7b3bd672c991c023b50811c6d20221455830b9645b"
+      "bytes": 9885,
+      "sha256": "bd56e1e562bb05869e00fbe1496692011051a498e27d246d893f2c46dff0f83a"
     },
     {
       "path": "tracker/status.json",
-      "bytes": 15372,
-      "sha256": "c0df010994a6ced62e59289b7bde9f688d97c12719168f371f1978bc64f599a2"
+      "bytes": 15161,
+      "sha256": "59110d9aa664f643a29834e1527469897313ee6da3f9f2a433c04e6e3ff53026"
     }
   ]
 }
