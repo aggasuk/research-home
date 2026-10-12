@@ -1,5 +1,5 @@
 {
-  "packagedAt": "2026-10-12T12:24:47.828007+00:00",
+  "packagedAt": "2026-10-12T22:11:08.985204+00:00",
   "libraryBuiltAt": "2026-10-12T12:23:19.218385+08:00",
   "reports": 14,
   "omittedResources": [
@@ -37,13 +37,13 @@
     },
     {
       "path": "countries.html",
-      "bytes": 1523801,
-      "sha256": "8ae874d83265d1a774cdc23cfe382ea2475232ccd6d755fe19f24608d387bb3b"
+      "bytes": 3206698,
+      "sha256": "9ffe2ebcd2f36dc09f2e023d456fd3d7be633872780de1eeaa9718e6bcac3f81"
     },
     {
       "path": "index.html",
-      "bytes": 738780,
-      "sha256": "4e97ed03a6a2bf8140ea64151bfdde39132a4d4bbc6432f96bcb0731cf7b77f9"
+      "bytes": 738814,
+      "sha256": "d7645e5419587490086f3f25fc8d870ebcc90082ff37945afb4efce3ea89cd84"
     },
     {
       "path": "india.html",
@@ -1392,12 +1392,19 @@
     }
   ],
   "countryPilot": {
-    "dataBuiltAt": "2026-10-12T11:42:13.822202+00:00",
+    "dataBuiltAt": "2026-10-12T17:36:58.308548+00:00",
     "countries": [
       "IND",
       "IDN"
     ],
-    "series": 111,
+    "series": 74,
+    "validObservations": 4468,
+    "sourcePolicy": "authoritative per indicator with explicit dated fallbacks",
+    "indiaDiffusion": {
+      "items": 358,
+      "months": 21,
+      "coreItems": 198
+    },
     "scheduledRefresh": false
   }
 }

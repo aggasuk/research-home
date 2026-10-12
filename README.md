@@ -1,10 +1,12 @@
 # Research Home
 
-## Country pilot — 12 October 2026
+## Country pilot — authoritative sources and India diffusion
 
-The Countries section uses one shared India/Indonesia dashboard at `#country/IND/overview` and `#country/IDN/overview`. The saved country build is dated 12 October 2026, 19:42 Singapore, with 111 normalized series, source metadata, revision records and explicit coverage gaps. The original `#india` route remains available as an older saved monitor.
+The Countries section contains the approved India/Indonesia monitor at `#country/IND/overview`, `#country/IDN/overview`, and India item-level inflation diffusion at `#country/IND/diffusion`. The saved data build is 12 October 2026 at 17:36:58 UTC / 13 October at 01:36:58 Singapore: 74 series and 4,468 valid observations, including September national CPI.
 
-This publication includes the rendered country page and navigation only. The validated source pipeline and raw release archives remain in the local country workspace; no refresh scheduler or Bloomberg retrieval runs on the hosted site. India CPI/RBI/CGA releases include reviewed URL pins, and saved GDP/vendor histories retain their original dates. Use the scoped publishers for other sections; the legacy full-site compiler is blocked to prevent country-page loss.
+India diffusion is calculated from 358 official leaf items over 21 months, with national expenditure weights and a 198-item core basket. Published item YoY drives weighted buckets and threshold shares; raw MoM is seasonally unadjusted. Coverage, basket breaks, missing warm-ups and acceleration precision sensitivity are disclosed. National source histories replace compatible IMF series; remaining IMF fallbacks and longer reference histories are explicitly dated and separate.
+
+Publication includes the rendered country page, generated CSV exports and shell integration. Source pipelines, raw caches, item-input QA files and private alerts remain local. No Bloomberg retrieval or refresh scheduler runs on the hosted site. The original `#india` route remains an older saved monitor. Scoped RV and Trend publishers are unchanged.
 
 Public static research library, India macro monitor and rates paper tracker. Intended GitHub Pages URL: `https://aggasuk.github.io/research-home/`.
 
