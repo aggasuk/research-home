@@ -1,5 +1,11 @@
 # Research Home
 
+## Country pilot — 12 October 2026
+
+The Countries section uses one shared India/Indonesia dashboard at `#country/IND/overview` and `#country/IDN/overview`. The saved country build is dated 12 October 2026, 19:42 Singapore, with 111 normalized series, source metadata, revision records and explicit coverage gaps. The original `#india` route remains available as an older saved monitor.
+
+This publication includes the rendered country page and navigation only. The validated source pipeline and raw release archives remain in the local country workspace; no refresh scheduler or Bloomberg retrieval runs on the hosted site. India CPI/RBI/CGA releases include reviewed URL pins, and saved GDP/vendor histories retain their original dates. Use the scoped publishers for other sections; the legacy full-site compiler is blocked to prevent country-page loss.
+
 Public static research library, India macro monitor and rates paper tracker. Intended GitHub Pages URL: `https://aggasuk.github.io/research-home/`.
 
 The `site/` directory is the complete publishable website. GitHub Actions validates and deploys it on pushes to `main`, or through the manual workflow button. No Bloomberg requests, local Python generators or data refreshes run in GitHub Actions.

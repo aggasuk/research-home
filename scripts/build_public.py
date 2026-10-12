@@ -15,6 +15,8 @@ def file_path(url):
     if re.match(r'^/[A-Za-z]:/',value):value=value[1:]
     return Path(value)
 def build(source):
+    if (SITE/'countries.html').exists():
+        raise ValueError('Country pilot present: legacy full-site compiler is blocked to prevent stale overwrite. Use scoped update scripts or review the country build workspace before a full-site migration.')
     source=source.resolve();original=read(source/'index.html')
     match=PAYLOAD.search(original)
     if not match:raise ValueError('Research Home data block not found')

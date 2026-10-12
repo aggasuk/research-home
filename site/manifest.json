@@ -1,5 +1,5 @@
 {
-  "packagedAt": "2026-10-12T04:24:38.736002+00:00",
+  "packagedAt": "2026-10-12T12:24:47.828007+00:00",
   "libraryBuiltAt": "2026-10-12T12:23:19.218385+08:00",
   "reports": 14,
   "omittedResources": [
@@ -36,9 +36,14 @@
       "sha256": "b430df77011abf57061e7c87c28153731e7e91ac793370e44aa18aa283f41876"
     },
     {
+      "path": "countries.html",
+      "bytes": 1523801,
+      "sha256": "8ae874d83265d1a774cdc23cfe382ea2475232ccd6d755fe19f24608d387bb3b"
+    },
+    {
       "path": "index.html",
-      "bytes": 738351,
-      "sha256": "0b344b7f39ad373baa3ea7eccd1c4c69c1a3d6106bf82a5ec3544d77b8e1ffa6"
+      "bytes": 738780,
+      "sha256": "4e97ed03a6a2bf8140ea64151bfdde39132a4d4bbc6432f96bcb0731cf7b77f9"
     },
     {
       "path": "india.html",
@@ -1385,5 +1390,14 @@
       "bytes": 15197,
       "sha256": "17496bda6d6f7da80ac0e990aa51c65487d092556c7fa1116f21f88507c355b9"
     }
-  ]
+  ],
+  "countryPilot": {
+    "dataBuiltAt": "2026-10-12T11:42:13.822202+00:00",
+    "countries": [
+      "IND",
+      "IDN"
+    ],
+    "series": 111,
+    "scheduledRefresh": false
+  }
 }
