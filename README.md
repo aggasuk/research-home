@@ -1,5 +1,11 @@
 # Research Home
 
+## Brazil runoff polling
+
+The Brazil polls navigation entry opens `brazil-runoff/index.html`; `#brazil-runoff` and `#report/brazil-runoff` are stable shell aliases. The 13 October 2026 saved snapshot includes nine releases across eight pollsters, with seven latest entirely post-first-round waves in the default view. The headline is a descriptive valid-vote average. Win probabilities remain explicitly uncalibrated scenarios with visible shared-error, recency, drift and manual adjustment assumptions.
+
+Only the reviewed standalone HTML and public normalized polling JSON/CSV are packaged. To replace that snapshot, use `python scripts/update_brazil.py --source PATH/TO/reviewed/dist`, then `python scripts/validate_site.py`, review the scoped diff, and use the established commit/push workflow. The updater asserts that unrelated assets and the saved report payload are unchanged. It performs no source retrieval, market refresh, scheduling or publication itself. The canonical navigation preserves Brazil links during subsequent RV/Trend updates.
+
 ## Country pilot — authoritative sources and India diffusion
 
 The Countries section contains the approved India/Indonesia monitor at `#country/IND/overview`, `#country/IDN/overview`, and India item-level inflation diffusion at `#country/IND/diffusion`. The saved data build is 12 October 2026 at 17:36:58 UTC / 13 October at 01:36:58 Singapore: 74 series and 4,468 valid observations, including September national CPI.

@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Brazil runoff polling ledger and transparent probability scenarios."><title>Brazil runoff · Research Home</title><style>:root{--bg:#f3f4f0;--paper:#fff;--ink:#172d2a;--muted:#65736f;--line:#dbe2db;--green:#164f44;--pale:#e5eee7;--amber:#835323;--blue:#326caa;--red:#bf5b50}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:20px}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.6 'Segoe UI',Arial,sans-serif}a{color:var(--green)}button,input,select{font:inherit;color:inherit}button,a,input,select{touch-action:manipulation}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #c39044;outline-offset:3px}.shell{max-width:1680px;margin:auto;display:grid;grid-template-columns:210px minmax(0,1fr);min-height:100vh}.sidebar{padding:36px 22px;border-right:1px solid var(--line);position:sticky;top:0;height:100vh;display:flex;flex-direction:column}.brand{font:700 20px Georgia,serif;text-decoration:none;letter-spacing:-.6px;white-space:nowrap}.brand span{display:inline-grid;place-items:center;background:var(--green);color:#fff;border-radius:9px;width:31px;height:34px;margin-right:6px;font:600 14px 'Segoe UI',sans-serif}.eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:1.8px;font-weight:700;color:var(--muted)}.sidebar .eyebrow{margin:42px 0 12px}.sidebar nav{display:grid;gap:5px}.sidebar nav a{text-decoration:none;padding:9px 11px;border-radius:7px;color:var(--muted)}.sidebar nav a.active{background:var(--pale);color:var(--green);font-weight:650}.side-bottom{margin-top:auto;padding-top:35px;font-size:12px;color:var(--muted)}.side-bottom a{display:inline-block;margin-top:15px}.local-dot{display:inline-block;background:#869b66;width:7px;height:7px;border-radius:50%;margin-right:5px}main{min-width:0;padding:32px 40px 45px}.topline{display:flex;justify-content:space-between;align-items:center;gap:15px;color:var(--muted);font-size:11px}header{display:flex;align-items:center;justify-content:space-between;gap:20px;margin:25px 0 23px}h1{font:normal clamp(36px,4vw,51px)/1.1 Georgia,serif;letter-spacing:-1.7px;margin:0 0 11px}.intro{font-size:15px;color:var(--muted);margin:0}.countdown{display:flex;align-items:center;gap:12px;white-space:nowrap}.countdown strong{font:normal 43px Georgia,serif}.countdown span{font-size:11px;line-height:1.6;color:var(--muted)}.countdown b{font-weight:500}.page-tabs{display:flex;align-items:center;gap:26px;border-bottom:1px solid var(--line);margin-bottom:18px}.page-tabs a{text-decoration:none;padding:8px 0;color:var(--muted);white-space:nowrap;font-size:13px}.page-tabs a.active{color:var(--green);border-bottom:2px solid var(--green);font-weight:650}.export{margin-left:auto;border:0;background:none;color:var(--green);font-size:12px;white-space:nowrap}.freshness{border-left:3px solid #78917a;padding:9px 14px;background:#eaf0e8;color:#405a4a;font-size:12px;margin:0 0 20px}.freshness strong{font-weight:650}.scope-row{display:flex;align-items:center;gap:18px;flex-wrap:wrap;font-size:12px;margin:17px 0}.scope-row label{display:flex;align-items:center;gap:7px}.scope-row select{background:white;border:1px solid var(--line);border-radius:5px;padding:6px;max-width:210px}.check input{accent-color:var(--green);width:15px;height:15px}.text-button{border:1px solid var(--line);border-radius:5px;background:transparent;padding:5px 10px;font-size:12px}.scope-row .text-button{margin-left:auto}.stats-strip{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);background:white;border-radius:8px;margin:18px 0}.stats-strip div{padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:8px}.stats-strip div+div{border-left:1px solid var(--line)}.stats-strip span{font-size:11px;color:var(--muted);line-height:1.4}.stats-strip strong{font-size:21px;font-weight:600;font-variant-numeric:tabular-nums}.stats-strip i{font-style:normal}.scenario-card{display:grid;grid-template-columns:285px minmax(0,1fr);background:white;border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:0 0 22px}.scenario-summary{padding:25px 24px;background:#fbfcfa;border-right:1px solid var(--line)}.scenario-summary>.eyebrow{margin:0 0 5px}.small-badge{font-size:10px;border:1px solid #d9e0d9;border-radius:20px;padding:3px 8px;display:inline-block;color:var(--muted)}.candidate{display:flex;flex-direction:column;margin:22px 0 8px;gap:0}.candidate-label{font-size:13px;font-weight:600}.candidate strong{font-size:60px;font-weight:650;letter-spacing:-2px;line-height:1.15;font-variant-numeric:tabular-nums}.candidate strong span{font-size:26px;margin-left:3px}.flavio{color:var(--blue)}.lula{color:var(--red)}.probability-bar{display:flex;height:8px;border-radius:5px;overflow:hidden;background:#eef0ef}.probability-bar span:first-child{background:var(--blue)}.probability-bar span:last-child{background:var(--red)}.candidate.secondary{flex-direction:row;justify-content:space-between;align-items:center;margin:10px 0 18px}.candidate.secondary strong{font-size:28px;letter-spacing:-.5px}.candidate.secondary strong span{font-size:17px}.scenario-odds{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 0;margin:14px 0}.scenario-odds .small{margin:0 0 5px}.odds-values{display:flex;justify-content:space-between;font-size:13px}.odds-values strong{font-size:21px;font-variant-numeric:tabular-nums}.summary-details{font-size:11px;margin:17px 0 0}.summary-details div{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin:7px 0}.summary-details dt{color:var(--muted)}.summary-details dd{margin:0;white-space:nowrap;font:12px 'Consolas',monospace}.summary-details .divider{padding-top:9px;margin-top:12px;border-top:1px solid var(--line)}.small{font-size:11px;color:var(--muted);line-height:1.6}.scenario-workspace{padding:25px 27px 17px;min-width:0}.model-toggle{display:inline-flex;border:1px solid var(--line);border-radius:6px;padding:3px;gap:2px;background:#f7f8f5}.model-toggle button{border:0;background:transparent;border-radius:4px;padding:6px 11px;font-size:12px;color:var(--muted)}.model-toggle button.selected{background:var(--green);color:white}.mode-note{margin:8px 0 16px}.controls{display:grid;gap:15px}.slider>span{display:flex;justify-content:space-between;gap:10px;font-size:12px;font-weight:600}.slider output{font:12px Consolas,monospace;font-weight:400}.slider input{display:block;width:100%;accent-color:var(--green);height:15px;margin:8px 0}.slider small{font-size:10px;color:var(--muted)}.half-life{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:12px}.half-life>div{display:flex;gap:5px}.half-life button{font-size:11px;border:1px solid var(--line);border-radius:16px;padding:3px 10px;background:white}.half-life button.selected{background:var(--green);color:white;border-color:var(--green)}.chart-heading{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:20px 0 4px;font-size:10px;color:var(--muted)}.legend{display:flex;align-items:center;gap:5px;white-space:nowrap}.legend i{display:inline-block;width:7px;height:7px;border-radius:50%}.blue-dot{background:var(--blue)}.red-dot{background:var(--red);margin-left:7px}.density svg,.trend-chart svg{width:100%;height:auto;display:block}.chart-note{font-size:10px;line-height:1.6;color:var(--muted);margin:8px 0 0}.chart-note b{font-weight:600}details{border-top:1px solid var(--line);margin-top:14px;padding-top:12px}summary{cursor:pointer;font-size:12px;font-weight:600}.house-adjustments{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:14px 0}.house-adjustments label{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:11px}.house-adjustments input{width:65px;border:1px solid var(--line);border-radius:4px;padding:4px}.advanced-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.advanced-grid label{font-size:11px;display:grid;gap:4px}.advanced-grid input{border:1px solid var(--line);padding:5px;border-radius:4px;width:100%}.two-panels{display:grid;grid-template-columns:1.15fr 1fr;gap:22px}.panel{background:white;border:1px solid var(--line);border-radius:9px;padding:22px 24px;margin-bottom:22px;min-width:0}.section-heading{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:15px}.section-heading .eyebrow{margin:0 0 5px}h2{font:normal 25px/1.2 Georgia,serif;letter-spacing:-.5px;margin:0}h3{font-size:13px;font-weight:650;margin:16px 0 8px}.weight-row{display:grid;grid-template-columns:90px 1fr 48px;gap:9px;align-items:center;margin:11px 0;font-size:11px}.weight-track{height:8px;background:#eef2ed;border-radius:3px;overflow:hidden}.weight-track>span{display:block;height:100%;background:#71958a}.weight-row strong{text-align:right;font:11px Consolas,monospace}.leave-one-out{border-top:1px solid var(--line);padding-top:10px;margin-top:15px}.leave-one-out .loo-row{display:flex;justify-content:space-between;gap:12px;font-size:11px;margin:5px 0}.loo-row span:last-child{font-family:Consolas,monospace}.table-scroll{overflow:auto}table{width:100%;border-collapse:collapse;font-size:11px;line-height:1.5;text-align:left}th{font-size:10px;text-transform:uppercase;letter-spacing:.5px;font-weight:650;color:var(--muted);padding:10px 9px;border-bottom:1px solid var(--line);vertical-align:bottom}td{padding:12px 9px;border-bottom:1px solid #e9ede7;vertical-align:top}tbody tr:last-child td{border-bottom:0}.sensitivity-table th:not(:first-child),.sensitivity-table td:not(:first-child){text-align:center}.sensitivity-table td:first-child{font-weight:500}.sensitivity-table button{border:1px solid transparent;border-radius:5px;padding:8px 20px;background:#f0f4ef;min-width:80px;font-variant-numeric:tabular-nums}.sensitivity-table button.current{border:2px solid var(--green);background:#e2eee4;font-weight:700}.ledger table{min-width:1040px}.ledger th:first-child,.ledger td:first-child{padding-left:0}.ledger input{accent-color:var(--green)}.ledger td strong{font-weight:650;display:block}.ledger .sub{display:block;color:var(--muted);font-size:10px;margin-top:4px;max-width:170px}.ledger .excluded{opacity:.58}.ledger .source-link{display:inline-flex;font-size:10px;gap:5px;margin-top:4px}.ledger .reason{font-size:10px;border-radius:4px;background:#f4f4ef;padding:3px 6px;display:inline-block;color:var(--muted);max-width:145px}.ledger .reason.included{background:var(--pale);color:var(--green)}.ledger .derived{color:var(--amber)}.ledger details{border:0;padding:0;margin-top:5px}.ledger summary{font-size:10px;font-weight:400;color:var(--green)}.ledger details p{white-space:normal;min-width:180px;max-width:240px;color:var(--muted)}.method>.eyebrow{margin-top:0}.method-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}.method-grid p{font-size:11px;color:var(--muted)}code{font:10px/1.8 Consolas,monospace;display:block;white-space:normal;background:#f2f5ef;padding:8px;border-radius:4px}.source-note{font-size:11px;margin:10px 0;color:var(--muted)}.source-note a{font-weight:600}.method>details p{font-size:11px;color:var(--muted)}footer{border-top:1px solid var(--line);padding-top:15px;font-size:11px;color:var(--muted);display:flex;justify-content:space-between;gap:15px}.empty-state{padding:35px 20px;text-align:center;color:var(--muted);font-size:12px;background:#f7f8f5;border-radius:6px}.error-text{color:var(--amber)}
+@media(min-width:1500px){main{padding-left:50px;padding-right:50px}.scenario-card{grid-template-columns:315px minmax(0,1fr)}}
+@media(max-width:1150px){.shell{grid-template-columns:185px minmax(0,1fr)}.sidebar{padding:30px 15px}main{padding:28px 25px}.scenario-card{grid-template-columns:255px minmax(0,1fr)}.scenario-workspace{padding:22px 20px}.scenario-summary{padding:22px 20px}.stats-strip{grid-template-columns:repeat(2,1fr)}.stats-strip div:nth-child(3){border-left:0;border-top:1px solid var(--line)}.stats-strip div:nth-child(4){border-top:1px solid var(--line)}.two-panels{grid-template-columns:1fr 1fr}.chart-heading{flex-wrap:wrap}.half-life{align-items:flex-start;flex-direction:column}.method-grid{grid-template-columns:1fr}.method-grid p{max-width:750px}.method-grid{gap:0}}
+@media(max-width:850px){.shell{display:block}.sidebar{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line);padding:16px 22px}.sidebar>.eyebrow,.side-bottom{display:none}.sidebar nav{display:flex;overflow:auto;margin-top:12px;gap:2px}.sidebar nav a{font-size:12px;padding:7px 9px;white-space:nowrap}.brand{font-size:20px}.scenario-card{grid-template-columns:240px minmax(0,1fr)}.page-tabs{gap:20px}.two-panels{grid-template-columns:1fr 1fr}.panel{padding:20px}.scope-row{gap:13px}}
+@media(max-width:650px){main{padding:20px 17px 30px}.topline{align-items:flex-start;gap:9px}.topline .eyebrow{font-size:9px;letter-spacing:1.1px}#snapshot-date{font-size:9px;text-align:right}header{margin:22px 0;align-items:flex-start}.intro{font-size:13px;max-width:280px}h1{font-size:38px}.countdown{gap:6px;flex-direction:column;align-items:flex-end}.countdown strong{font-size:31px;line-height:1}.countdown span{font-size:9px;text-align:right}.page-tabs{gap:16px;overflow:auto}.page-tabs a{font-size:11px}.export{display:block;margin-left:0;padding:7px 0}.page-tabs{flex-wrap:wrap;gap:8px 16px}.freshness{font-size:11px;padding:9px 10px}.scope-row{gap:11px;font-size:11px}.scope-row>label:first-child{width:100%;justify-content:space-between}.scope-row select{max-width:none}.scope-row .text-button{margin-left:0}.stats-strip div{padding:10px 12px}.stats-strip strong{font-size:20px}.stats-strip span{font-size:10px}.scenario-card{display:block}.scenario-summary{border-right:0;border-bottom:1px solid var(--line);padding:22px}.candidate{margin-top:15px}.candidate strong{font-size:64px}.scenario-summary .summary-details{display:none}.scenario-summary .small-badge{float:right;margin-top:-22px;font-size:9px}.scenario-odds{margin:16px 0 10px}.scenario-summary #summary-note{margin-bottom:0}.scenario-workspace{padding:22px 18px}.half-life{flex-direction:row;align-items:center}.half-life button{padding:4px 8px;font-size:10px}.chart-heading{gap:6px}.two-panels{display:block}.panel{padding:20px 18px}.sensitivity-table button{min-width:54px;padding:7px 9px}.sensitivity-table th{font-size:9px;letter-spacing:0;padding:9px 4px}.sensitivity-table td{padding:8px 3px}.section-heading{align-items:flex-start}h2{font-size:24px}.section-heading .eyebrow{font-size:9px}.weight-row{grid-template-columns:100px 1fr 45px}.method-grid p{font-size:12px}footer{display:block}footer span{display:block;margin-top:5px}.house-adjustments{grid-template-columns:1fr 1fr;gap:10px}.house-adjustments label{font-size:10px}.house-adjustments input{width:53px}}
+@media print{.sidebar,.page-tabs,.scope-row,button,.controls,.model-toggle,details{display:none!important}.shell{display:block}main{padding:0}.panel,.scenario-card{break-inside:avoid}.table-scroll{overflow:visible}.ledger table{min-width:0;font-size:8px}body{background:white}.freshness{background:white}}
+</style></head>
+<body><div class="shell"><aside class="sidebar"><a class="brand" href="../index.html#research"><span>R</span> Research Home</a><p class="eyebrow">Your workspace</p><nav aria-label="Research sections"><a href="../index.html#report/rates-rv">Rates RV</a><a href="../index.html#rates-trend">Rates Trend</a><a href="../index.html#research">Research</a><a class="active" aria-current="page" href="#overview">Brazil polls</a><a href="../index.html#frameworks">Frameworks</a><a href="../index.html#country/IND/overview">Countries</a></nav><div class="side-bottom"><span class="local-dot"></span> Saved polling snapshot<br>No automatic refresh<br><a href="#method">Model &amp; sources ↗</a></div></aside>
+<main><div class="topline"><span class="eyebrow">Brazil / Election monitor</span><span id="snapshot-date">Loading saved snapshot</span></div>
+<header id="overview"><div><h1>Brazil runoff</h1><p class="intro">A transparent view of the polls—and the assumptions behind the odds.</p></div><div class="countdown"><strong id="days-left">—</strong><span>days to runoff<br><b id="runoff-date">25 October 2026</b></span></div></header>
+<div class="page-tabs" role="navigation" aria-label="Page sections"><a href="#overview" class="active">Overview</a><a href="#polls">Poll ledger</a><a href="#sensitivity">Sensitivity</a><a href="#method">Method &amp; sources</a><button id="download" class="export">↓ Export selected polls</button></div>
+<div class="freshness" id="freshness"></div>
+<div class="scope-row"><label>Sample filter <select id="sample-rule"><option value="gt">Total n &gt; 2,000</option><option value="gte">Total n ≥ 2,000</option><option value="all" selected>All sample sizes</option></select></label><label class="check"><input id="post-only" type="checkbox" checked> Entirely after first round</label><label class="check"><input id="latest-only" type="checkbox" checked> Latest selected wave per pollster</label><button class="text-button" id="reset">Reset</button></div>
+<div class="stats-strip"><div><span>Included waves</span><strong id="wave-count">—</strong></div><div><span>Independent pollsters</span><strong id="house-count">—</strong></div><div><span>Effective pollsters <i title="1 / sum of squared pollster weight shares">ⓘ</i></span><strong id="effective-houses">—</strong></div><div><span>Largest pollster weight</span><strong id="largest-weight">—</strong></div></div>
+<section class="scenario-card" aria-labelledby="scenario-title"><div class="scenario-summary"><p class="eyebrow" id="scenario-title">Weighted polling average</p><span class="small-badge">Valid votes · descriptive</span><div class="candidate"><span class="candidate-label flavio">Flávio Bolsonaro</span><strong id="share-flavio" class="flavio">—</strong></div><div class="probability-bar" aria-hidden="true"><span id="prob-flavio"></span><span id="prob-lula"></span></div><div class="candidate secondary"><span class="candidate-label lula">Lula</span><strong id="share-lula" class="lula">—</strong></div><div class="scenario-odds"><p class="small">Scenario win probability · uncalibrated</p><div class="odds-values"><span class="flavio">Flávio <strong id="p-flavio">—</strong></span><span class="lula">Lula <strong id="p-lula">—</strong></span></div></div><dl class="summary-details"><div><dt>Poll average · Lula valid votes</dt><dd id="raw-share">—</dd></div><div><dt>Scenario centre · Lula</dt><dd id="adjusted-share">—</dd></div><div><dt>Implied Flávio vote margin</dt><dd id="margin">—</dd></div><div class="divider"><dt>Average’s sampling error</dt><dd id="sampling-error">—</dd></div><div><dt>Shared polling error</dt><dd id="shared-error-value">—</dd></div><div><dt>Remaining time drift</dt><dd id="drift-value">—</dd></div><div><dt>Total uncertainty · 1σ</dt><dd id="total-error">—</dd></div></dl><p class="small" id="summary-note"></p></div>
+<div class="scenario-workspace"><div class="model-toggle" role="group" aria-label="Model comparison"><button id="unadjusted" class="selected" aria-pressed="true">Unadjusted</button><button id="adjusted" aria-pressed="false">Pollster-adjusted scenario</button></div><p class="small mode-note" id="mode-note">No house-effect corrections. “Unadjusted” does not mean unbiased.</p><div class="controls"><label class="slider"><span>Common shift to Lula’s share <output id="shift-output">0.0 pp</output></span><input id="shift" type="range" min="-3" max="3" step=".25" value="0"><small>Positive adds to Lula’s valid-vote share; not an estimated bias.</small></label><label class="slider"><span>Shared polling error · 1σ <output id="error-output">2.5 pp</output></span><input id="error" type="range" min=".5" max="5" step=".25" value="2.5"><small>Election-wide error does not shrink as more polls are added.</small></label><div class="half-life"><span>Recency half-life</span><div role="group" aria-label="Recency half-life"><button data-half="4">4 days</button><button class="selected" data-half="7">7 days</button><button data-half="14">14 days</button><button data-half="30">30 days</button></div></div></div>
+<div class="chart-heading"><span>Possible election-day Lula valid-vote share</span><span class="legend"><i class="blue-dot"></i>Flávio wins <i class="red-dot"></i>Lula wins</span></div><div id="density" class="density" role="img" aria-label="Scenario probability distribution"></div><p class="chart-note">Vote share is the horizontal axis. The area beyond 50% is Lula’s scenario win probability.</p><details id="advanced"><summary>Pollster adjustments &amp; advanced assumptions</summary><p class="small">House adjustments are explicit scenarios, not fitted historical corrections. They apply only in pollster-adjusted mode.</p><div id="house-adjustments" class="house-adjustments"></div><div class="advanced-grid"><label>Sampling design effect <input id="design-effect" type="number" min="1" max="4" step=".25" value="1.5"></label><label>Drift σ per √day, share pp <input id="drift" type="number" min="0" max="1" step=".05" value=".25"></label></div></details></div></section>
+<div class="two-panels"><section class="panel"><div class="section-heading"><div><p class="eyebrow">What has changed</p><h2>Vote-share trend</h2></div><span class="small">Valid votes · %</span></div><div id="trend-chart" class="trend-chart" role="img" aria-label="Polling trend"></div><p class="chart-note">Dots: included releases. Line: recency-weighted unadjusted mean using only information released by each date. No election-result forecast band.</p></section><section class="panel"><div class="section-heading"><div><p class="eyebrow">Where the estimate comes from</p><h2>Pollster weights</h2></div></div><div id="weights"></div><p class="chart-note">Recency × sampling precision, normalized to 100%. Repeated waves do not become independent pollsters.</p><div id="leave-one-out" class="leave-one-out"></div></section></div>
+<section class="panel" id="sensitivity"><div class="section-heading"><div><p class="eyebrow">How much is assumption</p><h2>Change the error, change the odds</h2></div><span class="small">Lula win probability</span></div><p class="small">Common shifts to Lula’s valid-vote share versus election-wide error. Sampling and drift assumptions remain as selected.</p><div class="table-scroll"><table class="sensitivity-table"><thead><tr><th>Common share shift</th><th>Shared σ 1.5 pp</th><th>Shared σ 2.5 pp</th><th>Shared σ 3.5 pp</th></tr></thead><tbody id="sensitivity-body"></tbody></table></div><p class="chart-note">These are conditional model outputs. None is labelled “the” election probability.</p></section>
+<section class="panel ledger" id="polls"><div class="section-heading"><div><p class="eyebrow">Auditable inputs</p><h2>Every wave, every inclusion decision</h2></div><span id="ledger-count" class="small"></span></div><p class="small">Valid-vote shares exclude blank/null/undecided responses. Sample filtering uses total respondents; sampling precision uses valid respondents when known.</p><div class="table-scroll"><table><thead><tr><th>Use</th><th>Pollster / source</th><th>Fieldwork / release</th><th>Total n / valid n</th><th>Mode</th><th>Flávio / Lula<br>valid votes</th><th>Undecided / blank<br>all respondents</th><th>Weight</th><th>Model status</th></tr></thead><tbody id="poll-rows"></tbody></table></div><p class="chart-note">Click a source to inspect the original release. “Not reported” remains missing; it is never filled with zero.</p></section>
+<section class="panel method" id="method"><p class="eyebrow">Reproducible, not a black box</p><h2>Method &amp; provenance</h2><div class="method-grid"><div><h3>One vote-share scenario</h3><p>The centre is the weighted Lula share of valid votes. We add any selected pollster corrections and the common shift. Win probabilities are normal-distribution tail areas relative to 50%.</p><code>σ² = sampling variance + shared σ² + days left × drift σ²</code><p>Reported sample sizes are not effective independent sample sizes. The design-effect assumption inflates sampling variance. If valid n is unavailable, it is estimated from rounded candidate total shares; only if those are unavailable does the model assume 90% of total n. Estimates are marked, not presented as reported respondent counts.</p></div><div><h3>Dependence and scope</h3><p>Latest wave per pollster is the default. If multiple waves are selected, within-pollster sampling errors are treated as fully correlated. The shared election error remains across all pollsters.</p><p>First-round-straddling fieldwork is excluded by default. Strict n &gt; 2,000 excludes a survey with exactly 2,000 respondents. Duplicate releases of one wave are never counted twice.</p></div><div><h3>What is not estimated</h3><p>No historical calibration, learned house effects, turnout model, campaign-shock model or validation against this election’s outcome. Shifts, design effect, shared error and drift are disclosed assumptions.</p><p>Rounding, mode differences and fieldwork timing can matter. A new poll changes the pooled centre and weights; its vote share is not its candidate’s probability of winning.</p></div></div><details><summary>Source review and update procedure</summary><div id="source-notes"></div><p>Update the normalized source ledger, retain original links and fieldwork details, then run the local validation/build script. The page never calls Bloomberg or refreshes polls automatically. Downloaded inputs and the build timestamp make each snapshot reproducible.</p></details></section>
+<footer>Research Home · Brazil election monitor <span>Saved snapshot · no automatic refresh</span></footer></main></div><script>window.POLL_DATA = {
+  "as_of": "2026-10-13",
+  "first_round_date": "2026-10-04",
+  "runoff_date": "2026-10-25",
+  "coverage_note": "Accessible national runoff releases reviewed through 13 October; coverage is not certified exhaustive. Registration numbers are transcribed from reports, not independently verified in PesqEle.",
+  "polls": [
+    {
+      "pollster": "PoderData",
+      "registration": "BR-08134/2026",
+      "field_start": "2026-10-05",
+      "field_end": "2026-10-07",
+      "published_date": "2026-10-08",
+      "sample_n": 3000,
+      "valid_base_n": null,
+      "mode": "Telephone IVR/URA",
+      "moe_pct": 1.8,
+      "flavio_total": 49,
+      "lula_total": 44,
+      "flavio_valid_model": 53,
+      "valid_basis": "published valid-vote share",
+      "report_url": "https://static.poder360.com.br/uploads/2026/10/Relatorio-PoderData-Eleitoral-8out26-final.pdf",
+      "source_url": "https://www.poder360.com.br/poderdata/pesquisa-poderdata-aya-leia-os-resultados-de-lula-e-flavio-no-2o-turno/",
+      "notes": "Historical wave. Keep in trend; latest-per-pollster aggregation uses the 12 October wave instead. Mobile and landline IVR interviews.",
+      "id": "poderdata-2026-10-07",
+      "fieldwork_start": "2026-10-05",
+      "fieldwork_end": "2026-10-07",
+      "release_date": "2026-10-08",
+      "n_total": 3000,
+      "n_valid": null,
+      "flavio_valid": 53,
+      "lula_valid": 47,
+      "undecided_total": null,
+      "blank_null_total": null,
+      "verification": "primary",
+      "valid_fraction_assumption": 0.93,
+      "wave_key": "BR-08134/2026|runoff|2026-10-07"
+    },
+    {
+      "pollster": "PoderData",
+      "registration": "BR-01209/2026",
+      "field_start": "2026-10-10",
+      "field_end": "2026-10-12",
+      "published_date": "2026-10-13",
+      "sample_n": 3000,
+      "valid_base_n": null,
+      "mode": "Telephone IVR/URA",
+      "moe_pct": 1.8,
+      "flavio_total": 48,
+      "lula_total": 46,
+      "flavio_valid_model": 51,
+      "valid_basis": "published valid-vote share",
+      "report_url": "https://static.poder360.com.br/uploads/2026/10/Relatorio-PoderData-Eleitoral-12out26-1.pdf",
+      "source_url": "https://www.poder360.com.br/poder-governo/lula-reage-e-vai-a-49-contra-51-de-flavio-diz-poderdata-aya/",
+      "notes": "Original release linked an older PDF; the newest report was identified in the 13 October roundup. The '-1' filename suffix alone does not establish a substantive revision. Published full response categories sum to 101% due to rounding.",
+      "id": "poderdata-2026-10-12",
+      "fieldwork_start": "2026-10-10",
+      "fieldwork_end": "2026-10-12",
+      "release_date": "2026-10-13",
+      "n_total": 3000,
+      "n_valid": null,
+      "flavio_valid": 51,
+      "lula_valid": 49,
+      "undecided_total": null,
+      "blank_null_total": null,
+      "verification": "primary",
+      "valid_fraction_assumption": 0.94,
+      "wave_key": "BR-01209/2026|runoff|2026-10-12"
+    },
+    {
+      "pollster": "GERP",
+      "registration": "BR-07877/2026",
+      "field_start": "2026-10-08",
+      "field_end": "2026-10-12",
+      "fieldwork_dates": [
+        "2026-10-08",
+        "2026-10-09",
+        "2026-10-12"
+      ],
+      "published_date": "2026-10-13",
+      "sample_n": 2400,
+      "valid_base_n": 2314,
+      "mode": "Telephone CATI / RDD",
+      "moe_pct": 2,
+      "flavio_total": 53,
+      "lula_total": 44,
+      "flavio_valid_model": 55,
+      "valid_basis": "published valid-vote share",
+      "report_url": "https://static.poder360.com.br/uploads/2026/10/PRESIDENCIA_DO_BRASIL_32o_Relatorio_Presidencia_2026_primeiro.pdf",
+      "source_url": "https://www.poder360.com.br/poder-eleicoes-2026/flavio-tem-53-contra-44-de-lula-diz-pesquisa-gerp/",
+      "notes": "Fieldwork 8, 9 and 12 October, per primary report; some secondary coverage said 9–12. Published valid base is 2,314 of 2,400. Use published 55/45, not the ratio of rounded total shares. Earlier 2/3 October releases shared 1,250 interviews and are not included.",
+      "id": "gerp-2026-10-12",
+      "fieldwork_start": "2026-10-08",
+      "fieldwork_end": "2026-10-12",
+      "release_date": "2026-10-13",
+      "n_total": 2400,
+      "n_valid": 2314,
+      "flavio_valid": 55,
+      "lula_valid": 45,
+      "undecided_total": null,
+      "blank_null_total": null,
+      "verification": "primary",
+      "valid_fraction_assumption": 0.97,
+      "wave_key": "BR-07877/2026|runoff|2026-10-12"
+    },
+    {
+      "pollster": "Nexus",
+      "registration": "BR-07997/2026",
+      "field_start": "2026-10-10",
+      "field_end": "2026-10-12",
+      "published_date": "2026-10-13",
+      "sample_n": 2002,
+      "valid_base_n": null,
+      "mode": "Telephone CATI",
+      "moe_pct": 2,
+      "flavio_total": 48,
+      "lula_total": 45,
+      "flavio_valid_model": 51.61290322580645,
+      "valid_basis": "derived from rounded total shares",
+      "report_url": "https://static.poder360.com.br/uploads/2026/10/BTG-Nexus-Eleicoes-2026-Rodada-17-13.out_.2026.pdf",
+      "source_url": "https://www.poder360.com.br/poder-eleicoes-2026/flavio-tem-48-contra-45-de-lula-no-2o-turno-diz-btg-nexus/",
+      "notes": "Primary report gives 10–12 October, not 9–12. Valid shares here are 48/(48+45) and its complement. Some secondary coverage reports 52/48, but the retrieved primary text did not expose that valid-vote table. Registration transcribed, not independently verified.",
+      "id": "nexus-2026-10-12",
+      "fieldwork_start": "2026-10-10",
+      "fieldwork_end": "2026-10-12",
+      "release_date": "2026-10-13",
+      "n_total": 2002,
+      "n_valid": null,
+      "flavio_valid": 51.61290322580645,
+      "lula_valid": 48.38709677419355,
+      "undecided_total": null,
+      "blank_null_total": null,
+      "verification": "primary",
+      "valid_fraction_assumption": 0.93,
+      "wave_key": "BR-07997/2026|runoff|2026-10-12"
+    },
+    {
+      "pollster": "Datafolha",
+      "registration": "BR-02949/2026",
+      "field_start": "2026-10-06",
+      "field_end": "2026-10-07",
+      "published_date": "2026-10-08",
+      "sample_n": 2520,
+      "valid_base_n": null,
+      "mode": "In person",
+      "moe_pct": 2,
+      "flavio_total": 49,
+      "lula_total": 45,
+      "flavio_valid_model": 52,
+      "valid_basis": "published valid-vote share",
+      "report_url": "https://static.poder360.com.br/uploads/2026/10/datafolha-presidente-2turno-8out2026.pdf",
+      "source_url": "https://www1.folha.uol.com.br/poder/2026/10/datafolha-flavio-bolsonaro-tem-52-e-lula-48-em-votos-validos-no-segundo-turno.shtml",
+      "notes": "PDF is a printout of the Folha release. Sample of 2,520 across 153 municipalities. Exact interview locations not confirmed from retrieved primary text. Source update timestamp does not establish a numerical revision.",
+      "id": "datafolha-2026-10-07",
+      "fieldwork_start": "2026-10-06",
+      "fieldwork_end": "2026-10-07",
+      "release_date": "2026-10-08",
+      "n_total": 2520,
+      "n_valid": null,
+      "flavio_valid": 52,
+      "lula_valid": 48,
+      "undecided_total": null,
+      "blank_null_total": null,
+      "verification": "primary",
+      "valid_fraction_assumption": 0.94,
+      "wave_key": "BR-02949/2026|runoff|2026-10-07"
+    },
+    {
+      "pollster": "Vox Brasil",
+      "registration": "BR-09623/2026",
+      "field_start": "2026-10-05",
+      "field_end": "2026-10-07",
+      "published_date": "2026-10-09",
+      "sample_n": 2100,
+      "valid_base_n": null,
+      "mode": "In-person household",
+      "moe_pct": 2.15,
+      "flavio_total": 42.7,
+      "lula_total": 44.2,
+      "flavio_valid_model": 49.13693901035673,
+      "valid_basis": "derived from rounded total shares",
+      "report_url": "https://static.poder360.com.br/uploads/2026/10/pesquisa-vox-brasil-9out2026.pdf",
+      "source_url": "https://www.poder360.com.br/poder-eleicoes-2026/lula-tem-442-e-flavio-427-no-2o-turno-diz-vox-brasil/",
+      "notes": "Valid shares are derived from rounded total shares: Flávio 42.7/86.9=49.1369%; Lula 50.8631%. These are not pollster-published valid figures. Stratified probabilistic household sampling is claimed by the source.",
+      "id": "vox-brasil-2026-10-07",
+      "fieldwork_start": "2026-10-05",
+      "fieldwork_end": "2026-10-07",
+      "release_date": "2026-10-09",
+      "n_total": 2100,
+      "n_valid": null,
+      "flavio_valid": 49.13693901035673,
+      "lula_valid": 50.86306098964327,
+      "undecided_total": null,
+      "blank_null_total": null,
+      "verification": "primary",
+      "valid_fraction_assumption": 0.8690000000000001,
+      "wave_key": "BR-09623/2026|runoff|2026-10-07"
+    },
+    {
+      "pollster": "Ipespe",
+      "registration": "BR-00933/2026",
+      "field_start": "2026-10-06",
+      "field_end": "2026-10-08",
+      "published_date": "2026-10-10",
+      "sample_n": 1500,
+      "valid_base_n": null,
+      "mode": "Telephone CATI",
+      "moe_pct": 2.6,
+      "flavio_total": 49,
+      "lula_total": 44,
+      "flavio_valid_model": 52.7,
+      "valid_basis": "published valid-vote share",
+      "report_url": "https://static.poder360.com.br/uploads/2026/10/pesquisa-ipespe-abrapel-10out2026.pdf",
+      "source_url": "https://www.poder360.com.br/poder-eleicoes-2026/ipespe-confirma-poderdata-aya-e-da-flavio-com-527-e-lula-com-473/",
+      "notes": "Use all-elector valid results 52.7/47.3, not the maximum-turnout subset 53.1/46.9. Total response categories sum to 101% due to rounding. n=1,500 fails both 2,000 sample filters.",
+      "id": "ipespe-2026-10-08",
+      "fieldwork_start": "2026-10-06",
+      "fieldwork_end": "2026-10-08",
+      "release_date": "2026-10-10",
+      "n_total": 1500,
+      "n_valid": null,
+      "flavio_valid": 52.7,
+      "lula_valid": 47.3,
+      "undecided_total": null,
+      "blank_null_total": null,
+      "verification": "primary",
+      "valid_fraction_assumption": 0.93,
+      "wave_key": "BR-00933/2026|runoff|2026-10-08"
+    },
+    {
+      "pollster": "DataTrends",
+      "registration": "BR-03576/2026",
+      "field_start": "2026-10-07",
+      "field_end": "2026-10-09",
+      "published_date": "2026-10-11",
+      "sample_n": 2000,
+      "valid_base_n": null,
+      "mode": "Telephone IVR/URA",
+      "moe_pct": 2.19,
+      "flavio_total": 50,
+      "lula_total": 44,
+      "flavio_valid_model": 53.1,
+      "valid_basis": "published valid-vote share",
+      "report_url": "https://static.poder360.com.br/uploads/2026/10/pesquisa-datatrends-nacional-11out2026.pdf",
+      "source_url": "https://www.poder360.com.br/poder-eleicoes-2026/flavio-tem-531-e-lula-tem-469-em-votos-validos-diz-datatrends/",
+      "notes": "Exactly 2,000 respondents: excluded by >2,000, included by ≥2,000. NS/NR is inconsistent: summary p4 says 2%, main chart p12 says 1%; leave undecided missing. Main valid chart p13 gives 53.1/46.9; summary rounds 53/47.",
+      "id": "datatrends-2026-10-09",
+      "fieldwork_start": "2026-10-07",
+      "fieldwork_end": "2026-10-09",
+      "release_date": "2026-10-11",
+      "n_total": 2000,
+      "n_valid": null,
+      "flavio_valid": 53.1,
+      "lula_valid": 46.9,
+      "undecided_total": null,
+      "blank_null_total": null,
+      "verification": "primary",
+      "valid_fraction_assumption": 0.94,
+      "wave_key": "BR-03576/2026|runoff|2026-10-09"
+    },
+    {
+      "pollster": "AtlasIntel",
+      "registration": "BR-03663/2026",
+      "field_start": "2026-10-03",
+      "field_end": "2026-10-08",
+      "published_date": "2026-10-09",
+      "sample_n": 5026,
+      "valid_base_n": null,
+      "mode": "Online RDR / poststratified",
+      "moe_pct": 1,
+      "flavio_total": 51.1,
+      "lula_total": 45.7,
+      "flavio_valid_model": 52.8,
+      "valid_basis": "published valid-vote share",
+      "report_url": "https://static.poder360.com.br/uploads/2026/10/Pesquisa-Atlas_Bloomberg-Nacional-261009.pdf",
+      "source_url": "https://atlasintel.org/poll/brazil-national-2026-10-09",
+      "notes": "Fieldwork straddles the 4 October first round; excluded from the strict baseline. Do not split its 3.2% combined residual into invented undecided/blank components. Primary report was retrieved; candidate-chart pixels were not independently visually verified in the source review.",
+      "id": "atlasintel-2026-10-08",
+      "fieldwork_start": "2026-10-03",
+      "fieldwork_end": "2026-10-08",
+      "release_date": "2026-10-09",
+      "n_total": 5026,
+      "n_valid": null,
+      "flavio_valid": 52.8,
+      "lula_valid": 47.2,
+      "undecided_total": null,
+      "blank_null_total": null,
+      "verification": "primary",
+      "valid_fraction_assumption": 0.9680000000000001,
+      "wave_key": "BR-03663/2026|runoff|2026-10-08"
+    }
+  ],
+  "source_sha256": "312a949209b17774165d015ff95d79d57165b53497882c5a80d792fc1f96f0df",
+  "built_at": "2026-10-13T14:13:18.933149+00:00",
+  "schema_version": 1
+};
+</script><script>(function(root,factory){const api=factory();if(typeof module==='object'&&module.exports)module.exports=api;else root.PollModel=api})(typeof globalThis!=='undefined'?globalThis:this,function(){
+'use strict';
+const DAY=86400000;
+const defaults={sampleRule:'all',sampleMin:2000,strictPost:true,latestOnly:true,halfLife:7,sharedError:2.5,driftDaily:0.25,designEffect:1.5,globalShift:0,mode:'unadjusted',houseShifts:{},excluded:[]};
+const date=s=>Date.parse(s+'T12:00:00Z');
+const days=(a,b)=>(date(a)-date(b))/DAY;
+function normalCDF(x){const sign=x<0?-1:1;const z=Math.abs(x)/Math.sqrt(2),t=1/(1+0.3275911*z);const erf=1-(((((1.061405429*t-1.453152027)*t)+1.421413741)*t-0.284496736)*t+0.254829592)*t*Math.exp(-z*z);return .5*(1+sign*erf)}
+function pool(data,options={}){
+ const o={...defaults,...options},asof=o.asOf||data.as_of,excluded=new Set(o.excluded),seen=new Set(),audit=[];
+ const sorted=[...data.polls].sort((a,b)=>b.release_date.localeCompare(a.release_date)||b.fieldwork_end.localeCompare(a.fieldwork_end));
+ for(const p of sorted){
+  let reason=null;
+  const wave=p.wave_key||[p.pollster,p.fieldwork_start,p.fieldwork_end,p.mode,'runoff'].join('|');
+  if(seen.has(wave))reason='Duplicate wave';else seen.add(wave);
+  if(!reason&&!['primary','secondary'].includes(p.verification))reason='Source verification pending';
+  if(!reason&&(!p.source_url||!Number.isFinite(p.lula_valid)||!Number.isFinite(p.flavio_valid)))reason='Incomplete source or valid-vote result';
+  if(!reason&&(p.release_date>asof||p.fieldwork_end>asof))reason='Not yet available at this date';
+  if(!reason&&o.strictPost&&p.fieldwork_start<=data.first_round_date)reason='Fieldwork crosses first round';
+  if(!reason&&o.sampleRule==='gt'&&!(p.n_total>o.sampleMin))reason='Total n is not > '+o.sampleMin.toLocaleString();
+  if(!reason&&o.sampleRule==='gte'&&!(p.n_total>=o.sampleMin))reason='Total n is below '+o.sampleMin.toLocaleString();
+  if(!reason&&excluded.has(p.id))reason='Excluded by you';
+  audit.push({poll:p,reason,weight:0});
+ }
+ if(o.latestOnly){const houses=new Set();for(const a of [...audit].sort((a,b)=>b.poll.fieldwork_end.localeCompare(a.poll.fieldwork_end)||b.poll.release_date.localeCompare(a.poll.release_date))){if(a.reason)continue;if(houses.has(a.poll.pollster))a.reason='Earlier wave from same pollster';else houses.add(a.poll.pollster)}}
+ let selected=audit.filter(a=>!a.reason);
+ if(!selected.length)return {empty:true,audit,options:o,selected:[],houses:[],asOf:asof};
+ let rawTotal=0;
+ for(const a of selected){const p=a.poll;const mid=(date(p.fieldwork_start)+date(p.fieldwork_end))/2;const age=Math.max(0,(date(asof)-mid)/DAY);const validN=p.n_valid??p.n_total*(p.valid_fraction_assumption??.9);const share=p.lula_valid/100;
+  a.samplingVariance=10000*share*(1-share)*o.designEffect/validN;
+  a.effectiveN=validN/o.designEffect;a.validN=validN;a.validNAssumed=p.n_valid==null;
+  a.recency=Math.pow(.5,age/o.halfLife);a.rawWeight=a.recency/a.samplingVariance;rawTotal+=a.rawWeight;
+  a.adjustment=o.mode==='adjusted'?Number(o.houseShifts[p.pollster]||0):0;
+ }
+ let unadjusted=0,adjusted=0;const groups=new Map();
+ for(const a of selected){a.weight=a.rawWeight/rawTotal;unadjusted+=a.weight*a.poll.lula_valid;adjusted+=a.weight*(a.poll.lula_valid+a.adjustment);const g=groups.get(a.poll.pollster)||{name:a.poll.pollster,weight:0,samplingSum:0,waves:0};g.weight+=a.weight;g.samplingSum+=a.weight*Math.sqrt(a.samplingVariance);g.waves++;groups.set(g.name,g)}
+ const houses=[...groups.values()].sort((a,b)=>b.weight-a.weight);
+ // Same-pollster sampling errors are treated as fully correlated, conservatively.
+ const samplingVariance=houses.reduce((s,h)=>s+h.samplingSum*h.samplingSum,0);
+ const daysLeft=Math.max(0,days(data.runoff_date,asof));const driftSigma=o.driftDaily*Math.sqrt(daysLeft);
+ const sigma=Math.sqrt(samplingVariance+o.sharedError**2+driftSigma**2);const mean=adjusted+o.globalShift;
+ const pLula=sigma>0?normalCDF((mean-50)/sigma):mean>50?1:mean<50?0:.5;
+ return {empty:false,audit,selected,houses,options:o,asOf:asof,unadjusted,adjusted,mean,flavioMean:100-mean,marginFlavio:100-2*mean,samplingSigma:Math.sqrt(samplingVariance),driftSigma,sigma,pLula,pFlavio:1-pLula,daysLeft,effectivePollsters:1/houses.reduce((s,h)=>s+h.weight*h.weight,0),effectiveWaves:1/selected.reduce((s,a)=>s+a.weight*a.weight,0),sumSamples:selected.reduce((s,a)=>s+a.poll.n_total,0)};
+}
+function trend(data,options){const end=options.asOf||data.as_of;return [...new Set(data.polls.filter(p=>p.release_date<=end).map(p=>p.release_date))].sort().map(day=>({day,result:pool(data,{...options,asOf:day})})).filter(x=>!x.result.empty)}
+function sensitivity(data,options){return [-2,-1,0,1,2].map(shift=>({shift,values:[1.5,2.5,3.5].map(error=>pool(data,{...options,globalShift:shift,sharedError:error}))}))}
+return {defaults,pool,trend,sensitivity,normalCDF,days};
+});
+</script><script>'use strict';
+const D=window.POLL_DATA,M=window.PollModel,$=id=>document.getElementById(id);
+let options={...M.defaults,houseShifts:{},excluded:[]},result;
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const f=(x,n=1)=>Number.isFinite(x)?x.toFixed(n):'—';
+const signed=(x,n=1)=>(x>=0?'+':'')+f(x,n);
+const percent=p=>p<.005?'<1%':p>.995?'>99%':Math.round(100*p)+'%';
+const shortDate=d=>new Date(d+'T12:00:00Z').toLocaleDateString('en-GB',{day:'numeric',month:'short',timeZone:'UTC'});
+const empty=message=>'<div class="empty-state">'+esc(message)+'</div>';
+const svgText=(x,y,text,extra='')=>`<text x="${x}" y="${y}" fill="#65736f" font-family="Segoe UI,Arial,sans-serif" font-size="11" ${extra}>${esc(text)}</text>`;
+function density(r){
+ if(r.empty)return empty('Select at least one verified poll to calculate a scenario.');
+ const width=720,height=227,left=35,right=700,top=20,bottom=196;
+ const min=Math.min(40,Math.floor((r.mean-3.6*r.sigma)/2)*2),max=Math.max(60,Math.ceil((r.mean+3.6*r.sigma)/2)*2),x=v=>left+(v-min)/(max-min)*(right-left),y=v=>bottom-Math.exp(-.5*((v-r.mean)/r.sigma)**2)*(bottom-top);
+ function curve(a,b){const pts=Array.from({length:121},(_,i)=>a+(b-a)*i/120);return pts.map((v,i)=>(i?'L':'M')+x(v).toFixed(2)+','+y(v).toFixed(2)).join(' ')}
+ let s=`<svg viewBox="0 0 ${width} ${height}" role="img" aria-label="Scenario centred at ${f(r.mean)} percent Lula valid votes; Lula win probability ${percent(r.pLula)}"><title>Normal-error scenario, not a calibrated forecast</title>`;
+ for(let t=Math.ceil(min/2)*2;t<=max;t+=2)s+=`<line x1="${x(t)}" x2="${x(t)}" y1="${top}" y2="${bottom}" stroke="#e8ece5"/>`+svgText(x(t),216,t,'text-anchor="middle"');
+ s+=`<path d="M${x(min)},${bottom} ${curve(min,50).replace(/^M/,'L')} L${x(50)},${bottom}Z" fill="#326caa" opacity=".15"/><path d="M${x(50)},${bottom} ${curve(50,max).replace(/^M/,'L')} L${x(max)},${bottom}Z" fill="#bf5b50" opacity=".15"/>`;
+ s+=`<path d="${curve(min,max)}" fill="none" stroke="#425b53" stroke-width="2"/><line x1="${x(50)}" x2="${x(50)}" y1="10" y2="${bottom}" stroke="#172d2a" stroke-width="1.5"/><line x1="${x(r.mean)}" x2="${x(r.mean)}" y1="${top}" y2="${bottom}" stroke="#81948a" stroke-dasharray="4 4"/>`;
+ s+=svgText(x(50)+5,14,'50% win boundary')+svgText(x(r.mean)-5,40,f(r.mean)+'% centre','text-anchor="end"')+'</svg>';return s;
+}
+function trend(){
+ const series=M.trend(D,options);if(!series.length)return empty('No verified releases under these filters.');
+ const raw=result.audit.filter(a=>!a.reason||a.reason==='Earlier wave from same pollster');
+ const values=raw.flatMap(a=>[a.poll.flavio_valid,a.poll.lula_valid]);const min=Math.floor(Math.min(44,...values)/2)*2,max=Math.ceil(Math.max(56,...values)/2)*2;
+ const dates=series.map(v=>v.day),first=Date.parse(dates[0]),last=Date.parse(dates.at(-1)),span=Math.max(86400000,last-first);
+ const x=day=>42+(Date.parse(day)-first)/span*490,y=v=>250-(v-min)/(max-min)*205;
+ let s='<svg viewBox="0 0 560 310" role="img" aria-label="Released runoff polls and information-available-at-the-time weighted averages">';
+ for(let v=min;v<=max;v+=2)s+=`<line x1="42" x2="532" y1="${y(v)}" y2="${y(v)}" stroke="${v===50?'#bac6bb':'#e8ece5'}" ${v===50?'stroke-dasharray="4 4"':''}/>`+svgText(31,y(v)+4,v,'text-anchor="end"');
+ for(const day of dates)s+=svgText(x(day),275,shortDate(day),'text-anchor="middle"');
+ for(const [key,color] of [['lula_valid','#bf5b50'],['flavio_valid','#326caa']]){
+  for(const a of raw){const p=a.poll;s+=`<circle cx="${x(p.release_date)}" cy="${y(p[key])}" r="4" fill="white" stroke="${color}" stroke-width="1.4"><title>${esc(p.pollster+' · released '+shortDate(p.release_date)+' · '+f(p[key],2)+'%')}</title></circle>`}
+  const pts=series.map((v,i)=>(i?'L':'M')+x(v.day)+','+y(key==='lula_valid'?v.result.unadjusted:100-v.result.unadjusted)).join(' ');
+  s+=`<path d="${pts}" stroke="${color}" stroke-width="2.2" fill="none"/>`;
+ }
+ s+=`<circle cx="50" cy="299" r="3" fill="#326caa"/>`+svgText(59,303,'Flávio')+`<circle cx="116" cy="299" r="3" fill="#bf5b50"/>`+svgText(125,303,'Lula')+svgText(532,303,'Release date · information available then','text-anchor="end"')+'</svg>';return s;
+}
+function renderWeights(r){
+ if(r.empty){$('weights').innerHTML=empty('No included pollsters.');$('leave-one-out').innerHTML='';return}
+ $('weights').innerHTML=r.houses.map(h=>`<div class="weight-row"><span>${esc(h.name)}</span><div class="weight-track"><span style="width:${h.weight*100}%"></span></div><strong>${f(h.weight*100)}%</strong></div>`).join('');
+ const loo=r.houses.map(h=>{const excluded=[...options.excluded,...D.polls.filter(p=>p.pollster===h.name).map(p=>p.id)];const z=M.pool(D,{...options,excluded});return {house:h.name,shift:z.empty?null:z.unadjusted-r.unadjusted}}).sort((a,b)=>Math.abs(b.shift)-Math.abs(a.shift));
+ $('leave-one-out').innerHTML='<div class="small">Leave one pollster out · change in Lula’s average</div>'+loo.slice(0,3).map(x=>`<div class="loo-row"><span>Without ${esc(x.house)}</span><span>${x.shift===null?'—':signed(x.shift,2)+' pp'}</span></div>`).join('');
+}
+function renderLedger(r){
+ $('ledger-count').textContent=D.polls.length+' releases · '+new Set(D.polls.map(p=>p.pollster)).size+' pollsters reviewed';
+ $('poll-rows').innerHTML=r.audit.map(a=>{const p=a.poll,derived=p.valid_basis.startsWith('derived'),field=p.fieldwork_dates?p.fieldwork_dates.map(d=>Number(d.slice(-2))).join(', ')+' Oct':shortDate(p.fieldwork_start)+'–'+shortDate(p.fieldwork_end),valid=p.n_valid??p.n_total*p.valid_fraction_assumption;
+ return `<tr class="${a.reason?'excluded':''}"><td><input type="checkbox" data-poll="${esc(p.id)}" aria-label="Include ${esc(p.pollster+' '+p.fieldwork_end)}" ${options.excluded.includes(p.id)?'':'checked'}></td><td><strong>${esc(p.pollster)}</strong><a class="source-link" href="${esc(p.report_url)}" target="_blank" rel="noopener noreferrer">Original report ↗</a><span class="sub">${esc(p.registration)}</span><details><summary>Source notes</summary><p>${esc(p.notes)}</p><a href="${esc(p.source_url)}" target="_blank" rel="noopener noreferrer">Release article ↗</a></details></td><td>${field}<span class="sub">Released ${shortDate(p.release_date)}</span></td><td>${p.n_total.toLocaleString()} / ${p.n_valid==null?'~':''}${Math.round(valid).toLocaleString()}<span class="sub">${p.n_valid==null?'Valid n estimated from rounded total shares':'Valid n reported'}</span></td><td>${esc(p.mode)}<span class="sub">Reported MOE ±${f(p.moe_pct,2)} pp</span></td><td><span class="flavio">${f(p.flavio_valid,derived?2:1)}</span> / <span class="lula">${f(p.lula_valid,derived?2:1)}</span><span class="sub ${derived?'derived':''}">${derived?'Derived from rounded totals':'Published valid shares'}</span><span class="sub">Total: ${f(p.flavio_total)} / ${f(p.lula_total)}</span></td><td>${p.undecided_total==null?'Not reported':f(p.undecided_total)+'%'} / ${p.blank_null_total==null?'not reported':f(p.blank_null_total)+'%'}</td><td>${a.reason?'—':f(a.weight*100)+'%'}</td><td><span class="reason ${a.reason?'':'included'}">${esc(a.reason||'Included')}</span></td></tr>`}).join('');
+ for(const input of document.querySelectorAll('[data-poll]'))input.addEventListener('change',()=>{const id=input.dataset.poll;options.excluded=input.checked?options.excluded.filter(x=>x!==id):[...new Set([...options.excluded,id])];render()});
+}
+function render(){
+ result=M.pool(D,options);window.CURRENT_POLL_RESULT=result;const r=result;
+ $('days-left').textContent=Math.max(0,M.days(D.runoff_date,D.as_of));$('runoff-date').textContent=shortDate(D.runoff_date)+' 2026';
+ $('snapshot-date').textContent='Sources reviewed '+shortDate(D.as_of)+' 2026 · saved snapshot';
+ $('freshness').innerHTML='<strong>Source review complete for this snapshot.</strong> '+D.polls.length+' accessible releases across '+new Set(D.polls.map(p=>p.pollster)).size+' pollsters. '+(r.empty?'No polls meet the selected criteria.':r.selected.length+' waves / '+r.houses.length+' pollsters enter your current view.')+' Coverage is not certified exhaustive.';
+ $('wave-count').textContent=r.selected.length;$('house-count').textContent=r.houses.length;$('effective-houses').textContent=r.empty?'—':f(r.effectivePollsters);$('largest-weight').textContent=r.empty?'—':f(r.houses[0].weight*100)+'%';
+ $('share-flavio').innerHTML=r.empty?'—':f(100-r.unadjusted)+'<span>%</span>';$('share-lula').innerHTML=r.empty?'—':f(r.unadjusted)+'<span>%</span>';
+ $('p-flavio').textContent=r.empty?'—':percent(r.pFlavio);$('p-lula').textContent=r.empty?'—':percent(r.pLula);
+ $('prob-flavio').style.width=(r.empty?50:100-r.unadjusted)+'%';$('prob-lula').style.width=(r.empty?50:r.unadjusted)+'%';
+ $('raw-share').textContent=r.empty?'—':f(r.unadjusted)+'%';$('adjusted-share').textContent=r.empty?'—':f(r.mean)+'%';$('margin').textContent=r.empty?'—':signed(r.marginFlavio)+' pp';
+ $('sampling-error').textContent=r.empty?'—':'±'+f(r.samplingSigma,2)+' pp';$('shared-error-value').textContent='±'+f(options.sharedError)+' pp';$('drift-value').textContent=r.empty?'—':'±'+f(r.driftSigma,2)+' pp';$('total-error').textContent=r.empty?'—':'±'+f(r.sigma,2)+' pp';
+ const equal=r.empty?null:r.houses.reduce((sum,h)=>{const entries=r.selected.filter(a=>a.poll.pollster===h.name);return sum+entries.reduce((s,a)=>s+a.poll.lula_valid,0)/entries.length},0)/r.houses.length;
+ $('summary-note').textContent=r.empty?'The model is paused until a verified poll is selected.':`Equal-pollster benchmark: Flávio ${f(100-equal)}% / Lula ${f(equal)}%. Headline above uses recency and precision weights; probabilities additionally depend on the assumptions at right.`;
+ $('shift-output').textContent=signed(options.globalShift)+' pp';$('error-output').textContent=f(options.sharedError)+' pp';
+ $('mode-note').textContent=options.mode==='unadjusted'?'No house-effect corrections. “Unadjusted” does not mean unbiased.':'User-defined pollster shifts only; no fitted historical house effects. Zero shifts reproduce the unadjusted scenario.';
+ for(const mode of ['unadjusted','adjusted']){$(mode).classList.toggle('selected',options.mode===mode);$(mode).setAttribute('aria-pressed',String(options.mode===mode))}
+ for(const b of document.querySelectorAll('[data-half]')){b.classList.toggle('selected',Number(b.dataset.half)===options.halfLife);b.setAttribute('aria-pressed',String(Number(b.dataset.half)===options.halfLife))}
+ $('density').innerHTML=density(r);$('trend-chart').innerHTML=trend();renderWeights(r);renderLedger(r);
+ $('sensitivity-body').innerHTML=M.sensitivity(D,options).map(row=>`<tr><td>${row.shift===0?'No shift':signed(row.shift)+' pp to Lula'}</td>${row.values.map((v,j)=>`<td><button data-shift="${row.shift}" data-error="${[1.5,2.5,3.5][j]}" class="${row.shift===options.globalShift&&[1.5,2.5,3.5][j]===options.sharedError?'current':''}" aria-label="Set Lula shift ${row.shift}, shared error ${[1.5,2.5,3.5][j]}">${v.empty?'—':percent(v.pLula)}</button></td>`).join('')}</tr>`).join('');
+ for(const b of document.querySelectorAll('[data-shift]'))b.addEventListener('click',()=>{options.globalShift=Number(b.dataset.shift);options.sharedError=Number(b.dataset.error);$('shift').value=options.globalShift;$('error').value=options.sharedError;render()});
+ $('download').disabled=r.empty;document.body.dataset.ready='true';
+}
+function readControls(){options.sampleRule=$('sample-rule').value;options.strictPost=$('post-only').checked;options.latestOnly=$('latest-only').checked;options.globalShift=Number($('shift').value);options.sharedError=Number($('error').value);options.designEffect=Math.min(4,Math.max(1,Number($('design-effect').value)||1.5));options.driftDaily=Math.min(1,Math.max(0,Number($('drift').value)||0));render()}
+for(const id of ['sample-rule','post-only','latest-only','design-effect','drift'])$(id).addEventListener('change',readControls);
+for(const id of ['shift','error'])$(id).addEventListener('input',readControls);
+for(const mode of ['unadjusted','adjusted'])$(mode).addEventListener('click',()=>{options.mode=mode;render()});
+for(const b of document.querySelectorAll('[data-half]'))b.addEventListener('click',()=>{options.halfLife=Number(b.dataset.half);render()});
+$('house-adjustments').innerHTML=[...new Set(D.polls.map(p=>p.pollster))].sort().map(name=>`<label>${esc(name)} <input data-house="${esc(name)}" type="number" min="-5" max="5" step=".25" value="0" aria-label="${esc(name)} shift to Lula in percentage points"></label>`).join('');
+for(const input of document.querySelectorAll('[data-house]'))input.addEventListener('change',()=>{options.houseShifts[input.dataset.house]=Math.max(-5,Math.min(5,Number(input.value)||0));input.value=options.houseShifts[input.dataset.house];render()});
+$('reset').addEventListener('click',()=>{options={...M.defaults,houseShifts:{},excluded:[]};$('sample-rule').value='all';$('post-only').checked=true;$('latest-only').checked=true;$('shift').value=0;$('error').value=2.5;$('design-effect').value=1.5;$('drift').value=.25;for(const input of document.querySelectorAll('[data-house]'))input.value=0;render()});
+$('download').addEventListener('click',()=>{const cols=['pollster','fieldwork_start','fieldwork_end','release_date','n_total','n_valid','flavio_valid','lula_valid','valid_basis','source_url','report_url'];const quote=v=>'"'+String(v??'').replaceAll('"','""')+'"';const rows=[cols.concat(['weight','lula_scenario_shift_pp']),...result.selected.map(a=>cols.map(k=>a.poll[k]).concat([a.weight,a.adjustment]))];const csv=rows.map(row=>row.map(quote).join(',')).join('\r\n');const url=URL.createObjectURL(new Blob(['\ufeff'+csv],{type:'text/csv;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='brazil-runoff-selected-'+D.as_of+'.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)});
+$('source-notes').innerHTML='<p class="small">'+esc(D.coverage_note)+'</p><p class="small">Source ledger SHA-256: <code>'+esc(D.source_sha256)+'</code>Built '+esc(D.built_at)+'. Input scope and missing fields are retained in <a href="polls.json" download>the full JSON ledger</a> and <a href="polls.csv" download>CSV</a>.</p>'+D.polls.map(p=>`<p class="source-note"><a href="${esc(p.report_url)}" target="_blank" rel="noopener noreferrer">${esc(p.pollster)} · ${shortDate(p.release_date)}</a> — ${esc(p.notes)}</p>`).join('');
+render();
+</script></body></html>
