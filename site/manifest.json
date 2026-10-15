@@ -1,6 +1,6 @@
 {
-  "packagedAt": "2026-10-15T07:02:13.358618+00:00",
-  "libraryBuiltAt": "2026-10-15T15:00:38.645468+08:00",
+  "packagedAt": "2026-10-15T07:58:24.210822+00:00",
+  "libraryBuiltAt": "2026-10-15T15:57:12.014029+08:00",
   "reports": 14,
   "omittedResources": [
     {
@@ -58,7 +58,7 @@
     {
       "path": "index.html",
       "bytes": 739007,
-      "sha256": "5d93f8a1d0c81c55996d584c2d3e88f8fd4baf1e83194b0e61836e662907f666"
+      "sha256": "a4bc8415eaff17c2bffba49d5fa07add65651d945b00576eb715b9f0282f3e98"
     },
     {
       "path": "india.html",
@@ -1398,12 +1398,12 @@
     {
       "path": "tracker/index.html",
       "bytes": 10024,
-      "sha256": "e6e025a9882ae70a7e601af45cc64fae919a399fdc4a4f2382f0788fcfe5f7ed"
+      "sha256": "bd2d45e494d27459b0e1f496b13f130f20851c5ab18a8f0e30ff1919c79c545e"
     },
     {
       "path": "tracker/status.json",
       "bytes": 16497,
-      "sha256": "1004e56e283af0e444b6fdd2ecc1f581c807732294bf9cb067248a6ae9bf367f"
+      "sha256": "ed10f666aa59ac0559780006bb70b3d3ddc9cbbeca51ad29e14d4c34e528bfd7"
     }
   ],
   "countryPilot": {
