@@ -21,7 +21,7 @@
 <section class="panel ledger" id="polls"><div class="section-heading"><div><p class="eyebrow">Auditable inputs</p><h2>Every wave, every inclusion decision</h2></div><span id="ledger-count" class="small"></span></div><p class="small">Valid-vote shares exclude blank/null/undecided responses. Sample filtering uses total respondents; sampling precision uses valid respondents when known.</p><div class="table-scroll"><table><thead><tr><th>Use</th><th>Pollster / source</th><th>Fieldwork / release</th><th>Total n / valid n</th><th>Mode</th><th>Flávio / Lula<br>valid votes</th><th>Undecided / blank<br>all respondents</th><th>Weight</th><th>Model status</th></tr></thead><tbody id="poll-rows"></tbody></table></div><p class="chart-note">Click a source to inspect the original release. “Not reported” remains missing; it is never filled with zero.</p></section>
 <section class="panel method" id="method"><p class="eyebrow">Reproducible, not a black box</p><h2>Method &amp; provenance</h2><div class="method-grid"><div><h3>One vote-share scenario</h3><p>The centre is the weighted Lula share of valid votes. We add any selected pollster corrections and the common shift. Win probabilities are normal-distribution tail areas relative to 50%.</p><code>σ² = sampling variance + shared σ² + days left × drift σ²</code><p>Reported sample sizes are not effective independent sample sizes. The design-effect assumption inflates sampling variance. If valid n is unavailable, it is estimated from rounded candidate total shares; only if those are unavailable does the model assume 90% of total n. Estimates are marked, not presented as reported respondent counts.</p></div><div><h3>Dependence and scope</h3><p>Latest wave per pollster is the default. If multiple waves are selected, within-pollster sampling errors are treated as fully correlated. The shared election error remains across all pollsters.</p><p>First-round-straddling fieldwork is excluded by default. Strict n &gt; 2,000 excludes a survey with exactly 2,000 respondents. Duplicate releases of one wave are never counted twice.</p></div><div><h3>What is not estimated</h3><p>No historical calibration, learned house effects, turnout model, campaign-shock model or validation against this election’s outcome. Shifts, design effect, shared error and drift are disclosed assumptions.</p><p>Rounding, mode differences and fieldwork timing can matter. A new poll changes the pooled centre and weights; its vote share is not its candidate’s probability of winning.</p></div></div><details><summary>Source review and update procedure</summary><div id="source-notes"></div><p>Update the normalized source ledger, retain original links and fieldwork details, then run the local validation/build script. The page never calls Bloomberg or refreshes polls automatically. Downloaded inputs and the build timestamp make each snapshot reproducible.</p></details></section>
 <footer>Research Home · Brazil election monitor <span>Saved snapshot · no automatic refresh</span></footer></main></div><script>window.POLL_DATA = {
-  "as_of": "2026-10-17",
+  "as_of": "2026-10-18",
   "first_round_date": "2026-10-04",
   "runoff_date": "2026-10-25",
   "coverage_note": "Accessible national runoff releases reviewed through 13 October; coverage is not certified exhaustive. Registration numbers are transcribed from reports, not independently verified in PesqEle.",
@@ -495,10 +495,41 @@
       "verification": "primary",
       "valid_fraction_assumption": 0.94,
       "wave_key": "BR-00223/2026|runoff|2026-10-15"
+    },
+    {
+      "pollster": "Vox Brasil",
+      "registration": "BR-04332/2026",
+      "field_start": "2026-10-15",
+      "field_end": "2026-10-17",
+      "published_date": "2026-10-18",
+      "sample_n": 2100,
+      "valid_base_n": null,
+      "mode": "In-person household",
+      "moe_pct": 2.15,
+      "flavio_total": 44.6,
+      "lula_total": 46.4,
+      "flavio_valid_model": 49,
+      "valid_basis": "published valid-vote share",
+      "report_url": "https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2026/10/RELATORIO-VOX-BRASIL-NACIONAL-10-2-TURNO-18-10-2026.pdf",
+      "source_url": "https://www.cnnbrasil.com.br/eleicoes/vox-lula-tem-51-dos-votos-validos-no-2o-turno-flavio-49/",
+      "undecided_total": 3.9,
+      "blank_null_total": 5,
+      "notes": "Released 18 October; national electorate, in-person household interviews 15-17 October, n=2,100, 95% confidence. The complete 53-page institute report is hosted by CNN. Page13 publishes stimulated all-elector totals Lula46.4/Flavio44.6, nobody/blank/null5 and undecided3.9 (99.9 from rounding), and valid shares Lula51.0/Flavio49.0. Use published valid shares; valid-vote base count is not reported. Page7 spontaneous responses (50.6/49.4 valid) and demographic subgroups are excluded. The October9 wave is retained as history. Registration transcribed from the report, not independently verified.",
+      "id": "vox-brasil-2026-10-17",
+      "fieldwork_start": "2026-10-15",
+      "fieldwork_end": "2026-10-17",
+      "release_date": "2026-10-18",
+      "n_total": 2100,
+      "n_valid": null,
+      "flavio_valid": 49,
+      "lula_valid": 51,
+      "verification": "primary",
+      "valid_fraction_assumption": 0.91,
+      "wave_key": "BR-04332/2026|runoff|2026-10-17"
     }
   ],
-  "source_sha256": "f1390a727e00d7a7443abbfa7feaee01d257f743eb16b21d715d1f145da52dd8",
-  "built_at": "2026-10-17T15:04:04.470132+00:00",
+  "source_sha256": "62751bb9cd8c8eeaba53ed2db99b3b682eb16bbf3adf6f9302bae60912931fb2",
+  "built_at": "2026-10-19T00:02:08.389301+00:00",
   "schema_version": 1
 };
 </script><script>(function(root,factory){const api=factory();if(typeof module==='object'&&module.exports)module.exports=api;else root.PollModel=api})(typeof globalThis!=='undefined'?globalThis:this,function(){

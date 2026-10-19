@@ -1,5 +1,5 @@
 {
-  "packagedAt": "2026-10-18T08:55:54.202702+00:00",
+  "packagedAt": "2026-10-19T00:02:30.514554+00:00",
   "libraryBuiltAt": "2026-10-18T16:55:23.766036+08:00",
   "reports": 14,
   "omittedResources": [
@@ -37,18 +37,18 @@
     },
     {
       "path": "brazil-runoff/index.html",
-      "bytes": 68078,
-      "sha256": "d1e0cbfb40c904f75caa1fb115b34df060adeeb7b26260bcc1e3e95d8808548e"
+      "bytes": 69827,
+      "sha256": "1f4d8e2ac68e0830cb2289b6a7f6892bc1ddeec841fa1502e6b5240ff75debb3"
     },
     {
       "path": "brazil-runoff/polls.csv",
-      "bytes": 10626,
-      "sha256": "fd7f6df0263669cb27962c77597aa87f22d151c9e2cf6c027e84e1f35b50388f"
+      "bytes": 11600,
+      "sha256": "e11a6f1ee7822290c55b65e8192eae34beca0bf010c7f7ab572725a156f20e43"
     },
     {
       "path": "brazil-runoff/polls.json",
-      "bytes": 23240,
-      "sha256": "a49831404056bb4488ece40a1ecd4c721fc714b73cb1093143c37d13b2484210"
+      "bytes": 25020,
+      "sha256": "fbb40efddd7e1a4f9a96ef22cdbd66745d3bc3f6492d280bb4f9ed10389fdf9e"
     },
     {
       "path": "countries.html",
