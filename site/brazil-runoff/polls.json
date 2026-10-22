@@ -328,7 +328,7 @@
       "valid_fraction_assumption": 0.966,
       "wave_key": "BR-00650/2026|runoff|2026-10-10",
       "source_evidence_type": "Reviewed report (PDF)",
-      "source_captured_at": "2026-10-22T11:59:50.871679+00:00",
+      "source_captured_at": "2026-10-22T14:57:52.162914+00:00",
       "source_sha256": "c612de90ca566c240c7dc25f375b40232924899b150732620e9966e22cebc63c",
       "source_review_recorded_at": "2026-10-14T15:03:01.493929+00:00",
       "revision_recorded_at": null
@@ -400,7 +400,7 @@
       "valid_fraction_assumption": 0.94,
       "wave_key": "BR-04258/2026|runoff|2026-10-15",
       "source_evidence_type": "Reviewed report (PDF)",
-      "source_captured_at": "2026-10-22T11:59:51.802859+00:00",
+      "source_captured_at": "2026-10-22T14:57:53.128222+00:00",
       "source_sha256": "71743e3c0d76c2f71060683f641c66e32dc7e33429a9fd2ea4fd9bc20591578d",
       "source_review_recorded_at": "2026-10-16T15:13:46.770495+00:00",
       "revision_recorded_at": null
@@ -436,7 +436,7 @@
       "valid_fraction_assumption": 0.9269999999999999,
       "wave_key": "BR-00652/2026|runoff|2026-10-15",
       "source_evidence_type": "Reviewed report (PDF)",
-      "source_captured_at": "2026-10-22T11:59:55.723362+00:00",
+      "source_captured_at": "2026-10-22T14:57:56.941804+00:00",
       "source_sha256": "97ebef58aae3db7f9d0bdfc5393a571df91c05b98fcdc54dfed8caae5124df9a",
       "source_review_recorded_at": "2026-10-16T15:13:46.770495+00:00",
       "revision_recorded_at": null
@@ -472,7 +472,7 @@
       "valid_fraction_assumption": 0.92,
       "wave_key": "BR-00466/2026|runoff|2026-10-14",
       "source_evidence_type": "Reviewed report (PDF)",
-      "source_captured_at": "2026-10-22T11:59:59.919213+00:00",
+      "source_captured_at": "2026-10-22T14:58:05.120687+00:00",
       "source_sha256": "b86d9106bbdb9deb074f03e57522365ff9d5a7222f16ff0c8f7b36480cdd9b81",
       "source_review_recorded_at": "2026-10-16T18:00:14.225981+00:00",
       "revision_recorded_at": null
@@ -508,7 +508,7 @@
       "valid_fraction_assumption": 0.94,
       "wave_key": "BR-00223/2026|runoff|2026-10-15",
       "source_evidence_type": "Reviewed report (PDF)",
-      "source_captured_at": "2026-10-22T12:00:04.020193+00:00",
+      "source_captured_at": "2026-10-22T14:58:09.202935+00:00",
       "source_sha256": "7b9556512817d8023cc47528677a6d8a89567e459d7acd371d3a8a447d846ffd",
       "source_review_recorded_at": "2026-10-17T15:04:04.706113+00:00",
       "revision_recorded_at": null
@@ -544,7 +544,7 @@
       "valid_fraction_assumption": 0.91,
       "wave_key": "BR-04332/2026|runoff|2026-10-17",
       "source_evidence_type": "Reviewed report (PDF)",
-      "source_captured_at": "2026-10-22T12:00:05.113188+00:00",
+      "source_captured_at": "2026-10-22T14:58:10.293813+00:00",
       "source_sha256": "df9445445768fe30e629a68e13f7eadc38430ee3fd71e471eb2f4314fa9d4cac",
       "source_review_recorded_at": "2026-10-19T00:02:08.657863+00:00",
       "revision_recorded_at": null
@@ -580,7 +580,7 @@
       "valid_fraction_assumption": 0.9740000000000001,
       "wave_key": "BR-02418/2026|runoff|2026-10-18",
       "source_evidence_type": "Reviewed report (PDF)",
-      "source_captured_at": "2026-10-22T12:00:05.673694+00:00",
+      "source_captured_at": "2026-10-22T14:58:10.849878+00:00",
       "source_sha256": "08557d05fbd0ccb40d56937d11bcde76f670fedf3c671827e1494b2213127123",
       "source_review_recorded_at": "2026-10-19T11:05:26.127023+00:00",
       "revision_recorded_at": null
@@ -616,7 +616,7 @@
       "valid_fraction_assumption": 0.924,
       "wave_key": "BR-04499/2026|runoff|2026-10-18",
       "source_evidence_type": "Reviewed report (PDF)",
-      "source_captured_at": "2026-10-22T12:00:08.637746+00:00",
+      "source_captured_at": "2026-10-22T14:58:13.802948+00:00",
       "source_sha256": "f6ee08157b9906a8abd4fca2a7a418b329e8895043019bc871b81f12b1eabb45",
       "source_review_recorded_at": "2026-10-19T11:05:26.127023+00:00",
       "revision_recorded_at": null
@@ -652,7 +652,7 @@
       "valid_fraction_assumption": 0.95,
       "wave_key": "BR-02586/2026|runoff|2026-10-18",
       "source_evidence_type": "Reviewed report (PDF)",
-      "source_captured_at": "2026-10-22T12:00:09.343783+00:00",
+      "source_captured_at": "2026-10-22T14:58:14.575647+00:00",
       "source_sha256": "49d00ff66ff81342274af5c18ec09ae2ef154ab7316136a648bf1a3cfcaea6b2",
       "source_review_recorded_at": "2026-10-19T11:05:26.127023+00:00",
       "revision_recorded_at": null
@@ -688,7 +688,7 @@
       "valid_fraction_assumption": 0.958,
       "wave_key": "BR-06715/2026|runoff|2026-10-17",
       "source_evidence_type": "Reviewed report (PDF)",
-      "source_captured_at": "2026-10-22T12:00:10.367677+00:00",
+      "source_captured_at": "2026-10-22T14:58:15.630053+00:00",
       "source_sha256": "d73076b98fad510b9b0a560cfc4951a490db25fb9e64b1a40b31fbc16a31f4d9",
       "source_review_recorded_at": "2026-10-19T15:13:31.468201+00:00",
       "revision_recorded_at": null
@@ -724,7 +724,7 @@
       "valid_fraction_assumption": 0.95,
       "wave_key": "BR-04454/2026|runoff|2026-10-17",
       "source_evidence_type": "Reviewed report (PDF)",
-      "source_captured_at": "2026-10-22T12:00:10.929500+00:00",
+      "source_captured_at": "2026-10-22T14:58:16.168818+00:00",
       "source_sha256": "caf872b6f09335000172e556861b9ea67e1e73be0f4bb0221d3508877f4e05aa",
       "source_review_recorded_at": "2026-10-20T09:10:51.334531+00:00",
       "revision_recorded_at": null
@@ -760,7 +760,7 @@
       "valid_fraction_assumption": 0.93,
       "wave_key": "BR-02952/2026|runoff|2026-10-19",
       "source_evidence_type": "Reviewed report (PDF)",
-      "source_captured_at": "2026-10-22T12:00:12.181724+00:00",
+      "source_captured_at": "2026-10-22T14:58:17.328454+00:00",
       "source_sha256": "59c23bd15f28c5ef705e352fcdb3ceab1969cff43bb073850bbbc32a343610e0",
       "source_review_recorded_at": "2026-10-20T12:13:49.489532+00:00",
       "revision_recorded_at": null
@@ -868,7 +868,7 @@
       "valid_fraction_assumption": 0.94,
       "wave_key": "BR-08251/2026|runoff|2026-10-19",
       "source_evidence_type": "Reviewed report (PDF)",
-      "source_captured_at": "2026-10-22T12:00:15.826605+00:00",
+      "source_captured_at": "2026-10-22T14:58:20.579081+00:00",
       "source_sha256": "9f99a207468f4a2973cd4fcb9e5768bd2434ea79b60640ebaab2790162d995a3",
       "source_review_recorded_at": "2026-10-21T09:10:01.956772+00:00",
       "revision_recorded_at": null
@@ -904,7 +904,7 @@
       "valid_fraction_assumption": 0.98,
       "wave_key": "BR-04612/2026|runoff|2026-10-20",
       "source_evidence_type": "Reviewed report (PDF)",
-      "source_captured_at": "2026-10-22T12:00:44.238621+00:00",
+      "source_captured_at": "2026-10-22T14:58:49.209043+00:00",
       "source_sha256": "c13626d509203df088661647577ce19565f6e0f98dbfe6feb0f10638ea55cf94",
       "source_review_recorded_at": "2026-10-21T12:09:51.083078+00:00",
       "revision_recorded_at": null
@@ -976,7 +976,7 @@
       "valid_fraction_assumption": 0.9569999999999999,
       "wave_key": "BR-06614/2026|runoff|2026-10-20",
       "source_evidence_type": "Reviewed report (PDF)",
-      "source_captured_at": "2026-10-22T12:00:46.474849+00:00",
+      "source_captured_at": "2026-10-22T14:58:51.558137+00:00",
       "source_sha256": "5841168829064b1503abc0efe738af5e024598ea96967f1b4446597c7919647e",
       "source_review_recorded_at": "2026-10-21T15:03:37.113829+00:00",
       "revision_recorded_at": null
@@ -1011,11 +1011,47 @@
       "verification": "secondary",
       "valid_fraction_assumption": 0.97,
       "wave_key": "BR-07926/2026|runoff|2026-10-21",
+      "source_evidence_type": "Reviewed report (PDF)",
+      "source_captured_at": "2026-10-22T14:58:52.851439+00:00",
+      "source_sha256": "89e3196b1ca7232168b1e60bcc09980030a026af07eb79571ad470a8ecb70afb",
+      "source_review_recorded_at": "2026-10-22T12:03:44.118020+00:00",
+      "revision_recorded_at": null
+    },
+    {
+      "pollster": "Indexa/Broadcast",
+      "registration": "BR-02348/2026",
+      "field_start": "2026-10-20",
+      "field_end": "2026-10-21",
+      "published_date": "2026-10-22",
+      "sample_n": 2000,
+      "valid_base_n": null,
+      "mode": "Individual telephone interviews",
+      "moe_pct": 2.2,
+      "flavio_total": 45.2,
+      "lula_total": 44.1,
+      "flavio_valid_model": 50.6,
+      "valid_basis": "published valid-vote share",
+      "report_url": "https://viva.com.br/politica/indexabroadcast-flavio-tem-452-e-lula-441-em-empate-tecnico.html",
+      "source_url": "https://viva.com.br/politica/indexabroadcast-flavio-tem-452-e-lula-441-em-empate-tecnico.html",
+      "undecided_total": 1.6,
+      "blank_null_total": 4.3,
+      "notes": "Authoritative Broadcast commissioner release by Isadora Duarte and Geovani Bucci, syndicated on VIVA on 22 October at 09:42 Brasilia; full release HTML, not an institute PDF. National all-elector runoff including respondents who say they will not vote. Published valid shares 50.6/49.4 exclude nonvoters (4.8%), blank/null (4.3%) and do not know (1.6%); no likely-voter adjustment applied. Valid-response sample not reported. Exactly 2,000 telephone interviews. Registration transcribed, not independently verified.",
+      "id": "indexa-broadcast-2026-10-21",
+      "fieldwork_start": "2026-10-20",
+      "fieldwork_end": "2026-10-21",
+      "release_date": "2026-10-22",
+      "n_total": 2000,
+      "n_valid": null,
+      "flavio_valid": 50.6,
+      "lula_valid": 49.4,
+      "verification": "secondary",
+      "valid_fraction_assumption": 0.8930000000000001,
+      "wave_key": "BR-02348/2026|runoff|2026-10-21",
       "source_evidence_type": "Reviewed source; captured format not recorded in publication receipts"
     }
   ],
-  "source_sha256": "cc44315cb17458108a35539c6e434a0f438f02deda8165b105e20c033e994f22",
-  "built_at": "2026-10-22T12:03:43.755230+00:00",
+  "source_sha256": "745f0df8e7c23eb2bc26122ce0f67958fd81ffa31f9ca50cae585dc3fb732f08",
+  "built_at": "2026-10-22T15:05:39.088102+00:00",
   "schema_version": 1,
   "diagnostics_version": "2026-10-22.1",
   "publication_audit": [
@@ -1428,6 +1464,27 @@
       "changes": [
         {
           "action": "diagnostics_only"
+        }
+      ]
+    },
+    {
+      "commit": "a7c502de9ecb4481917f16faa24512c66c089486",
+      "staged_at": "2026-10-22T12:03:44.118020+00:00",
+      "verified_at": "2026-10-22T12:06:02.437242+00:00",
+      "as_of": "2026-10-22",
+      "waves": 29,
+      "houses": 17,
+      "flavio_valid_share": 51.03107722879494,
+      "lula_valid_share": 48.96892277120506,
+      "uncalibrated_p_flavio": 0.6566459645538274,
+      "net_share_change_pp": -0.07943721926380931,
+      "movement_attribution": "Net published change only; poll, recency and revision components not separately attributed.",
+      "status": "verified publication",
+      "changes": [
+        {
+          "action": "add",
+          "registration": "BR-07926/2026",
+          "pollster": "PoderData"
         }
       ]
     }
