@@ -5,6 +5,8 @@
 @media(max-width:850px){.shell{display:block}.sidebar{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line);padding:16px 22px}.sidebar>.eyebrow,.side-bottom{display:none}.sidebar nav{display:flex;overflow:auto;margin-top:12px;gap:2px}.sidebar nav a{font-size:12px;padding:7px 9px;white-space:nowrap}.brand{font-size:20px}.scenario-card{grid-template-columns:240px minmax(0,1fr)}.page-tabs{gap:20px}.two-panels{grid-template-columns:1fr 1fr}.panel{padding:20px}.scope-row{gap:13px}}
 @media(max-width:650px){main{padding:20px 17px 30px}.topline{align-items:flex-start;gap:9px}.topline .eyebrow{font-size:9px;letter-spacing:1.1px}#snapshot-date{font-size:9px;text-align:right}header{margin:22px 0;align-items:flex-start}.intro{font-size:13px;max-width:280px}h1{font-size:38px}.countdown{gap:6px;flex-direction:column;align-items:flex-end}.countdown strong{font-size:31px;line-height:1}.countdown span{font-size:9px;text-align:right}.page-tabs{gap:16px;overflow:auto}.page-tabs a{font-size:11px}.export{display:block;margin-left:0;padding:7px 0}.page-tabs{flex-wrap:wrap;gap:8px 16px}.freshness{font-size:11px;padding:9px 10px}.scope-row{gap:11px;font-size:11px}.scope-row>label:first-child{width:100%;justify-content:space-between}.scope-row select{max-width:none}.scope-row .text-button{margin-left:0}.stats-strip div{padding:10px 12px}.stats-strip strong{font-size:20px}.stats-strip span{font-size:10px}.scenario-card{display:block}.scenario-summary{border-right:0;border-bottom:1px solid var(--line);padding:22px}.candidate{margin-top:15px}.candidate strong{font-size:64px}.scenario-summary .summary-details{display:none}.scenario-summary .small-badge{float:right;margin-top:-22px;font-size:9px}.scenario-odds{margin:16px 0 10px}.scenario-summary #summary-note{margin-bottom:0}.scenario-workspace{padding:22px 18px}.half-life{flex-direction:row;align-items:center}.half-life button{padding:4px 8px;font-size:10px}.chart-heading{gap:6px}.two-panels{display:block}.panel{padding:20px 18px}.sensitivity-table button{min-width:54px;padding:7px 9px}.sensitivity-table th{font-size:9px;letter-spacing:0;padding:9px 4px}.sensitivity-table td{padding:8px 3px}.section-heading{align-items:flex-start}h2{font-size:24px}.section-heading .eyebrow{font-size:9px}.weight-row{grid-template-columns:100px 1fr 45px}.method-grid p{font-size:12px}footer{display:block}footer span{display:block;margin-top:5px}.house-adjustments{grid-template-columns:1fr 1fr;gap:10px}.house-adjustments label{font-size:10px}.house-adjustments input{width:53px}}
 @media print{.sidebar,.page-tabs,.scope-row,button,.controls,.model-toggle,details{display:none!important}.shell{display:block}main{padding:0}.panel,.scenario-card{break-inside:avoid}.table-scroll{overflow:visible}.ledger table{min-width:0;font-size:8px}body{background:white}.freshness{background:white}}
+
+.diagnostic-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:16px 0}.diagnostic-card{background:#f4f7f2;border:1px solid var(--line);border-radius:7px;padding:15px}.diagnostic-card>span{display:block;font-size:11px;color:var(--muted)}.diagnostic-card>strong{display:block;font:600 25px/1.5 'Segoe UI',sans-serif;font-variant-numeric:tabular-nums}.diagnostic-card p{font-size:11px;margin:5px 0 0;color:var(--muted)}.diagnostic-note{font-size:12px;border-left:3px solid var(--green);padding:10px 14px;background:var(--pale)}.audit-table{min-width:820px}.robustness .section-heading{flex-wrap:wrap}@media(max-width:650px){.diagnostic-grid{grid-template-columns:1fr}.diagnostic-card>strong{font-size:24px}.scenario-summary .summary-details{display:block}#publication-history .section-heading{flex-wrap:wrap}}
 </style></head>
 <body><div class="shell"><aside class="sidebar"><a class="brand" href="../index.html#research"><span>R</span> Research Home</a><p class="eyebrow">Your workspace</p><nav aria-label="Research sections"><a href="../index.html#report/rates-rv">Rates RV</a><a href="../index.html#rates-trend">Rates Trend</a><a href="../index.html#research">Research</a><a class="active" aria-current="page" href="#overview">Brazil polls</a><a href="../index.html#frameworks">Frameworks</a><a href="../index.html#country/IND/overview">Countries</a></nav><div class="side-bottom"><span class="local-dot"></span> Saved polling snapshot<br>No automatic refresh<br><a href="#method">Model &amp; sources ↗</a></div></aside>
 <main><div class="topline"><span class="eyebrow">Brazil / Election monitor</span><span id="snapshot-date">Loading saved snapshot</span></div>
@@ -12,19 +14,21 @@
 <div class="page-tabs" role="navigation" aria-label="Page sections"><a href="#overview" class="active">Overview</a><a href="#polls">Poll ledger</a><a href="#sensitivity">Sensitivity</a><a href="#method">Method &amp; sources</a><button id="download" class="export">↓ Export selected polls</button></div>
 <div class="freshness" id="freshness"></div>
 <div class="scope-row"><label>Sample filter <select id="sample-rule"><option value="gt">Total n &gt; 2,000</option><option value="gte">Total n ≥ 2,000</option><option value="all" selected>All sample sizes</option></select></label><label class="check"><input id="post-only" type="checkbox" checked> Entirely after first round</label><label class="check"><input id="latest-only" type="checkbox" checked> Latest selected wave per pollster</label><button class="text-button" id="reset">Reset</button></div>
-<div class="stats-strip"><div><span>Included waves</span><strong id="wave-count">—</strong></div><div><span>Independent pollsters</span><strong id="house-count">—</strong></div><div><span>Effective pollsters <i title="1 / sum of squared pollster weight shares">ⓘ</i></span><strong id="effective-houses">—</strong></div><div><span>Largest pollster weight</span><strong id="largest-weight">—</strong></div></div>
+<div class="stats-strip"><div><span>Included waves</span><strong id="wave-count">—</strong></div><div><span>Included pollsters</span><strong id="house-count">—</strong></div><div><span>Weight-concentration equivalent <i title="1 / sum of squared house weights; not an independent-information count">ⓘ</i></span><strong id="effective-houses">—</strong></div><div><span>Largest pollster weight</span><strong id="largest-weight">—</strong></div></div>
 <section class="scenario-card" aria-labelledby="scenario-title"><div class="scenario-summary"><p class="eyebrow" id="scenario-title">Weighted polling average</p><span class="small-badge">Valid votes · descriptive</span><div class="candidate"><span class="candidate-label flavio">Flávio Bolsonaro</span><strong id="share-flavio" class="flavio">—</strong></div><div class="probability-bar" aria-hidden="true"><span id="prob-flavio"></span><span id="prob-lula"></span></div><div class="candidate secondary"><span class="candidate-label lula">Lula</span><strong id="share-lula" class="lula">—</strong></div><div class="scenario-odds"><p class="small">Scenario win probability · uncalibrated</p><div class="odds-values"><span class="flavio">Flávio <strong id="p-flavio">—</strong></span><span class="lula">Lula <strong id="p-lula">—</strong></span></div></div><dl class="summary-details"><div><dt>Poll average · Lula valid votes</dt><dd id="raw-share">—</dd></div><div><dt>Scenario centre · Lula</dt><dd id="adjusted-share">—</dd></div><div><dt>Implied Flávio vote margin</dt><dd id="margin">—</dd></div><div class="divider"><dt>Average’s sampling error</dt><dd id="sampling-error">—</dd></div><div><dt>Shared polling error</dt><dd id="shared-error-value">—</dd></div><div><dt>Remaining time drift</dt><dd id="drift-value">—</dd></div><div><dt>Total uncertainty · 1σ</dt><dd id="total-error">—</dd></div></dl><p class="small" id="summary-note"></p></div>
 <div class="scenario-workspace"><div class="model-toggle" role="group" aria-label="Model comparison"><button id="unadjusted" class="selected" aria-pressed="true">Unadjusted</button><button id="adjusted" aria-pressed="false">Pollster-adjusted scenario</button></div><p class="small mode-note" id="mode-note">No house-effect corrections. “Unadjusted” does not mean unbiased.</p><div class="controls"><label class="slider"><span>Common shift to Lula’s share <output id="shift-output">0.0 pp</output></span><input id="shift" type="range" min="-3" max="3" step=".25" value="0"><small>Positive adds to Lula’s valid-vote share; not an estimated bias.</small></label><label class="slider"><span>Shared polling error · 1σ <output id="error-output">2.5 pp</output></span><input id="error" type="range" min=".5" max="5" step=".25" value="2.5"><small>Election-wide error does not shrink as more polls are added.</small></label><div class="half-life"><span>Recency half-life</span><div role="group" aria-label="Recency half-life"><button data-half="4">4 days</button><button class="selected" data-half="7">7 days</button><button data-half="14">14 days</button><button data-half="30">30 days</button></div></div></div>
 <div class="chart-heading"><span>Possible election-day Lula valid-vote share</span><span class="legend"><i class="blue-dot"></i>Flávio wins <i class="red-dot"></i>Lula wins</span></div><div id="density" class="density" role="img" aria-label="Scenario probability distribution"></div><p class="chart-note">Vote share is the horizontal axis. The area beyond 50% is Lula’s scenario win probability.</p><details id="advanced"><summary>Pollster adjustments &amp; advanced assumptions</summary><p class="small">House adjustments are explicit scenarios, not fitted historical corrections. They apply only in pollster-adjusted mode.</p><div id="house-adjustments" class="house-adjustments"></div><div class="advanced-grid"><label>Sampling design effect <input id="design-effect" type="number" min="1" max="4" step=".25" value="1.5"></label><label>Drift σ per √day, share pp <input id="drift" type="number" min="0" max="1" step=".05" value=".25"></label></div></details></div></section>
-<div class="two-panels"><section class="panel"><div class="section-heading"><div><p class="eyebrow">What has changed</p><h2>Vote-share trend</h2></div><span class="small">Valid votes · %</span></div><div id="trend-chart" class="trend-chart" role="img" aria-label="Polling trend"></div><p class="chart-note">Dots: included releases. Line: recency-weighted unadjusted mean using only information released by each date. No election-result forecast band.</p></section><section class="panel"><div class="section-heading"><div><p class="eyebrow">Where the estimate comes from</p><h2>Pollster weights</h2></div></div><div id="weights"></div><p class="chart-note">Recency × sampling precision, normalized to 100%. Repeated waves do not become independent pollsters.</p><div id="leave-one-out" class="leave-one-out"></div></section></div>
-<section class="panel" id="sensitivity"><div class="section-heading"><div><p class="eyebrow">How much is assumption</p><h2>Change the error, change the odds</h2></div><span class="small">Lula win probability</span></div><p class="small">Common shifts to Lula’s valid-vote share versus election-wide error. Sampling and drift assumptions remain as selected.</p><div class="table-scroll"><table class="sensitivity-table"><thead><tr><th>Common share shift</th><th>Shared σ 1.5 pp</th><th>Shared σ 2.5 pp</th><th>Shared σ 3.5 pp</th></tr></thead><tbody id="sensitivity-body"></tbody></table></div><p class="chart-note">These are conditional model outputs. None is labelled “the” election probability.</p></section>
+<section class="panel robustness" id="robustness"><div class="section-heading"><div><p class="eyebrow">Alongside the unchanged baseline</p><h2>How robust is the polling average?</h2></div><a href="#sensitivity" class="small">Common-error / mean-shift grid ↓</a></div><p class="small">These diagnostics follow the current filters and controls. Vote-share ranges are sensitivity tests, not confidence intervals. Alternative weights are exploratory; they do not replace the headline.</p><div id="robustness-results"></div><p id="uncertainty-explanation" class="diagnostic-note"></p><details><summary>Why no effective-sample or turnout correction?</summary><p class="small">Palver Wave 8 reports 5,000 interviews, full-sample Kish effective n = 1,745 and an unequal-weighting effect of 2.86 (report p. 18). Its candidate-valid subset effective n is not reported. The baseline still uses its disclosed generic design effect of 1.5 and estimated valid n. Applying both the full-sample Kish reduction and another design effect could double-count weighting; no such adjustment is made here. Non-probability recruitment error is not captured by Kish n. Weight-cap and equal-house scenarios test concentration without invented precision.</p><p class="small">No pooled undecided or turnout reallocation is calculated: missing categories, rounded shares and incompatible definitions (including blank/null/would-not-vote combinations) do not supply a verified common denominator. The common-share-shift grid is a conditional stress test, not a fitted turnout or undecided model.</p></details></section>
+<div class="two-panels"><section class="panel"><div class="section-heading"><div><p class="eyebrow">What has changed</p><h2>Reconstructed release-date trend</h2></div><span class="small">Valid votes · %</span></div><div id="trend-chart" class="trend-chart" role="img" aria-label="Polling trend"></div><p class="chart-note">Dots: included releases. Line: current-ledger reconstruction by release date. Later verification and revisions can change earlier points; this is not what the site actually showed then. Actual publication receipts appear below. No forecast or confidence band.</p></section><section class="panel"><div class="section-heading"><div><p class="eyebrow">Where the estimate comes from</p><h2>Pollster weights</h2></div></div><div id="weights"></div><p class="chart-note">Recency × sampling precision, normalized to 100%. Repeated waves do not become independent pollsters.</p><div id="leave-one-out" class="leave-one-out"></div></section></div>
+<section class="panel" id="sensitivity"><div class="section-heading"><div><p class="eyebrow">How much is assumption</p><h2>Change the error, change the odds</h2></div><span class="small">Lula win scenario · uncalibrated</span></div><p class="small">Common shifts to Lula’s valid-vote share versus election-wide error. Sampling and drift assumptions remain as selected.</p><div class="table-scroll"><table class="sensitivity-table"><thead><tr><th>Common share shift</th><th>Shared σ 1.5 pp</th><th>Shared σ 2.5 pp</th><th>Shared σ 3.5 pp</th></tr></thead><tbody id="sensitivity-body"></tbody></table></div><p class="chart-note">These are conditional model outputs. None is labelled “the” election probability.</p></section>
 <section class="panel ledger" id="polls"><div class="section-heading"><div><p class="eyebrow">Auditable inputs</p><h2>Every wave, every inclusion decision</h2></div><span id="ledger-count" class="small"></span></div><p class="small">Valid-vote shares exclude blank/null/undecided responses. Sample filtering uses total respondents; sampling precision uses valid respondents when known.</p><div class="table-scroll"><table><thead><tr><th>Use</th><th>Pollster / source</th><th>Fieldwork / release</th><th>Total n / valid n</th><th>Mode</th><th>Flávio / Lula<br>valid votes</th><th>Undecided / blank<br>all respondents</th><th>Weight</th><th>Model status</th></tr></thead><tbody id="poll-rows"></tbody></table></div><p class="chart-note">Click a source to inspect the original release. “Not reported” remains missing; it is never filled with zero.</p></section>
+<section class="panel" id="publication-history"><div class="section-heading"><div><p class="eyebrow">Actual recorded publications</p><h2>Publication audit trail</h2></div><button id="download-audit" class="text-button">Export audit CSV</button></div><p class="small">Verified deployment receipts, separate from poll release dates and reconstructed history. Earlier vintages without receipts are not invented. Withdrawn releases and corrections remain visible. The audit covers publications verified before this build; it cannot include its own future deployment receipt.</p><details><summary id="audit-summary">Recorded snapshots</summary><div class="table-scroll"><table class="audit-table"><thead><tr><th>Live verification (UTC) / commit</th><th>Ledger cutoff / waves</th><th>Flávio / Lula valid share</th><th>Flávio win scenario · uncalibrated</th><th>Net Flávio share change</th><th>Recorded changes / status</th></tr></thead><tbody id="audit-rows"></tbody></table></div></details><p class="chart-note">Movement is the exact difference between successive recorded default snapshots, displayed in share pp. Poll additions, recency and revisions are not separately attributed; their individual contributions remain unknown. Source capture, review and explicit revision timestamps, where recorded, are preserved in the JSON and poll CSV.</p></section>
 <section class="panel method" id="method"><p class="eyebrow">Reproducible, not a black box</p><h2>Method &amp; provenance</h2><div class="method-grid"><div><h3>One vote-share scenario</h3><p>The centre is the weighted Lula share of valid votes. We add any selected pollster corrections and the common shift. Win probabilities are normal-distribution tail areas relative to 50%.</p><code>σ² = sampling variance + shared σ² + days left × drift σ²</code><p>Reported sample sizes are not effective independent sample sizes. The design-effect assumption inflates sampling variance. If valid n is unavailable, it is estimated from rounded candidate total shares; only if those are unavailable does the model assume 90% of total n. Estimates are marked, not presented as reported respondent counts.</p></div><div><h3>Dependence and scope</h3><p>Latest wave per pollster is the default. If multiple waves are selected, within-pollster sampling errors are treated as fully correlated. The shared election error remains across all pollsters.</p><p>First-round-straddling fieldwork is excluded by default. Strict n &gt; 2,000 excludes a survey with exactly 2,000 respondents. Duplicate releases of one wave are never counted twice.</p></div><div><h3>What is not estimated</h3><p>No historical calibration, learned house effects, turnout model, campaign-shock model or validation against this election’s outcome. Shifts, design effect, shared error and drift are disclosed assumptions.</p><p>Rounding, mode differences and fieldwork timing can matter. A new poll changes the pooled centre and weights; its vote share is not its candidate’s probability of winning.</p></div></div><details><summary>Source review and update procedure</summary><div id="source-notes"></div><p>Update the normalized source ledger, retain original links and fieldwork details, then run the local validation/build script. The page never calls Bloomberg or refreshes polls automatically. Downloaded inputs and the build timestamp make each snapshot reproducible.</p></details></section>
 <footer>Research Home · Brazil election monitor <span>Saved snapshot · no automatic refresh</span></footer></main></div><script>window.POLL_DATA = {
   "as_of": "2026-10-21",
   "first_round_date": "2026-10-04",
   "runoff_date": "2026-10-25",
-  "coverage_note": "Accessible national runoff releases reviewed through 13 October; coverage is not certified exhaustive. Registration numbers are transcribed from reports, not independently verified in PesqEle.",
+  "coverage_note": "Reviewed ledger releases through 2026-10-21. Coverage is not certified exhaustive. Source capture/review times are separate from poll release dates; missing historical receipts remain missing.",
   "polls": [
     {
       "pollster": "PoderData",
@@ -53,9 +57,10 @@
       "lula_valid": 47,
       "undecided_total": null,
       "blank_null_total": null,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.93,
-      "wave_key": "BR-08134/2026|runoff|2026-10-07"
+      "wave_key": "BR-08134/2026|runoff|2026-10-07",
+      "source_evidence_type": "Reviewed source; captured format not recorded in publication receipts"
     },
     {
       "pollster": "PoderData",
@@ -84,9 +89,10 @@
       "lula_valid": 49,
       "undecided_total": null,
       "blank_null_total": null,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.94,
-      "wave_key": "BR-01209/2026|runoff|2026-10-12"
+      "wave_key": "BR-01209/2026|runoff|2026-10-12",
+      "source_evidence_type": "Reviewed source; captured format not recorded in publication receipts"
     },
     {
       "pollster": "GERP",
@@ -120,9 +126,10 @@
       "lula_valid": 45,
       "undecided_total": null,
       "blank_null_total": null,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.97,
-      "wave_key": "BR-07877/2026|runoff|2026-10-12"
+      "wave_key": "BR-07877/2026|runoff|2026-10-12",
+      "source_evidence_type": "Reviewed source; captured format not recorded in publication receipts"
     },
     {
       "pollster": "Nexus",
@@ -151,9 +158,10 @@
       "lula_valid": 48.38709677419355,
       "undecided_total": null,
       "blank_null_total": null,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.93,
-      "wave_key": "BR-07997/2026|runoff|2026-10-12"
+      "wave_key": "BR-07997/2026|runoff|2026-10-12",
+      "source_evidence_type": "Reviewed source; captured format not recorded in publication receipts"
     },
     {
       "pollster": "Datafolha",
@@ -182,9 +190,10 @@
       "lula_valid": 48,
       "undecided_total": null,
       "blank_null_total": null,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.94,
-      "wave_key": "BR-02949/2026|runoff|2026-10-07"
+      "wave_key": "BR-02949/2026|runoff|2026-10-07",
+      "source_evidence_type": "Reviewed source; captured format not recorded in publication receipts"
     },
     {
       "pollster": "Vox Brasil",
@@ -213,9 +222,10 @@
       "lula_valid": 50.86306098964327,
       "undecided_total": null,
       "blank_null_total": null,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.8690000000000001,
-      "wave_key": "BR-09623/2026|runoff|2026-10-07"
+      "wave_key": "BR-09623/2026|runoff|2026-10-07",
+      "source_evidence_type": "Reviewed source; captured format not recorded in publication receipts"
     },
     {
       "pollster": "Ipespe",
@@ -244,9 +254,10 @@
       "lula_valid": 47.3,
       "undecided_total": null,
       "blank_null_total": null,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.93,
-      "wave_key": "BR-00933/2026|runoff|2026-10-08"
+      "wave_key": "BR-00933/2026|runoff|2026-10-08",
+      "source_evidence_type": "Reviewed source; captured format not recorded in publication receipts"
     },
     {
       "pollster": "DataTrends",
@@ -275,9 +286,10 @@
       "lula_valid": 46.9,
       "undecided_total": null,
       "blank_null_total": null,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.94,
-      "wave_key": "BR-03576/2026|runoff|2026-10-09"
+      "wave_key": "BR-03576/2026|runoff|2026-10-09",
+      "source_evidence_type": "Reviewed source; captured format not recorded in publication receipts"
     },
     {
       "pollster": "AtlasIntel",
@@ -306,9 +318,10 @@
       "lula_valid": 47.2,
       "undecided_total": null,
       "blank_null_total": null,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.9680000000000001,
-      "wave_key": "BR-03663/2026|runoff|2026-10-08"
+      "wave_key": "BR-03663/2026|runoff|2026-10-08",
+      "source_evidence_type": "Reviewed source; captured format not recorded in publication receipts"
     },
     {
       "pollster": "Futura",
@@ -337,9 +350,14 @@
       "n_valid": null,
       "flavio_valid": 51.8,
       "lula_valid": 48.2,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.966,
-      "wave_key": "BR-00650/2026|runoff|2026-10-10"
+      "wave_key": "BR-00650/2026|runoff|2026-10-10",
+      "source_evidence_type": "Reviewed report (PDF)",
+      "source_captured_at": "2026-10-22T05:56:39.144334+00:00",
+      "source_sha256": "c612de90ca566c240c7dc25f375b40232924899b150732620e9966e22cebc63c",
+      "source_review_recorded_at": "2026-10-14T15:03:01.493929+00:00",
+      "revision_recorded_at": null
     },
     {
       "pollster": "Indexa/Broadcast",
@@ -368,9 +386,14 @@
       "n_valid": null,
       "flavio_valid": 51,
       "lula_valid": 49,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.86,
-      "wave_key": "BR-04629/2026|runoff|2026-10-14"
+      "wave_key": "BR-04629/2026|runoff|2026-10-14",
+      "source_evidence_type": "Reviewed release (HTML)",
+      "source_captured_at": "2026-10-15T15:05:03.348940+00:00",
+      "source_sha256": "ba26da95002512ba30ae5724a569bc7bafcab090b24ede177320e56402cc5b13",
+      "source_review_recorded_at": "2026-10-15T15:09:59.477451+00:00",
+      "revision_recorded_at": null
     },
     {
       "pollster": "PoderData",
@@ -399,9 +422,14 @@
       "n_valid": null,
       "flavio_valid": 50,
       "lula_valid": 50,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.94,
-      "wave_key": "BR-04258/2026|runoff|2026-10-15"
+      "wave_key": "BR-04258/2026|runoff|2026-10-15",
+      "source_evidence_type": "Reviewed report (PDF)",
+      "source_captured_at": "2026-10-22T05:56:39.676077+00:00",
+      "source_sha256": "71743e3c0d76c2f71060683f641c66e32dc7e33429a9fd2ea4fd9bc20591578d",
+      "source_review_recorded_at": "2026-10-16T15:13:46.770495+00:00",
+      "revision_recorded_at": null
     },
     {
       "pollster": "CNT/MDA",
@@ -430,9 +458,14 @@
       "n_valid": null,
       "flavio_valid": 50.5,
       "lula_valid": 49.5,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.9269999999999999,
-      "wave_key": "BR-00652/2026|runoff|2026-10-15"
+      "wave_key": "BR-00652/2026|runoff|2026-10-15",
+      "source_evidence_type": "Reviewed report (PDF)",
+      "source_captured_at": "2026-10-22T05:59:26.001960+00:00",
+      "source_sha256": "97ebef58aae3db7f9d0bdfc5393a571df91c05b98fcdc54dfed8caae5124df9a",
+      "source_review_recorded_at": "2026-10-16T15:13:46.770495+00:00",
+      "revision_recorded_at": null
     },
     {
       "pollster": "Datafolha",
@@ -461,9 +494,14 @@
       "n_valid": 2330,
       "flavio_valid": 51,
       "lula_valid": 49,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.92,
-      "wave_key": "BR-00466/2026|runoff|2026-10-14"
+      "wave_key": "BR-00466/2026|runoff|2026-10-14",
+      "source_evidence_type": "Reviewed report (PDF)",
+      "source_captured_at": "2026-10-22T05:59:34.139268+00:00",
+      "source_sha256": "b86d9106bbdb9deb074f03e57522365ff9d5a7222f16ff0c8f7b36480cdd9b81",
+      "source_review_recorded_at": "2026-10-16T18:00:14.225981+00:00",
+      "revision_recorded_at": null
     },
     {
       "pollster": "Ipespe",
@@ -492,9 +530,14 @@
       "n_valid": null,
       "flavio_valid": 51.2,
       "lula_valid": 48.8,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.94,
-      "wave_key": "BR-00223/2026|runoff|2026-10-15"
+      "wave_key": "BR-00223/2026|runoff|2026-10-15",
+      "source_evidence_type": "Reviewed report (PDF)",
+      "source_captured_at": "2026-10-22T05:59:45.534851+00:00",
+      "source_sha256": "7b9556512817d8023cc47528677a6d8a89567e459d7acd371d3a8a447d846ffd",
+      "source_review_recorded_at": "2026-10-17T15:04:04.706113+00:00",
+      "revision_recorded_at": null
     },
     {
       "pollster": "Vox Brasil",
@@ -523,9 +566,14 @@
       "n_valid": null,
       "flavio_valid": 49,
       "lula_valid": 51,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.91,
-      "wave_key": "BR-04332/2026|runoff|2026-10-17"
+      "wave_key": "BR-04332/2026|runoff|2026-10-17",
+      "source_evidence_type": "Reviewed report (PDF)",
+      "source_captured_at": "2026-10-22T05:59:46.556745+00:00",
+      "source_sha256": "df9445445768fe30e629a68e13f7eadc38430ee3fd71e471eb2f4314fa9d4cac",
+      "source_review_recorded_at": "2026-10-19T00:02:08.657863+00:00",
+      "revision_recorded_at": null
     },
     {
       "pollster": "AtlasIntel",
@@ -554,9 +602,14 @@
       "lula_valid": 48.9,
       "undecided_total": null,
       "blank_null_total": null,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.9740000000000001,
-      "wave_key": "BR-02418/2026|runoff|2026-10-18"
+      "wave_key": "BR-02418/2026|runoff|2026-10-18",
+      "source_evidence_type": "Reviewed report (PDF)",
+      "source_captured_at": "2026-10-22T05:59:47.219911+00:00",
+      "source_sha256": "08557d05fbd0ccb40d56937d11bcde76f670fedf3c671827e1494b2213127123",
+      "source_review_recorded_at": "2026-10-19T11:05:26.127023+00:00",
+      "revision_recorded_at": null
     },
     {
       "pollster": "Nexus",
@@ -585,9 +638,14 @@
       "n_valid": null,
       "flavio_valid": 50.3,
       "lula_valid": 49.7,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.924,
-      "wave_key": "BR-04499/2026|runoff|2026-10-18"
+      "wave_key": "BR-04499/2026|runoff|2026-10-18",
+      "source_evidence_type": "Reviewed report (PDF)",
+      "source_captured_at": "2026-10-22T05:59:50.001609+00:00",
+      "source_sha256": "f6ee08157b9906a8abd4fca2a7a418b329e8895043019bc871b81f12b1eabb45",
+      "source_review_recorded_at": "2026-10-19T11:05:26.127023+00:00",
+      "revision_recorded_at": null
     },
     {
       "pollster": "PoderData",
@@ -616,9 +674,14 @@
       "n_valid": null,
       "flavio_valid": 52,
       "lula_valid": 48,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.95,
-      "wave_key": "BR-02586/2026|runoff|2026-10-18"
+      "wave_key": "BR-02586/2026|runoff|2026-10-18",
+      "source_evidence_type": "Reviewed report (PDF)",
+      "source_captured_at": "2026-10-22T05:59:50.968340+00:00",
+      "source_sha256": "49d00ff66ff81342274af5c18ec09ae2ef154ab7316136a648bf1a3cfcaea6b2",
+      "source_review_recorded_at": "2026-10-19T11:05:26.127023+00:00",
+      "revision_recorded_at": null
     },
     {
       "pollster": "Futura",
@@ -647,9 +710,14 @@
       "n_valid": null,
       "flavio_valid": 50.4,
       "lula_valid": 49.6,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.958,
-      "wave_key": "BR-06715/2026|runoff|2026-10-17"
+      "wave_key": "BR-06715/2026|runoff|2026-10-17",
+      "source_evidence_type": "Reviewed report (PDF)",
+      "source_captured_at": "2026-10-22T05:59:51.927684+00:00",
+      "source_sha256": "d73076b98fad510b9b0a560cfc4951a490db25fb9e64b1a40b31fbc16a31f4d9",
+      "source_review_recorded_at": "2026-10-19T15:13:31.468201+00:00",
+      "revision_recorded_at": null
     },
     {
       "pollster": "DataTrends",
@@ -678,9 +746,14 @@
       "n_valid": null,
       "flavio_valid": 51.5,
       "lula_valid": 48.5,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.95,
-      "wave_key": "BR-04454/2026|runoff|2026-10-17"
+      "wave_key": "BR-04454/2026|runoff|2026-10-17",
+      "source_evidence_type": "Reviewed report (PDF)",
+      "source_captured_at": "2026-10-22T05:59:52.465458+00:00",
+      "source_sha256": "caf872b6f09335000172e556861b9ea67e1e73be0f4bb0221d3508877f4e05aa",
+      "source_review_recorded_at": "2026-10-20T09:10:51.334531+00:00",
+      "revision_recorded_at": null
     },
     {
       "pollster": "Real Time Big Data",
@@ -709,9 +782,14 @@
       "n_valid": null,
       "flavio_valid": 52,
       "lula_valid": 48,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.93,
-      "wave_key": "BR-02952/2026|runoff|2026-10-19"
+      "wave_key": "BR-02952/2026|runoff|2026-10-19",
+      "source_evidence_type": "Reviewed report (PDF)",
+      "source_captured_at": "2026-10-22T05:59:53.671787+00:00",
+      "source_sha256": "59c23bd15f28c5ef705e352fcdb3ceab1969cff43bb073850bbbc32a343610e0",
+      "source_review_recorded_at": "2026-10-20T12:13:49.489532+00:00",
+      "revision_recorded_at": null
     },
     {
       "pollster": "Alfa Inteligencia",
@@ -740,9 +818,14 @@
       "n_valid": null,
       "flavio_valid": 51.5,
       "lula_valid": 48.5,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.9469999999999998,
-      "wave_key": "BR-00820/2026|runoff|2026-10-19"
+      "wave_key": "BR-00820/2026|runoff|2026-10-19",
+      "source_evidence_type": "Reviewed release (HTML)",
+      "source_captured_at": "2026-10-20T12:31:23.551554+00:00",
+      "source_sha256": "064799c16370313035c56f3ad7b6b4cd5a921a6ad4783e956c0c1feafaa21b58",
+      "source_review_recorded_at": "2026-10-20T12:32:31.222528+00:00",
+      "revision_recorded_at": null
     },
     {
       "pollster": "Data Ranking",
@@ -771,9 +854,14 @@
       "n_valid": null,
       "flavio_valid": 49.6,
       "lula_valid": 50.4,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.9,
-      "wave_key": "BR-00152/2026|runoff|2026-10-16"
+      "wave_key": "BR-00152/2026|runoff|2026-10-16",
+      "source_evidence_type": "Reviewed release (HTML)",
+      "source_captured_at": "2026-10-20T15:13:32.504236+00:00",
+      "source_sha256": "bea236a550afb1181535c6e8538de409679554b928798c40fd270d2bc0bbb689",
+      "source_review_recorded_at": "2026-10-20T15:14:51.915870+00:00",
+      "revision_recorded_at": null
     },
     {
       "pollster": "Meio/Ideia",
@@ -802,9 +890,14 @@
       "n_valid": null,
       "flavio_valid": 51.1,
       "lula_valid": 48.9,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.94,
-      "wave_key": "BR-08251/2026|runoff|2026-10-19"
+      "wave_key": "BR-08251/2026|runoff|2026-10-19",
+      "source_evidence_type": "Reviewed report (PDF)",
+      "source_captured_at": "2026-10-22T05:59:57.165779+00:00",
+      "source_sha256": "9f99a207468f4a2973cd4fcb9e5768bd2434ea79b60640ebaab2790162d995a3",
+      "source_review_recorded_at": "2026-10-21T09:10:01.956772+00:00",
+      "revision_recorded_at": null
     },
     {
       "pollster": "Palver",
@@ -833,9 +926,14 @@
       "n_valid": null,
       "flavio_valid": 51.02040816326531,
       "lula_valid": 48.97959183673469,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.98,
-      "wave_key": "BR-04612/2026|runoff|2026-10-20"
+      "wave_key": "BR-04612/2026|runoff|2026-10-20",
+      "source_evidence_type": "Reviewed report (PDF)",
+      "source_captured_at": "2026-10-22T06:00:24.560299+00:00",
+      "source_sha256": "c13626d509203df088661647577ce19565f6e0f98dbfe6feb0f10638ea55cf94",
+      "source_review_recorded_at": "2026-10-21T12:09:51.083078+00:00",
+      "revision_recorded_at": null
     },
     {
       "pollster": "Quaest",
@@ -864,9 +962,14 @@
       "n_valid": null,
       "flavio_valid": 50.561797752808985,
       "lula_valid": 49.438202247191015,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.89,
-      "wave_key": "BR-08535/2026|runoff|2026-10-20"
+      "wave_key": "BR-08535/2026|runoff|2026-10-20",
+      "source_evidence_type": "Reviewed release (HTML)",
+      "source_captured_at": "2026-10-21T13:46:26.581150+00:00",
+      "source_sha256": "ecf95926d21e28996b6aa9feeba5bda31df7964f75d6862c5c148db9d6d70c66",
+      "source_review_recorded_at": "2026-10-21T13:48:21.793288+00:00",
+      "revision_recorded_at": null
     },
     {
       "pollster": "Futura",
@@ -895,14 +998,416 @@
       "n_valid": null,
       "flavio_valid": 51.1,
       "lula_valid": 48.9,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.9569999999999999,
-      "wave_key": "BR-06614/2026|runoff|2026-10-20"
+      "wave_key": "BR-06614/2026|runoff|2026-10-20",
+      "source_evidence_type": "Reviewed report (PDF)",
+      "source_captured_at": "2026-10-22T06:00:26.895846+00:00",
+      "source_sha256": "5841168829064b1503abc0efe738af5e024598ea96967f1b4446597c7919647e",
+      "source_review_recorded_at": "2026-10-21T15:03:37.113829+00:00",
+      "revision_recorded_at": null
     }
   ],
   "source_sha256": "b7886e52dcb55cc3fe3dc21388d07fc71857a953573c7c0d4d2a0e280d5f5f03",
-  "built_at": "2026-10-21T15:03:36.846576+00:00",
-  "schema_version": 1
+  "built_at": "2026-10-22T06:28:14.001734+00:00",
+  "schema_version": 1,
+  "diagnostics_version": "2026-10-22.1",
+  "publication_audit": [
+    {
+      "commit": "821c28ac9032f080d4d2f524917197ac1f5be47f",
+      "staged_at": "2026-10-14T15:03:01.493929+00:00",
+      "verified_at": "2026-10-14T15:06:34.517050+00:00",
+      "as_of": "2026-10-13",
+      "waves": 10,
+      "houses": 9,
+      "flavio_valid_share": 52.11456806624999,
+      "lula_valid_share": 47.88543193375001,
+      "uncalibrated_p_flavio": 0.7840941502557781,
+      "net_share_change_pp": null,
+      "movement_attribution": "Net published change only; poll, recency and revision components not separately attributed.",
+      "status": "verified publication",
+      "changes": [
+        {
+          "action": "add",
+          "registration": "BR-00650/2026",
+          "pollster": "Futura"
+        }
+      ]
+    },
+    {
+      "commit": "7945441b3c245c5fd4b59a47c6586465687fc630",
+      "staged_at": "2026-10-15T15:09:59.477451+00:00",
+      "verified_at": "2026-10-15T15:12:36.569122+00:00",
+      "as_of": "2026-10-15",
+      "waves": 11,
+      "houses": 10,
+      "flavio_valid_share": 51.956002442903255,
+      "lula_valid_share": 48.043997557096745,
+      "uncalibrated_p_flavio": 0.7686639588120185,
+      "net_share_change_pp": -0.15856562334673185,
+      "movement_attribution": "Net published change only; poll, recency and revision components not separately attributed.",
+      "status": "verified publication",
+      "changes": [
+        {
+          "action": "add",
+          "registration": "BR-04629/2026",
+          "pollster": "Indexa/Broadcast"
+        }
+      ]
+    },
+    {
+      "commit": "3aac6d0a487e299a1aba0675818a65f48bd5c2d7",
+      "staged_at": "2026-10-16T15:13:46.770495+00:00",
+      "verified_at": "2026-10-16T15:15:03.729416+00:00",
+      "as_of": "2026-10-16",
+      "waves": 13,
+      "houses": 11,
+      "flavio_valid_share": 51.51416414160185,
+      "lula_valid_share": 48.48583585839815,
+      "uncalibrated_p_flavio": 0.7162119784593977,
+      "net_share_change_pp": -0.4418383013014022,
+      "movement_attribution": "Net published change only; poll, recency and revision components not separately attributed.",
+      "status": "verified publication",
+      "changes": [
+        {
+          "action": "add",
+          "registration": "BR-04258/2026",
+          "pollster": "PoderData"
+        },
+        {
+          "action": "add",
+          "registration": "BR-00652/2026",
+          "pollster": "CNT/MDA"
+        }
+      ]
+    },
+    {
+      "commit": "9a4c5868f360b5040f4191f40be079343b46e171",
+      "staged_at": "2026-10-16T18:00:14.225981+00:00",
+      "verified_at": "2026-10-16T18:02:06.887290+00:00",
+      "as_of": "2026-10-16",
+      "waves": 14,
+      "houses": 11,
+      "flavio_valid_share": 51.402973679955565,
+      "lula_valid_share": 48.597026320044435,
+      "uncalibrated_p_flavio": 0.7018567092716959,
+      "net_share_change_pp": -0.11119046164628799,
+      "movement_attribution": "Net published change only; poll, recency and revision components not separately attributed.",
+      "status": "verified publication",
+      "changes": [
+        {
+          "action": "add",
+          "registration": "BR-00466/2026",
+          "pollster": "Datafolha"
+        }
+      ]
+    },
+    {
+      "commit": "e8d7fb045993545751d4718620ea56a16e933595",
+      "staged_at": "2026-10-17T15:04:04.706113+00:00",
+      "verified_at": "2026-10-17T15:05:21.876514+00:00",
+      "as_of": "2026-10-17",
+      "waves": 15,
+      "houses": 11,
+      "flavio_valid_share": 51.32791026887221,
+      "lula_valid_share": 48.67208973112779,
+      "uncalibrated_p_flavio": 0.6927716513280333,
+      "net_share_change_pp": -0.0750634110833559,
+      "movement_attribution": "Net published change only; poll, recency and revision components not separately attributed.",
+      "status": "verified publication",
+      "changes": [
+        {
+          "action": "add",
+          "registration": "BR-00223/2026",
+          "pollster": "Ipespe"
+        }
+      ]
+    },
+    {
+      "commit": "344196b55cc87bca810ae4e5afcfca441a0921c9",
+      "staged_at": "2026-10-19T00:02:08.657863+00:00",
+      "verified_at": "2026-10-19T00:03:03.981941+00:00",
+      "as_of": "2026-10-18",
+      "waves": 16,
+      "houses": 11,
+      "flavio_valid_share": 51.12028734393178,
+      "lula_valid_share": 48.87971265606822,
+      "uncalibrated_p_flavio": 0.665297073291957,
+      "net_share_change_pp": -0.20762292494043066,
+      "movement_attribution": "Net published change only; poll, recency and revision components not separately attributed.",
+      "status": "verified publication",
+      "changes": [
+        {
+          "action": "add",
+          "registration": "BR-04332/2026",
+          "pollster": "Vox Brasil"
+        }
+      ]
+    },
+    {
+      "commit": "798bba9131b60edcab3a415f6bbffa15c6c24746",
+      "staged_at": "2026-10-19T11:05:26.127023+00:00",
+      "verified_at": "2026-10-19T11:06:30.095399+00:00",
+      "as_of": "2026-10-19",
+      "waves": 19,
+      "houses": 11,
+      "flavio_valid_share": 51.26720503138863,
+      "lula_valid_share": 48.73279496861137,
+      "uncalibrated_p_flavio": 0.6866824970203722,
+      "net_share_change_pp": 0.14691768745684897,
+      "movement_attribution": "Net published change only; poll, recency and revision components not separately attributed.",
+      "status": "verified publication",
+      "changes": [
+        {
+          "action": "add",
+          "registration": "BR-02418/2026",
+          "pollster": "AtlasIntel"
+        },
+        {
+          "action": "add",
+          "registration": "BR-04499/2026",
+          "pollster": "Nexus"
+        },
+        {
+          "action": "add",
+          "registration": "BR-02586/2026",
+          "pollster": "PoderData"
+        }
+      ]
+    },
+    {
+      "commit": "fe8eaeb756e1a62013116f9a7c9f9087b56d7fcd",
+      "staged_at": "2026-10-19T15:13:31.468201+00:00",
+      "verified_at": "2026-10-19T15:14:51.088932+00:00",
+      "as_of": "2026-10-19",
+      "waves": 20,
+      "houses": 11,
+      "flavio_valid_share": 51.164386739181154,
+      "lula_valid_share": 48.835613260818846,
+      "uncalibrated_p_flavio": 0.6725904609744732,
+      "net_share_change_pp": -0.1028182922074734,
+      "movement_attribution": "Net published change only; poll, recency and revision components not separately attributed.",
+      "status": "verified publication",
+      "changes": [
+        {
+          "action": "add",
+          "registration": "BR-06715/2026",
+          "pollster": "Futura"
+        }
+      ]
+    },
+    {
+      "commit": "d6fd30f32dd8b710a14b7af946501ad519b7c2e7",
+      "staged_at": "2026-10-19T21:09:29.902863+00:00",
+      "verified_at": "2026-10-19T21:10:42.689568+00:00",
+      "as_of": "2026-10-19",
+      "waves": 21,
+      "houses": 12,
+      "flavio_valid_share": 51.14096590813405,
+      "lula_valid_share": 48.85903409186595,
+      "uncalibrated_p_flavio": 0.6700605157982883,
+      "net_share_change_pp": -0.023420831047104684,
+      "movement_attribution": "Net published change only; poll, recency and revision components not separately attributed.",
+      "status": "withdrawn after source review",
+      "changes": [
+        {
+          "action": "add",
+          "registration": "BR-01107/2026",
+          "pollster": "Verita"
+        }
+      ]
+    },
+    {
+      "commit": "c69680f2d42adcae422de6647a656ca13ea9ffc3",
+      "staged_at": "2026-10-19T21:17:44.848367+00:00",
+      "verified_at": "2026-10-19T21:19:03.315382+00:00",
+      "as_of": "2026-10-19",
+      "waves": 20,
+      "houses": 11,
+      "flavio_valid_share": 51.164386739181154,
+      "lula_valid_share": 48.835613260818846,
+      "uncalibrated_p_flavio": 0.6725904609744732,
+      "net_share_change_pp": 0.023420831047104684,
+      "movement_attribution": "Net published change only; poll, recency and revision components not separately attributed.",
+      "status": "correction",
+      "changes": [
+        {
+          "action": "withdraw_unverified_addition",
+          "registration": "BR-01107/2026",
+          "pollster": "Verita"
+        }
+      ]
+    },
+    {
+      "commit": "fe365706d3938245f4ae3d56b4877fb7fc531a7b",
+      "staged_at": "2026-10-20T09:10:51.334531+00:00",
+      "verified_at": "2026-10-20T09:13:33.232217+00:00",
+      "as_of": "2026-10-19",
+      "waves": 21,
+      "houses": 11,
+      "flavio_valid_share": 51.11982002169364,
+      "lula_valid_share": 48.88017997830636,
+      "uncalibrated_p_flavio": 0.6664273060526968,
+      "net_share_change_pp": -0.04456671748751262,
+      "movement_attribution": "Net published change only; poll, recency and revision components not separately attributed.",
+      "status": "verified publication",
+      "changes": [
+        {
+          "action": "add",
+          "registration": "BR-04454/2026",
+          "pollster": "DataTrends"
+        }
+      ]
+    },
+    {
+      "commit": "6f6262ff1ee18a945b34142eb1b9c648791c2af2",
+      "staged_at": "2026-10-20T12:13:49.489532+00:00",
+      "verified_at": "2026-10-20T12:17:08.763737+00:00",
+      "as_of": "2026-10-20",
+      "waves": 22,
+      "houses": 12,
+      "flavio_valid_share": 51.19265839696115,
+      "lula_valid_share": 48.80734160303885,
+      "uncalibrated_p_flavio": 0.6774351588878468,
+      "net_share_change_pp": 0.07283837526750858,
+      "movement_attribution": "Net published change only; poll, recency and revision components not separately attributed.",
+      "status": "verified publication",
+      "changes": [
+        {
+          "action": "add",
+          "registration": "BR-02952/2026",
+          "pollster": "Real Time Big Data"
+        }
+      ]
+    },
+    {
+      "commit": "2769764b6f1de6ef45d22291d4f9ca619501bd4d",
+      "staged_at": "2026-10-20T12:32:31.222528+00:00",
+      "verified_at": "2026-10-20T12:34:22.703656+00:00",
+      "as_of": "2026-10-20",
+      "waves": 23,
+      "houses": 13,
+      "flavio_valid_share": 51.22403067064482,
+      "lula_valid_share": 48.77596932935518,
+      "uncalibrated_p_flavio": 0.6819287059579018,
+      "net_share_change_pp": 0.03137227368367235,
+      "movement_attribution": "Net published change only; poll, recency and revision components not separately attributed.",
+      "status": "verified publication",
+      "changes": [
+        {
+          "action": "add",
+          "registration": "BR-00820/2026",
+          "pollster": "Alfa Inteligencia"
+        }
+      ]
+    },
+    {
+      "commit": "c47d6ed4932602c3e0b0e8dc7a41e9f83ef5c8dd",
+      "staged_at": "2026-10-20T15:14:51.915870+00:00",
+      "verified_at": "2026-10-20T15:17:20.065857+00:00",
+      "as_of": "2026-10-20",
+      "waves": 24,
+      "houses": 14,
+      "flavio_valid_share": 51.12944307095595,
+      "lula_valid_share": 48.87055692904405,
+      "uncalibrated_p_flavio": 0.6688737414339634,
+      "net_share_change_pp": -0.09458759968887165,
+      "movement_attribution": "Net published change only; poll, recency and revision components not separately attributed.",
+      "status": "verified publication",
+      "changes": [
+        {
+          "action": "add",
+          "registration": "BR-00152/2026",
+          "pollster": "Data Ranking"
+        }
+      ]
+    },
+    {
+      "commit": "7be7e550d6250618124278850e618d57961378fc",
+      "staged_at": "2026-10-21T09:10:01.956772+00:00",
+      "verified_at": "2026-10-21T09:13:10.572497+00:00",
+      "as_of": "2026-10-21",
+      "waves": 25,
+      "houses": 15,
+      "flavio_valid_share": 51.12796141472671,
+      "lula_valid_share": 48.87203858527329,
+      "uncalibrated_p_flavio": 0.6694747765508009,
+      "net_share_change_pp": -0.0014816562292381263,
+      "movement_attribution": "Net published change only; poll, recency and revision components not separately attributed.",
+      "status": "verified publication",
+      "changes": [
+        {
+          "action": "add",
+          "registration": "BR-08251/2026",
+          "pollster": "Meio/Ideia"
+        }
+      ]
+    },
+    {
+      "commit": "6ddf21227341dc1fc992858df820c57161f4e672",
+      "staged_at": "2026-10-21T12:09:51.083078+00:00",
+      "verified_at": "2026-10-21T12:11:18.317228+00:00",
+      "as_of": "2026-10-21",
+      "waves": 26,
+      "houses": 16,
+      "flavio_valid_share": 51.109063085686486,
+      "lula_valid_share": 48.890936914313514,
+      "uncalibrated_p_flavio": 0.6669765760785509,
+      "net_share_change_pp": -0.018898329040226258,
+      "movement_attribution": "Net published change only; poll, recency and revision components not separately attributed.",
+      "status": "verified publication",
+      "changes": [
+        {
+          "action": "add",
+          "registration": "BR-04612/2026",
+          "pollster": "Palver"
+        }
+      ]
+    },
+    {
+      "commit": "28c8537d2ac2dcb162d8e8baad903e0e92ffc4c6",
+      "staged_at": "2026-10-21T13:48:21.793288+00:00",
+      "verified_at": "2026-10-21T13:49:35.244022+00:00",
+      "as_of": "2026-10-21",
+      "waves": 27,
+      "houses": 17,
+      "flavio_valid_share": 51.075466553887765,
+      "lula_valid_share": 48.924533446112235,
+      "uncalibrated_p_flavio": 0.6622690694169304,
+      "net_share_change_pp": -0.033596531798721685,
+      "movement_attribution": "Net published change only; poll, recency and revision components not separately attributed.",
+      "status": "verified publication",
+      "changes": [
+        {
+          "action": "add",
+          "registration": "BR-08535/2026",
+          "pollster": "Quaest"
+        }
+      ]
+    },
+    {
+      "commit": "05a1f190dcdfecbd8b983258779da7a8a5c9b95b",
+      "staged_at": "2026-10-21T15:03:37.113829+00:00",
+      "verified_at": "2026-10-21T15:08:08.916263+00:00",
+      "as_of": "2026-10-21",
+      "waves": 28,
+      "houses": 17,
+      "flavio_valid_share": 51.11051444805875,
+      "lula_valid_share": 48.88948555194125,
+      "uncalibrated_p_flavio": 0.6672346146815172,
+      "net_share_change_pp": 0.03504789417098664,
+      "movement_attribution": "Net published change only; poll, recency and revision components not separately attributed.",
+      "status": "verified publication",
+      "changes": [
+        {
+          "action": "add",
+          "registration": "BR-06614/2026",
+          "pollster": "Futura"
+        }
+      ]
+    }
+  ],
+  "history_basis": "Release-date reconstruction from the current ledger, not an as-published historical vintage."
 };
 </script><script>(function(root,factory){const api=factory();if(typeof module==='object'&&module.exports)module.exports=api;else root.PollModel=api})(typeof globalThis!=='undefined'?globalThis:this,function(){
 'use strict';
@@ -951,6 +1456,35 @@ function trend(data,options){const end=options.asOf||data.as_of;return [...new S
 function sensitivity(data,options){return [-2,-1,0,1,2].map(shift=>({shift,values:[1.5,2.5,3.5].map(error=>pool(data,{...options,globalShift:shift,sharedError:error}))}))}
 return {defaults,pool,trend,sensitivity,normalCDF,days};
 });
+</script><script>(function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory(require('./model.js'));else root.PollDiagnostics=factory(root.PollModel)})(typeof globalThis!=='undefined'?globalThis:this,function(M){
+'use strict';
+// Companion diagnostics only: never writes to the frozen model, its inputs or controls.
+function cappedWeights(houses,cap=.10){
+ if(!houses.length||!Number.isFinite(cap)||cap<=0||cap>1||houses.length*cap<1-1e-12)return null;
+ const weights={},remaining=new Map(houses.map(h=>[h.name,h.weight]));let mass=1;
+ while(remaining.size){const total=[...remaining.values()].reduce((a,b)=>a+b,0);if(!(total>0))return null;
+  const capped=[...remaining].filter(([,w])=>mass*w/total>cap+1e-12);
+  if(!capped.length){for(const [name,w] of remaining)weights[name]=mass*w/total;break;}
+  for(const [name] of capped){weights[name]=cap;remaining.delete(name);mass-=cap;}
+ }return weights;
+}
+function reweight(r,weights){
+ if(r.empty||!weights)return null;
+ let raw=0,adjusted=0;const sampling={};
+ for(const h of r.houses){const entries=r.selected.filter(a=>a.poll.pollster===h.name);for(const a of entries){const w=weights[h.name]*a.weight/h.weight;raw+=w*a.poll.lula_valid;adjusted+=w*(a.poll.lula_valid+a.adjustment);sampling[h.name]=(sampling[h.name]||0)+w*Math.sqrt(a.samplingVariance);}}
+ const sigma=Math.sqrt(Object.values(sampling).reduce((s,x)=>s+x*x,0)+r.options.sharedError**2+r.driftSigma**2),mean=adjusted+r.options.globalShift;
+ const pL=sigma>0?M.normalCDF((mean-50)/sigma):mean>50?1:mean<50?0:.5;
+ return {flavio:100-raw,pFlavio:1-pL,sigma,weights};
+}
+function calculate(data,options={}){
+ const r=M.pool(data,options);if(r.empty)return {empty:true,loo:[],recency:[],equal:null,capped:null,commonVarianceShare:null};
+ const equal=reweight(r,Object.fromEntries(r.houses.map(h=>[h.name,1/r.houses.length]))),capped=reweight(r,cappedWeights(r.houses));
+ const loo=r.houses.map(h=>{const x=M.pool(data,{...options,excluded:[...new Set([...(options.excluded||[]),...data.polls.filter(p=>p.pollster===h.name).map(p=>p.id)])]});return {omitted:h.name,flavio:x.empty?null:100-x.unadjusted,pFlavio:x.empty?null:x.pFlavio}}).filter(x=>x.flavio!==null);
+ const recency=[4,7,14,30].map(halfLife=>{const x=M.pool(data,{...options,halfLife});return {halfLife,flavio:100-x.unadjusted,pFlavio:x.pFlavio}});
+ return {empty:false,equal,capped,loo,recency,commonVarianceShare:r.sigma>0?r.options.sharedError**2/r.sigma**2:null,samplingSigma:r.samplingSigma,sharedSigma:r.options.sharedError,driftSigma:r.driftSigma,totalSigma:r.sigma};
+}
+return {calculate,cappedWeights,reweight};
+});
 </script><script>'use strict';
 const D=window.POLL_DATA,M=window.PollModel,$=id=>document.getElementById(id);
 let options={...M.defaults,houseShifts:{},excluded:[]},result;
@@ -978,7 +1512,7 @@ function trend(){
  const values=raw.flatMap(a=>[a.poll.flavio_valid,a.poll.lula_valid]);const min=Math.floor(Math.min(44,...values)/2)*2,max=Math.ceil(Math.max(56,...values)/2)*2;
  const dates=series.map(v=>v.day),first=Date.parse(dates[0]),last=Date.parse(dates.at(-1)),span=Math.max(86400000,last-first);
  const x=day=>42+(Date.parse(day)-first)/span*490,y=v=>250-(v-min)/(max-min)*205;
- let s='<svg viewBox="0 0 560 310" role="img" aria-label="Released runoff polls and information-available-at-the-time weighted averages">';
+ let s='<svg viewBox="0 0 560 310" role="img" aria-label="Current-ledger release-date reconstruction; not actual historical snapshots">';
  for(let v=min;v<=max;v+=2)s+=`<line x1="42" x2="532" y1="${y(v)}" y2="${y(v)}" stroke="${v===50?'#bac6bb':'#e8ece5'}" ${v===50?'stroke-dasharray="4 4"':''}/>`+svgText(31,y(v)+4,v,'text-anchor="end"');
  for(const day of dates)s+=svgText(x(day),275,shortDate(day),'text-anchor="middle"');
  for(const [key,color] of [['lula_valid','#bf5b50'],['flavio_valid','#326caa']]){
@@ -986,7 +1520,7 @@ function trend(){
   const pts=series.map((v,i)=>(i?'L':'M')+x(v.day)+','+y(key==='lula_valid'?v.result.unadjusted:100-v.result.unadjusted)).join(' ');
   s+=`<path d="${pts}" stroke="${color}" stroke-width="2.2" fill="none"/>`;
  }
- s+=`<circle cx="50" cy="299" r="3" fill="#326caa"/>`+svgText(59,303,'Flávio')+`<circle cx="116" cy="299" r="3" fill="#bf5b50"/>`+svgText(125,303,'Lula')+svgText(532,303,'Release date · information available then','text-anchor="end"')+'</svg>';return s;
+ s+=`<circle cx="50" cy="299" r="3" fill="#326caa"/>`+svgText(59,303,'Flávio')+`<circle cx="116" cy="299" r="3" fill="#bf5b50"/>`+svgText(125,303,'Lula')+svgText(532,303,'Release date · current-ledger reconstruction','text-anchor="end"')+'</svg>';return s;
 }
 function renderWeights(r){
  if(r.empty){$('weights').innerHTML=empty('No included pollsters.');$('leave-one-out').innerHTML='';return}
@@ -997,7 +1531,7 @@ function renderWeights(r){
 function renderLedger(r){
  $('ledger-count').textContent=D.polls.length+' releases · '+new Set(D.polls.map(p=>p.pollster)).size+' pollsters reviewed';
  $('poll-rows').innerHTML=r.audit.map(a=>{const p=a.poll,derived=p.valid_basis.startsWith('derived'),field=p.fieldwork_dates?p.fieldwork_dates.map(d=>Number(d.slice(-2))).join(', ')+' Oct':shortDate(p.fieldwork_start)+'–'+shortDate(p.fieldwork_end),valid=p.n_valid??p.n_total*p.valid_fraction_assumption;
- return `<tr class="${a.reason?'excluded':''}"><td><input type="checkbox" data-poll="${esc(p.id)}" aria-label="Include ${esc(p.pollster+' '+p.fieldwork_end)}" ${options.excluded.includes(p.id)?'':'checked'}></td><td><strong>${esc(p.pollster)}</strong><a class="source-link" href="${esc(p.report_url)}" target="_blank" rel="noopener noreferrer">Original report ↗</a><span class="sub">${esc(p.registration)}</span><details><summary>Source notes</summary><p>${esc(p.notes)}</p><a href="${esc(p.source_url)}" target="_blank" rel="noopener noreferrer">Release article ↗</a></details></td><td>${field}<span class="sub">Released ${shortDate(p.release_date)}</span></td><td>${p.n_total.toLocaleString()} / ${p.n_valid==null?'~':''}${Math.round(valid).toLocaleString()}<span class="sub">${p.n_valid==null?'Valid n estimated from rounded total shares':'Valid n reported'}</span></td><td>${esc(p.mode)}<span class="sub">Reported MOE ±${f(p.moe_pct,2)} pp</span></td><td><span class="flavio">${f(p.flavio_valid,derived?2:1)}</span> / <span class="lula">${f(p.lula_valid,derived?2:1)}</span><span class="sub ${derived?'derived':''}">${derived?'Derived from rounded totals':'Published valid shares'}</span><span class="sub">Total: ${f(p.flavio_total)} / ${f(p.lula_total)}</span></td><td>${p.undecided_total==null?'Not reported':f(p.undecided_total)+'%'} / ${p.blank_null_total==null?'not reported':f(p.blank_null_total)+'%'}</td><td>${a.reason?'—':f(a.weight*100)+'%'}</td><td><span class="reason ${a.reason?'':'included'}">${esc(a.reason||'Included')}</span></td></tr>`}).join('');
+ return `<tr class="${a.reason?'excluded':''}"><td><input type="checkbox" data-poll="${esc(p.id)}" aria-label="Include ${esc(p.pollster+' '+p.fieldwork_end)}" ${options.excluded.includes(p.id)?'':'checked'}></td><td><strong>${esc(p.pollster)}</strong><a class="source-link" href="${esc(p.report_url)}" target="_blank" rel="noopener noreferrer">Reviewed source ↗</a><span class="sub">${esc(p.registration)}</span><span class="sub">${esc(p.source_evidence_type)}</span><details><summary>Source notes</summary><p>${esc(p.notes)}</p><a href="${esc(p.source_url)}" target="_blank" rel="noopener noreferrer">Release article ↗</a></details></td><td>${field}<span class="sub">Released ${shortDate(p.release_date)}</span></td><td>${p.n_total.toLocaleString()} / ${p.n_valid==null?'~':''}${Math.round(valid).toLocaleString()}<span class="sub">${p.n_valid==null?'Valid n estimated from rounded total shares':'Valid n reported'}</span></td><td>${esc(p.mode)}<span class="sub">Reported MOE ±${f(p.moe_pct,2)} pp</span></td><td><span class="flavio">${f(p.flavio_valid,derived?2:1)}</span> / <span class="lula">${f(p.lula_valid,derived?2:1)}</span><span class="sub ${derived?'derived':''}">${derived?'Derived from rounded totals':'Published valid shares'}</span><span class="sub">Total: ${f(p.flavio_total)} / ${f(p.lula_total)}</span></td><td>${p.undecided_total==null?'Not reported':f(p.undecided_total)+'%'} / ${p.blank_null_total==null?'not reported':f(p.blank_null_total)+'%'}</td><td>${a.reason?'—':f(a.weight*100)+'%'}</td><td><span class="reason ${a.reason?'':'included'}">${esc(a.reason||'Included')}</span></td></tr>`}).join('');
  for(const input of document.querySelectorAll('[data-poll]'))input.addEventListener('change',()=>{const id=input.dataset.poll;options.excluded=input.checked?options.excluded.filter(x=>x!==id):[...new Set([...options.excluded,id])];render()});
 }
 function render(){
@@ -1011,7 +1545,7 @@ function render(){
  $('prob-flavio').style.width=(r.empty?50:100-r.unadjusted)+'%';$('prob-lula').style.width=(r.empty?50:r.unadjusted)+'%';
  $('raw-share').textContent=r.empty?'—':f(r.unadjusted)+'%';$('adjusted-share').textContent=r.empty?'—':f(r.mean)+'%';$('margin').textContent=r.empty?'—':signed(r.marginFlavio)+' pp';
  $('sampling-error').textContent=r.empty?'—':'±'+f(r.samplingSigma,2)+' pp';$('shared-error-value').textContent='±'+f(options.sharedError)+' pp';$('drift-value').textContent=r.empty?'—':'±'+f(r.driftSigma,2)+' pp';$('total-error').textContent=r.empty?'—':'±'+f(r.sigma,2)+' pp';
- const equal=r.empty?null:r.houses.reduce((sum,h)=>{const entries=r.selected.filter(a=>a.poll.pollster===h.name);return sum+entries.reduce((s,a)=>s+a.poll.lula_valid,0)/entries.length},0)/r.houses.length;
+ const equal=r.empty?null:100-window.PollDiagnostics.calculate(D,options).equal.flavio;
  $('summary-note').textContent=r.empty?'The model is paused until a verified poll is selected.':`Equal-pollster benchmark: Flávio ${f(100-equal)}% / Lula ${f(equal)}%. Headline above uses recency and precision weights; probabilities additionally depend on the assumptions at right.`;
  $('shift-output').textContent=signed(options.globalShift)+' pp';$('error-output').textContent=f(options.sharedError)+' pp';
  $('mode-note').textContent=options.mode==='unadjusted'?'No house-effect corrections. “Unadjusted” does not mean unbiased.':'User-defined pollster shifts only; no fitted historical house effects. Zero shifts reproduce the unadjusted scenario.';
@@ -1020,7 +1554,7 @@ function render(){
  $('density').innerHTML=density(r);$('trend-chart').innerHTML=trend();renderWeights(r);renderLedger(r);
  $('sensitivity-body').innerHTML=M.sensitivity(D,options).map(row=>`<tr><td>${row.shift===0?'No shift':signed(row.shift)+' pp to Lula'}</td>${row.values.map((v,j)=>`<td><button data-shift="${row.shift}" data-error="${[1.5,2.5,3.5][j]}" class="${row.shift===options.globalShift&&[1.5,2.5,3.5][j]===options.sharedError?'current':''}" aria-label="Set Lula shift ${row.shift}, shared error ${[1.5,2.5,3.5][j]}">${v.empty?'—':percent(v.pLula)}</button></td>`).join('')}</tr>`).join('');
  for(const b of document.querySelectorAll('[data-shift]'))b.addEventListener('click',()=>{options.globalShift=Number(b.dataset.shift);options.sharedError=Number(b.dataset.error);$('shift').value=options.globalShift;$('error').value=options.sharedError;render()});
- $('download').disabled=r.empty;document.body.dataset.ready='true';
+ renderRobustness();$('download').disabled=r.empty;document.body.dataset.ready='true';
 }
 function readControls(){options.sampleRule=$('sample-rule').value;options.strictPost=$('post-only').checked;options.latestOnly=$('latest-only').checked;options.globalShift=Number($('shift').value);options.sharedError=Number($('error').value);options.designEffect=Math.min(4,Math.max(1,Number($('design-effect').value)||1.5));options.driftDaily=Math.min(1,Math.max(0,Number($('drift').value)||0));render()}
 for(const id of ['sample-rule','post-only','latest-only','design-effect','drift'])$(id).addEventListener('change',readControls);
@@ -1030,7 +1564,22 @@ for(const b of document.querySelectorAll('[data-half]'))b.addEventListener('clic
 $('house-adjustments').innerHTML=[...new Set(D.polls.map(p=>p.pollster))].sort().map(name=>`<label>${esc(name)} <input data-house="${esc(name)}" type="number" min="-5" max="5" step=".25" value="0" aria-label="${esc(name)} shift to Lula in percentage points"></label>`).join('');
 for(const input of document.querySelectorAll('[data-house]'))input.addEventListener('change',()=>{options.houseShifts[input.dataset.house]=Math.max(-5,Math.min(5,Number(input.value)||0));input.value=options.houseShifts[input.dataset.house];render()});
 $('reset').addEventListener('click',()=>{options={...M.defaults,houseShifts:{},excluded:[]};$('sample-rule').value='all';$('post-only').checked=true;$('latest-only').checked=true;$('shift').value=0;$('error').value=2.5;$('design-effect').value=1.5;$('drift').value=.25;for(const input of document.querySelectorAll('[data-house]'))input.value=0;render()});
-$('download').addEventListener('click',()=>{const cols=['pollster','fieldwork_start','fieldwork_end','release_date','n_total','n_valid','flavio_valid','lula_valid','valid_basis','source_url','report_url'];const quote=v=>'"'+String(v??'').replaceAll('"','""')+'"';const rows=[cols.concat(['weight','lula_scenario_shift_pp']),...result.selected.map(a=>cols.map(k=>a.poll[k]).concat([a.weight,a.adjustment]))];const csv=rows.map(row=>row.map(quote).join(',')).join('\r\n');const url=URL.createObjectURL(new Blob(['\ufeff'+csv],{type:'text/csv;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='brazil-runoff-selected-'+D.as_of+'.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)});
+$('download').addEventListener('click',()=>{const cols=['source_evidence_type','source_captured_at','source_review_recorded_at','revision_recorded_at','pollster','fieldwork_start','fieldwork_end','release_date','n_total','n_valid','flavio_valid','lula_valid','valid_basis','source_url','report_url'];const quote=v=>'"'+String(v??'').replaceAll('"','""')+'"';const rows=[cols.concat(['weight','lula_scenario_shift_pp']),...result.selected.map(a=>cols.map(k=>a.poll[k]).concat([a.weight,a.adjustment]))];const csv=rows.map(row=>row.map(quote).join(',')).join('\r\n');const url=URL.createObjectURL(new Blob(['\ufeff'+csv],{type:'text/csv;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='brazil-runoff-selected-'+D.as_of+'.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)});
 $('source-notes').innerHTML='<p class="small">'+esc(D.coverage_note)+'</p><p class="small">Source ledger SHA-256: <code>'+esc(D.source_sha256)+'</code>Built '+esc(D.built_at)+'. Input scope and missing fields are retained in <a href="polls.json" download>the full JSON ledger</a> and <a href="polls.csv" download>CSV</a>.</p>'+D.polls.map(p=>`<p class="source-note"><a href="${esc(p.report_url)}" target="_blank" rel="noopener noreferrer">${esc(p.pollster)} · ${shortDate(p.release_date)}</a> — ${esc(p.notes)}</p>`).join('');
+
+function renderRobustness(){
+ const d=window.PollDiagnostics.calculate(D,options);window.CURRENT_DIAGNOSTICS=d;
+ if(d.empty){$('robustness-results').innerHTML=empty('No eligible polls. Diagnostics remain unavailable.');$('uncertainty-explanation').textContent='';return;}
+ const range=xs=>xs.length?f(Math.min(...xs),2)+'–'+f(Math.max(...xs),2)+'%':'Unavailable';
+ const looMin=d.loo.reduce((a,b)=>!a||b.flavio<a.flavio?b:a,null),looMax=d.loo.reduce((a,b)=>!a||b.flavio>a.flavio?b:a,null);
+ const card=(name,value,note)=>`<div class="diagnostic-card"><span>${name}</span><strong>${value}</strong><p>${note}</p></div>`;
+ $('robustness-results').innerHTML='<div class="diagnostic-grid">'+card('Equal-house · Flávio valid share',f(d.equal.flavio,2)+'%', 'Each selected house has the same total weight; within-house relative weights are retained.')+card('Leave one house out · Flávio share',range(d.loo.map(x=>x.flavio)),looMin?'Lowest without '+esc(looMin.omitted)+'; highest without '+esc(looMax.omitted)+'.':'At least two houses required.')+card('Recency 4 / 7 / 14 / 30 days',range(d.recency.map(x=>x.flavio)),d.recency.map(x=>x.halfLife+'d: '+f(x.flavio,2)+'%').join(' · '))+card('10% house cap · Flávio valid share',d.capped?f(d.capped.flavio,2)+'%':'Unavailable',d.capped?'Excess weight is redistributed proportionally until every house is at or below 10%.':'A 10% cap needs at least ten selected houses.')+'</div><div class="table-scroll"><table><thead><tr><th>Exploratory weights</th><th>Flávio / Lula valid share</th><th>Flávio win scenario · uncalibrated</th></tr></thead><tbody>'+[['Equal-house',d.equal],['10% house cap',d.capped]].map(([label,x])=>`<tr><td>${label}</td><td>${x?f(x.flavio,2)+'% / '+f(100-x.flavio,2)+'%':'Unavailable'}</td><td>${x?f(100*x.pFlavio,1)+'%':'Unavailable'}</td></tr>`).join('')+'</tbody></table></div>';
+ $('uncertainty-explanation').textContent='Common error contributes '+f(100*d.commonVarianceShare,1)+'% of total scenario variance. One-sigma widths in vote-share pp: sampling '+f(d.samplingSigma,2)+', common '+f(d.sharedSigma,2)+', remaining-time drift '+f(d.driftSigma,2)+'; combined '+f(d.totalSigma,2)+'. Variances add, not these widths. More houses do not diversify away common error. The weight-concentration equivalent is not a count of statistically independent forecasts.';
+}
+const audit=D.publication_audit||[];
+$('audit-summary').textContent=audit.length+' verified deployment receipts'+(audit.length?' · through '+audit.at(-1).verified_at.replace('T',' ').slice(0,19)+' UTC':' · earlier vintages unavailable');
+$('audit-rows').innerHTML=audit.map(a=>`<tr><td>${esc(a.verified_at.replace('T',' ').slice(0,19))}<br><a href="https://github.com/aggasuk/research-home/commit/${esc(a.commit)}" target="_blank" rel="noopener noreferrer">${esc(a.commit.slice(0,8))}</a></td><td>${esc(a.as_of)}<br>${a.waves} waves / ${a.houses} houses</td><td>${f(a.flavio_valid_share,2)}% / ${f(a.lula_valid_share,2)}%</td><td>${f(100*a.uncalibrated_p_flavio,1)}%</td><td>${a.net_share_change_pp==null?'No earlier receipt':signed(a.net_share_change_pp,3)+' pp'}</td><td>${esc(a.status)}<br>${esc(a.changes.map(c=>[c.action,c.pollster,c.registration].filter(Boolean).join(' · ')).join('; '))}</td></tr>`).join('');
+$('download-audit').addEventListener('click',()=>{const cols=['commit','staged_at','verified_at','as_of','waves','houses','flavio_valid_share','lula_valid_share','uncalibrated_p_flavio','net_share_change_pp','movement_attribution','status','changes'];const quote=v=>'"'+String(v??'').replaceAll('"','""')+'"';const rows=[cols,...audit.map(a=>cols.map(k=>k==='changes'?JSON.stringify(a[k]):a[k]))];const url=URL.createObjectURL(new Blob(['\ufeff'+rows.map(r=>r.map(quote).join(',')).join('\r\n')],{type:'text/csv;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='brazil-publication-audit-'+D.as_of+'.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)});
+
 render();
 </script></body></html>

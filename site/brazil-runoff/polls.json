@@ -2,7 +2,7 @@
   "as_of": "2026-10-21",
   "first_round_date": "2026-10-04",
   "runoff_date": "2026-10-25",
-  "coverage_note": "Accessible national runoff releases reviewed through 13 October; coverage is not certified exhaustive. Registration numbers are transcribed from reports, not independently verified in PesqEle.",
+  "coverage_note": "Reviewed ledger releases through 2026-10-21. Coverage is not certified exhaustive. Source capture/review times are separate from poll release dates; missing historical receipts remain missing.",
   "polls": [
     {
       "pollster": "PoderData",
@@ -31,9 +31,10 @@
       "lula_valid": 47,
       "undecided_total": null,
       "blank_null_total": null,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.93,
-      "wave_key": "BR-08134/2026|runoff|2026-10-07"
+      "wave_key": "BR-08134/2026|runoff|2026-10-07",
+      "source_evidence_type": "Reviewed source; captured format not recorded in publication receipts"
     },
     {
       "pollster": "PoderData",
@@ -62,9 +63,10 @@
       "lula_valid": 49,
       "undecided_total": null,
       "blank_null_total": null,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.94,
-      "wave_key": "BR-01209/2026|runoff|2026-10-12"
+      "wave_key": "BR-01209/2026|runoff|2026-10-12",
+      "source_evidence_type": "Reviewed source; captured format not recorded in publication receipts"
     },
     {
       "pollster": "GERP",
@@ -98,9 +100,10 @@
       "lula_valid": 45,
       "undecided_total": null,
       "blank_null_total": null,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.97,
-      "wave_key": "BR-07877/2026|runoff|2026-10-12"
+      "wave_key": "BR-07877/2026|runoff|2026-10-12",
+      "source_evidence_type": "Reviewed source; captured format not recorded in publication receipts"
     },
     {
       "pollster": "Nexus",
@@ -129,9 +132,10 @@
       "lula_valid": 48.38709677419355,
       "undecided_total": null,
       "blank_null_total": null,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.93,
-      "wave_key": "BR-07997/2026|runoff|2026-10-12"
+      "wave_key": "BR-07997/2026|runoff|2026-10-12",
+      "source_evidence_type": "Reviewed source; captured format not recorded in publication receipts"
     },
     {
       "pollster": "Datafolha",
@@ -160,9 +164,10 @@
       "lula_valid": 48,
       "undecided_total": null,
       "blank_null_total": null,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.94,
-      "wave_key": "BR-02949/2026|runoff|2026-10-07"
+      "wave_key": "BR-02949/2026|runoff|2026-10-07",
+      "source_evidence_type": "Reviewed source; captured format not recorded in publication receipts"
     },
     {
       "pollster": "Vox Brasil",
@@ -191,9 +196,10 @@
       "lula_valid": 50.86306098964327,
       "undecided_total": null,
       "blank_null_total": null,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.8690000000000001,
-      "wave_key": "BR-09623/2026|runoff|2026-10-07"
+      "wave_key": "BR-09623/2026|runoff|2026-10-07",
+      "source_evidence_type": "Reviewed source; captured format not recorded in publication receipts"
     },
     {
       "pollster": "Ipespe",
@@ -222,9 +228,10 @@
       "lula_valid": 47.3,
       "undecided_total": null,
       "blank_null_total": null,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.93,
-      "wave_key": "BR-00933/2026|runoff|2026-10-08"
+      "wave_key": "BR-00933/2026|runoff|2026-10-08",
+      "source_evidence_type": "Reviewed source; captured format not recorded in publication receipts"
     },
     {
       "pollster": "DataTrends",
@@ -253,9 +260,10 @@
       "lula_valid": 46.9,
       "undecided_total": null,
       "blank_null_total": null,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.94,
-      "wave_key": "BR-03576/2026|runoff|2026-10-09"
+      "wave_key": "BR-03576/2026|runoff|2026-10-09",
+      "source_evidence_type": "Reviewed source; captured format not recorded in publication receipts"
     },
     {
       "pollster": "AtlasIntel",
@@ -284,9 +292,10 @@
       "lula_valid": 47.2,
       "undecided_total": null,
       "blank_null_total": null,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.9680000000000001,
-      "wave_key": "BR-03663/2026|runoff|2026-10-08"
+      "wave_key": "BR-03663/2026|runoff|2026-10-08",
+      "source_evidence_type": "Reviewed source; captured format not recorded in publication receipts"
     },
     {
       "pollster": "Futura",
@@ -315,9 +324,14 @@
       "n_valid": null,
       "flavio_valid": 51.8,
       "lula_valid": 48.2,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.966,
-      "wave_key": "BR-00650/2026|runoff|2026-10-10"
+      "wave_key": "BR-00650/2026|runoff|2026-10-10",
+      "source_evidence_type": "Reviewed report (PDF)",
+      "source_captured_at": "2026-10-22T05:56:39.144334+00:00",
+      "source_sha256": "c612de90ca566c240c7dc25f375b40232924899b150732620e9966e22cebc63c",
+      "source_review_recorded_at": "2026-10-14T15:03:01.493929+00:00",
+      "revision_recorded_at": null
     },
     {
       "pollster": "Indexa/Broadcast",
@@ -346,9 +360,14 @@
       "n_valid": null,
       "flavio_valid": 51,
       "lula_valid": 49,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.86,
-      "wave_key": "BR-04629/2026|runoff|2026-10-14"
+      "wave_key": "BR-04629/2026|runoff|2026-10-14",
+      "source_evidence_type": "Reviewed release (HTML)",
+      "source_captured_at": "2026-10-15T15:05:03.348940+00:00",
+      "source_sha256": "ba26da95002512ba30ae5724a569bc7bafcab090b24ede177320e56402cc5b13",
+      "source_review_recorded_at": "2026-10-15T15:09:59.477451+00:00",
+      "revision_recorded_at": null
     },
     {
       "pollster": "PoderData",
@@ -377,9 +396,14 @@
       "n_valid": null,
       "flavio_valid": 50,
       "lula_valid": 50,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.94,
-      "wave_key": "BR-04258/2026|runoff|2026-10-15"
+      "wave_key": "BR-04258/2026|runoff|2026-10-15",
+      "source_evidence_type": "Reviewed report (PDF)",
+      "source_captured_at": "2026-10-22T05:56:39.676077+00:00",
+      "source_sha256": "71743e3c0d76c2f71060683f641c66e32dc7e33429a9fd2ea4fd9bc20591578d",
+      "source_review_recorded_at": "2026-10-16T15:13:46.770495+00:00",
+      "revision_recorded_at": null
     },
     {
       "pollster": "CNT/MDA",
@@ -408,9 +432,14 @@
       "n_valid": null,
       "flavio_valid": 50.5,
       "lula_valid": 49.5,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.9269999999999999,
-      "wave_key": "BR-00652/2026|runoff|2026-10-15"
+      "wave_key": "BR-00652/2026|runoff|2026-10-15",
+      "source_evidence_type": "Reviewed report (PDF)",
+      "source_captured_at": "2026-10-22T05:59:26.001960+00:00",
+      "source_sha256": "97ebef58aae3db7f9d0bdfc5393a571df91c05b98fcdc54dfed8caae5124df9a",
+      "source_review_recorded_at": "2026-10-16T15:13:46.770495+00:00",
+      "revision_recorded_at": null
     },
     {
       "pollster": "Datafolha",
@@ -439,9 +468,14 @@
       "n_valid": 2330,
       "flavio_valid": 51,
       "lula_valid": 49,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.92,
-      "wave_key": "BR-00466/2026|runoff|2026-10-14"
+      "wave_key": "BR-00466/2026|runoff|2026-10-14",
+      "source_evidence_type": "Reviewed report (PDF)",
+      "source_captured_at": "2026-10-22T05:59:34.139268+00:00",
+      "source_sha256": "b86d9106bbdb9deb074f03e57522365ff9d5a7222f16ff0c8f7b36480cdd9b81",
+      "source_review_recorded_at": "2026-10-16T18:00:14.225981+00:00",
+      "revision_recorded_at": null
     },
     {
       "pollster": "Ipespe",
@@ -470,9 +504,14 @@
       "n_valid": null,
       "flavio_valid": 51.2,
       "lula_valid": 48.8,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.94,
-      "wave_key": "BR-00223/2026|runoff|2026-10-15"
+      "wave_key": "BR-00223/2026|runoff|2026-10-15",
+      "source_evidence_type": "Reviewed report (PDF)",
+      "source_captured_at": "2026-10-22T05:59:45.534851+00:00",
+      "source_sha256": "7b9556512817d8023cc47528677a6d8a89567e459d7acd371d3a8a447d846ffd",
+      "source_review_recorded_at": "2026-10-17T15:04:04.706113+00:00",
+      "revision_recorded_at": null
     },
     {
       "pollster": "Vox Brasil",
@@ -501,9 +540,14 @@
       "n_valid": null,
       "flavio_valid": 49,
       "lula_valid": 51,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.91,
-      "wave_key": "BR-04332/2026|runoff|2026-10-17"
+      "wave_key": "BR-04332/2026|runoff|2026-10-17",
+      "source_evidence_type": "Reviewed report (PDF)",
+      "source_captured_at": "2026-10-22T05:59:46.556745+00:00",
+      "source_sha256": "df9445445768fe30e629a68e13f7eadc38430ee3fd71e471eb2f4314fa9d4cac",
+      "source_review_recorded_at": "2026-10-19T00:02:08.657863+00:00",
+      "revision_recorded_at": null
     },
     {
       "pollster": "AtlasIntel",
@@ -532,9 +576,14 @@
       "lula_valid": 48.9,
       "undecided_total": null,
       "blank_null_total": null,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.9740000000000001,
-      "wave_key": "BR-02418/2026|runoff|2026-10-18"
+      "wave_key": "BR-02418/2026|runoff|2026-10-18",
+      "source_evidence_type": "Reviewed report (PDF)",
+      "source_captured_at": "2026-10-22T05:59:47.219911+00:00",
+      "source_sha256": "08557d05fbd0ccb40d56937d11bcde76f670fedf3c671827e1494b2213127123",
+      "source_review_recorded_at": "2026-10-19T11:05:26.127023+00:00",
+      "revision_recorded_at": null
     },
     {
       "pollster": "Nexus",
@@ -563,9 +612,14 @@
       "n_valid": null,
       "flavio_valid": 50.3,
       "lula_valid": 49.7,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.924,
-      "wave_key": "BR-04499/2026|runoff|2026-10-18"
+      "wave_key": "BR-04499/2026|runoff|2026-10-18",
+      "source_evidence_type": "Reviewed report (PDF)",
+      "source_captured_at": "2026-10-22T05:59:50.001609+00:00",
+      "source_sha256": "f6ee08157b9906a8abd4fca2a7a418b329e8895043019bc871b81f12b1eabb45",
+      "source_review_recorded_at": "2026-10-19T11:05:26.127023+00:00",
+      "revision_recorded_at": null
     },
     {
       "pollster": "PoderData",
@@ -594,9 +648,14 @@
       "n_valid": null,
       "flavio_valid": 52,
       "lula_valid": 48,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.95,
-      "wave_key": "BR-02586/2026|runoff|2026-10-18"
+      "wave_key": "BR-02586/2026|runoff|2026-10-18",
+      "source_evidence_type": "Reviewed report (PDF)",
+      "source_captured_at": "2026-10-22T05:59:50.968340+00:00",
+      "source_sha256": "49d00ff66ff81342274af5c18ec09ae2ef154ab7316136a648bf1a3cfcaea6b2",
+      "source_review_recorded_at": "2026-10-19T11:05:26.127023+00:00",
+      "revision_recorded_at": null
     },
     {
       "pollster": "Futura",
@@ -625,9 +684,14 @@
       "n_valid": null,
       "flavio_valid": 50.4,
       "lula_valid": 49.6,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.958,
-      "wave_key": "BR-06715/2026|runoff|2026-10-17"
+      "wave_key": "BR-06715/2026|runoff|2026-10-17",
+      "source_evidence_type": "Reviewed report (PDF)",
+      "source_captured_at": "2026-10-22T05:59:51.927684+00:00",
+      "source_sha256": "d73076b98fad510b9b0a560cfc4951a490db25fb9e64b1a40b31fbc16a31f4d9",
+      "source_review_recorded_at": "2026-10-19T15:13:31.468201+00:00",
+      "revision_recorded_at": null
     },
     {
       "pollster": "DataTrends",
@@ -656,9 +720,14 @@
       "n_valid": null,
       "flavio_valid": 51.5,
       "lula_valid": 48.5,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.95,
-      "wave_key": "BR-04454/2026|runoff|2026-10-17"
+      "wave_key": "BR-04454/2026|runoff|2026-10-17",
+      "source_evidence_type": "Reviewed report (PDF)",
+      "source_captured_at": "2026-10-22T05:59:52.465458+00:00",
+      "source_sha256": "caf872b6f09335000172e556861b9ea67e1e73be0f4bb0221d3508877f4e05aa",
+      "source_review_recorded_at": "2026-10-20T09:10:51.334531+00:00",
+      "revision_recorded_at": null
     },
     {
       "pollster": "Real Time Big Data",
@@ -687,9 +756,14 @@
       "n_valid": null,
       "flavio_valid": 52,
       "lula_valid": 48,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.93,
-      "wave_key": "BR-02952/2026|runoff|2026-10-19"
+      "wave_key": "BR-02952/2026|runoff|2026-10-19",
+      "source_evidence_type": "Reviewed report (PDF)",
+      "source_captured_at": "2026-10-22T05:59:53.671787+00:00",
+      "source_sha256": "59c23bd15f28c5ef705e352fcdb3ceab1969cff43bb073850bbbc32a343610e0",
+      "source_review_recorded_at": "2026-10-20T12:13:49.489532+00:00",
+      "revision_recorded_at": null
     },
     {
       "pollster": "Alfa Inteligencia",
@@ -718,9 +792,14 @@
       "n_valid": null,
       "flavio_valid": 51.5,
       "lula_valid": 48.5,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.9469999999999998,
-      "wave_key": "BR-00820/2026|runoff|2026-10-19"
+      "wave_key": "BR-00820/2026|runoff|2026-10-19",
+      "source_evidence_type": "Reviewed release (HTML)",
+      "source_captured_at": "2026-10-20T12:31:23.551554+00:00",
+      "source_sha256": "064799c16370313035c56f3ad7b6b4cd5a921a6ad4783e956c0c1feafaa21b58",
+      "source_review_recorded_at": "2026-10-20T12:32:31.222528+00:00",
+      "revision_recorded_at": null
     },
     {
       "pollster": "Data Ranking",
@@ -749,9 +828,14 @@
       "n_valid": null,
       "flavio_valid": 49.6,
       "lula_valid": 50.4,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.9,
-      "wave_key": "BR-00152/2026|runoff|2026-10-16"
+      "wave_key": "BR-00152/2026|runoff|2026-10-16",
+      "source_evidence_type": "Reviewed release (HTML)",
+      "source_captured_at": "2026-10-20T15:13:32.504236+00:00",
+      "source_sha256": "bea236a550afb1181535c6e8538de409679554b928798c40fd270d2bc0bbb689",
+      "source_review_recorded_at": "2026-10-20T15:14:51.915870+00:00",
+      "revision_recorded_at": null
     },
     {
       "pollster": "Meio/Ideia",
@@ -780,9 +864,14 @@
       "n_valid": null,
       "flavio_valid": 51.1,
       "lula_valid": 48.9,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.94,
-      "wave_key": "BR-08251/2026|runoff|2026-10-19"
+      "wave_key": "BR-08251/2026|runoff|2026-10-19",
+      "source_evidence_type": "Reviewed report (PDF)",
+      "source_captured_at": "2026-10-22T05:59:57.165779+00:00",
+      "source_sha256": "9f99a207468f4a2973cd4fcb9e5768bd2434ea79b60640ebaab2790162d995a3",
+      "source_review_recorded_at": "2026-10-21T09:10:01.956772+00:00",
+      "revision_recorded_at": null
     },
     {
       "pollster": "Palver",
@@ -811,9 +900,14 @@
       "n_valid": null,
       "flavio_valid": 51.02040816326531,
       "lula_valid": 48.97959183673469,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.98,
-      "wave_key": "BR-04612/2026|runoff|2026-10-20"
+      "wave_key": "BR-04612/2026|runoff|2026-10-20",
+      "source_evidence_type": "Reviewed report (PDF)",
+      "source_captured_at": "2026-10-22T06:00:24.560299+00:00",
+      "source_sha256": "c13626d509203df088661647577ce19565f6e0f98dbfe6feb0f10638ea55cf94",
+      "source_review_recorded_at": "2026-10-21T12:09:51.083078+00:00",
+      "revision_recorded_at": null
     },
     {
       "pollster": "Quaest",
@@ -842,9 +936,14 @@
       "n_valid": null,
       "flavio_valid": 50.561797752808985,
       "lula_valid": 49.438202247191015,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.89,
-      "wave_key": "BR-08535/2026|runoff|2026-10-20"
+      "wave_key": "BR-08535/2026|runoff|2026-10-20",
+      "source_evidence_type": "Reviewed release (HTML)",
+      "source_captured_at": "2026-10-21T13:46:26.581150+00:00",
+      "source_sha256": "ecf95926d21e28996b6aa9feeba5bda31df7964f75d6862c5c148db9d6d70c66",
+      "source_review_recorded_at": "2026-10-21T13:48:21.793288+00:00",
+      "revision_recorded_at": null
     },
     {
       "pollster": "Futura",
@@ -873,12 +972,414 @@
       "n_valid": null,
       "flavio_valid": 51.1,
       "lula_valid": 48.9,
-      "verification": "primary",
+      "verification": "secondary",
       "valid_fraction_assumption": 0.9569999999999999,
-      "wave_key": "BR-06614/2026|runoff|2026-10-20"
+      "wave_key": "BR-06614/2026|runoff|2026-10-20",
+      "source_evidence_type": "Reviewed report (PDF)",
+      "source_captured_at": "2026-10-22T06:00:26.895846+00:00",
+      "source_sha256": "5841168829064b1503abc0efe738af5e024598ea96967f1b4446597c7919647e",
+      "source_review_recorded_at": "2026-10-21T15:03:37.113829+00:00",
+      "revision_recorded_at": null
     }
   ],
   "source_sha256": "b7886e52dcb55cc3fe3dc21388d07fc71857a953573c7c0d4d2a0e280d5f5f03",
-  "built_at": "2026-10-21T15:03:36.846576+00:00",
-  "schema_version": 1
+  "built_at": "2026-10-22T06:28:14.001734+00:00",
+  "schema_version": 1,
+  "diagnostics_version": "2026-10-22.1",
+  "publication_audit": [
+    {
+      "commit": "821c28ac9032f080d4d2f524917197ac1f5be47f",
+      "staged_at": "2026-10-14T15:03:01.493929+00:00",
+      "verified_at": "2026-10-14T15:06:34.517050+00:00",
+      "as_of": "2026-10-13",
+      "waves": 10,
+      "houses": 9,
+      "flavio_valid_share": 52.11456806624999,
+      "lula_valid_share": 47.88543193375001,
+      "uncalibrated_p_flavio": 0.7840941502557781,
+      "net_share_change_pp": null,
+      "movement_attribution": "Net published change only; poll, recency and revision components not separately attributed.",
+      "status": "verified publication",
+      "changes": [
+        {
+          "action": "add",
+          "registration": "BR-00650/2026",
+          "pollster": "Futura"
+        }
+      ]
+    },
+    {
+      "commit": "7945441b3c245c5fd4b59a47c6586465687fc630",
+      "staged_at": "2026-10-15T15:09:59.477451+00:00",
+      "verified_at": "2026-10-15T15:12:36.569122+00:00",
+      "as_of": "2026-10-15",
+      "waves": 11,
+      "houses": 10,
+      "flavio_valid_share": 51.956002442903255,
+      "lula_valid_share": 48.043997557096745,
+      "uncalibrated_p_flavio": 0.7686639588120185,
+      "net_share_change_pp": -0.15856562334673185,
+      "movement_attribution": "Net published change only; poll, recency and revision components not separately attributed.",
+      "status": "verified publication",
+      "changes": [
+        {
+          "action": "add",
+          "registration": "BR-04629/2026",
+          "pollster": "Indexa/Broadcast"
+        }
+      ]
+    },
+    {
+      "commit": "3aac6d0a487e299a1aba0675818a65f48bd5c2d7",
+      "staged_at": "2026-10-16T15:13:46.770495+00:00",
+      "verified_at": "2026-10-16T15:15:03.729416+00:00",
+      "as_of": "2026-10-16",
+      "waves": 13,
+      "houses": 11,
+      "flavio_valid_share": 51.51416414160185,
+      "lula_valid_share": 48.48583585839815,
+      "uncalibrated_p_flavio": 0.7162119784593977,
+      "net_share_change_pp": -0.4418383013014022,
+      "movement_attribution": "Net published change only; poll, recency and revision components not separately attributed.",
+      "status": "verified publication",
+      "changes": [
+        {
+          "action": "add",
+          "registration": "BR-04258/2026",
+          "pollster": "PoderData"
+        },
+        {
+          "action": "add",
+          "registration": "BR-00652/2026",
+          "pollster": "CNT/MDA"
+        }
+      ]
+    },
+    {
+      "commit": "9a4c5868f360b5040f4191f40be079343b46e171",
+      "staged_at": "2026-10-16T18:00:14.225981+00:00",
+      "verified_at": "2026-10-16T18:02:06.887290+00:00",
+      "as_of": "2026-10-16",
+      "waves": 14,
+      "houses": 11,
+      "flavio_valid_share": 51.402973679955565,
+      "lula_valid_share": 48.597026320044435,
+      "uncalibrated_p_flavio": 0.7018567092716959,
+      "net_share_change_pp": -0.11119046164628799,
+      "movement_attribution": "Net published change only; poll, recency and revision components not separately attributed.",
+      "status": "verified publication",
+      "changes": [
+        {
+          "action": "add",
+          "registration": "BR-00466/2026",
+          "pollster": "Datafolha"
+        }
+      ]
+    },
+    {
+      "commit": "e8d7fb045993545751d4718620ea56a16e933595",
+      "staged_at": "2026-10-17T15:04:04.706113+00:00",
+      "verified_at": "2026-10-17T15:05:21.876514+00:00",
+      "as_of": "2026-10-17",
+      "waves": 15,
+      "houses": 11,
+      "flavio_valid_share": 51.32791026887221,
+      "lula_valid_share": 48.67208973112779,
+      "uncalibrated_p_flavio": 0.6927716513280333,
+      "net_share_change_pp": -0.0750634110833559,
+      "movement_attribution": "Net published change only; poll, recency and revision components not separately attributed.",
+      "status": "verified publication",
+      "changes": [
+        {
+          "action": "add",
+          "registration": "BR-00223/2026",
+          "pollster": "Ipespe"
+        }
+      ]
+    },
+    {
+      "commit": "344196b55cc87bca810ae4e5afcfca441a0921c9",
+      "staged_at": "2026-10-19T00:02:08.657863+00:00",
+      "verified_at": "2026-10-19T00:03:03.981941+00:00",
+      "as_of": "2026-10-18",
+      "waves": 16,
+      "houses": 11,
+      "flavio_valid_share": 51.12028734393178,
+      "lula_valid_share": 48.87971265606822,
+      "uncalibrated_p_flavio": 0.665297073291957,
+      "net_share_change_pp": -0.20762292494043066,
+      "movement_attribution": "Net published change only; poll, recency and revision components not separately attributed.",
+      "status": "verified publication",
+      "changes": [
+        {
+          "action": "add",
+          "registration": "BR-04332/2026",
+          "pollster": "Vox Brasil"
+        }
+      ]
+    },
+    {
+      "commit": "798bba9131b60edcab3a415f6bbffa15c6c24746",
+      "staged_at": "2026-10-19T11:05:26.127023+00:00",
+      "verified_at": "2026-10-19T11:06:30.095399+00:00",
+      "as_of": "2026-10-19",
+      "waves": 19,
+      "houses": 11,
+      "flavio_valid_share": 51.26720503138863,
+      "lula_valid_share": 48.73279496861137,
+      "uncalibrated_p_flavio": 0.6866824970203722,
+      "net_share_change_pp": 0.14691768745684897,
+      "movement_attribution": "Net published change only; poll, recency and revision components not separately attributed.",
+      "status": "verified publication",
+      "changes": [
+        {
+          "action": "add",
+          "registration": "BR-02418/2026",
+          "pollster": "AtlasIntel"
+        },
+        {
+          "action": "add",
+          "registration": "BR-04499/2026",
+          "pollster": "Nexus"
+        },
+        {
+          "action": "add",
+          "registration": "BR-02586/2026",
+          "pollster": "PoderData"
+        }
+      ]
+    },
+    {
+      "commit": "fe8eaeb756e1a62013116f9a7c9f9087b56d7fcd",
+      "staged_at": "2026-10-19T15:13:31.468201+00:00",
+      "verified_at": "2026-10-19T15:14:51.088932+00:00",
+      "as_of": "2026-10-19",
+      "waves": 20,
+      "houses": 11,
+      "flavio_valid_share": 51.164386739181154,
+      "lula_valid_share": 48.835613260818846,
+      "uncalibrated_p_flavio": 0.6725904609744732,
+      "net_share_change_pp": -0.1028182922074734,
+      "movement_attribution": "Net published change only; poll, recency and revision components not separately attributed.",
+      "status": "verified publication",
+      "changes": [
+        {
+          "action": "add",
+          "registration": "BR-06715/2026",
+          "pollster": "Futura"
+        }
+      ]
+    },
+    {
+      "commit": "d6fd30f32dd8b710a14b7af946501ad519b7c2e7",
+      "staged_at": "2026-10-19T21:09:29.902863+00:00",
+      "verified_at": "2026-10-19T21:10:42.689568+00:00",
+      "as_of": "2026-10-19",
+      "waves": 21,
+      "houses": 12,
+      "flavio_valid_share": 51.14096590813405,
+      "lula_valid_share": 48.85903409186595,
+      "uncalibrated_p_flavio": 0.6700605157982883,
+      "net_share_change_pp": -0.023420831047104684,
+      "movement_attribution": "Net published change only; poll, recency and revision components not separately attributed.",
+      "status": "withdrawn after source review",
+      "changes": [
+        {
+          "action": "add",
+          "registration": "BR-01107/2026",
+          "pollster": "Verita"
+        }
+      ]
+    },
+    {
+      "commit": "c69680f2d42adcae422de6647a656ca13ea9ffc3",
+      "staged_at": "2026-10-19T21:17:44.848367+00:00",
+      "verified_at": "2026-10-19T21:19:03.315382+00:00",
+      "as_of": "2026-10-19",
+      "waves": 20,
+      "houses": 11,
+      "flavio_valid_share": 51.164386739181154,
+      "lula_valid_share": 48.835613260818846,
+      "uncalibrated_p_flavio": 0.6725904609744732,
+      "net_share_change_pp": 0.023420831047104684,
+      "movement_attribution": "Net published change only; poll, recency and revision components not separately attributed.",
+      "status": "correction",
+      "changes": [
+        {
+          "action": "withdraw_unverified_addition",
+          "registration": "BR-01107/2026",
+          "pollster": "Verita"
+        }
+      ]
+    },
+    {
+      "commit": "fe365706d3938245f4ae3d56b4877fb7fc531a7b",
+      "staged_at": "2026-10-20T09:10:51.334531+00:00",
+      "verified_at": "2026-10-20T09:13:33.232217+00:00",
+      "as_of": "2026-10-19",
+      "waves": 21,
+      "houses": 11,
+      "flavio_valid_share": 51.11982002169364,
+      "lula_valid_share": 48.88017997830636,
+      "uncalibrated_p_flavio": 0.6664273060526968,
+      "net_share_change_pp": -0.04456671748751262,
+      "movement_attribution": "Net published change only; poll, recency and revision components not separately attributed.",
+      "status": "verified publication",
+      "changes": [
+        {
+          "action": "add",
+          "registration": "BR-04454/2026",
+          "pollster": "DataTrends"
+        }
+      ]
+    },
+    {
+      "commit": "6f6262ff1ee18a945b34142eb1b9c648791c2af2",
+      "staged_at": "2026-10-20T12:13:49.489532+00:00",
+      "verified_at": "2026-10-20T12:17:08.763737+00:00",
+      "as_of": "2026-10-20",
+      "waves": 22,
+      "houses": 12,
+      "flavio_valid_share": 51.19265839696115,
+      "lula_valid_share": 48.80734160303885,
+      "uncalibrated_p_flavio": 0.6774351588878468,
+      "net_share_change_pp": 0.07283837526750858,
+      "movement_attribution": "Net published change only; poll, recency and revision components not separately attributed.",
+      "status": "verified publication",
+      "changes": [
+        {
+          "action": "add",
+          "registration": "BR-02952/2026",
+          "pollster": "Real Time Big Data"
+        }
+      ]
+    },
+    {
+      "commit": "2769764b6f1de6ef45d22291d4f9ca619501bd4d",
+      "staged_at": "2026-10-20T12:32:31.222528+00:00",
+      "verified_at": "2026-10-20T12:34:22.703656+00:00",
+      "as_of": "2026-10-20",
+      "waves": 23,
+      "houses": 13,
+      "flavio_valid_share": 51.22403067064482,
+      "lula_valid_share": 48.77596932935518,
+      "uncalibrated_p_flavio": 0.6819287059579018,
+      "net_share_change_pp": 0.03137227368367235,
+      "movement_attribution": "Net published change only; poll, recency and revision components not separately attributed.",
+      "status": "verified publication",
+      "changes": [
+        {
+          "action": "add",
+          "registration": "BR-00820/2026",
+          "pollster": "Alfa Inteligencia"
+        }
+      ]
+    },
+    {
+      "commit": "c47d6ed4932602c3e0b0e8dc7a41e9f83ef5c8dd",
+      "staged_at": "2026-10-20T15:14:51.915870+00:00",
+      "verified_at": "2026-10-20T15:17:20.065857+00:00",
+      "as_of": "2026-10-20",
+      "waves": 24,
+      "houses": 14,
+      "flavio_valid_share": 51.12944307095595,
+      "lula_valid_share": 48.87055692904405,
+      "uncalibrated_p_flavio": 0.6688737414339634,
+      "net_share_change_pp": -0.09458759968887165,
+      "movement_attribution": "Net published change only; poll, recency and revision components not separately attributed.",
+      "status": "verified publication",
+      "changes": [
+        {
+          "action": "add",
+          "registration": "BR-00152/2026",
+          "pollster": "Data Ranking"
+        }
+      ]
+    },
+    {
+      "commit": "7be7e550d6250618124278850e618d57961378fc",
+      "staged_at": "2026-10-21T09:10:01.956772+00:00",
+      "verified_at": "2026-10-21T09:13:10.572497+00:00",
+      "as_of": "2026-10-21",
+      "waves": 25,
+      "houses": 15,
+      "flavio_valid_share": 51.12796141472671,
+      "lula_valid_share": 48.87203858527329,
+      "uncalibrated_p_flavio": 0.6694747765508009,
+      "net_share_change_pp": -0.0014816562292381263,
+      "movement_attribution": "Net published change only; poll, recency and revision components not separately attributed.",
+      "status": "verified publication",
+      "changes": [
+        {
+          "action": "add",
+          "registration": "BR-08251/2026",
+          "pollster": "Meio/Ideia"
+        }
+      ]
+    },
+    {
+      "commit": "6ddf21227341dc1fc992858df820c57161f4e672",
+      "staged_at": "2026-10-21T12:09:51.083078+00:00",
+      "verified_at": "2026-10-21T12:11:18.317228+00:00",
+      "as_of": "2026-10-21",
+      "waves": 26,
+      "houses": 16,
+      "flavio_valid_share": 51.109063085686486,
+      "lula_valid_share": 48.890936914313514,
+      "uncalibrated_p_flavio": 0.6669765760785509,
+      "net_share_change_pp": -0.018898329040226258,
+      "movement_attribution": "Net published change only; poll, recency and revision components not separately attributed.",
+      "status": "verified publication",
+      "changes": [
+        {
+          "action": "add",
+          "registration": "BR-04612/2026",
+          "pollster": "Palver"
+        }
+      ]
+    },
+    {
+      "commit": "28c8537d2ac2dcb162d8e8baad903e0e92ffc4c6",
+      "staged_at": "2026-10-21T13:48:21.793288+00:00",
+      "verified_at": "2026-10-21T13:49:35.244022+00:00",
+      "as_of": "2026-10-21",
+      "waves": 27,
+      "houses": 17,
+      "flavio_valid_share": 51.075466553887765,
+      "lula_valid_share": 48.924533446112235,
+      "uncalibrated_p_flavio": 0.6622690694169304,
+      "net_share_change_pp": -0.033596531798721685,
+      "movement_attribution": "Net published change only; poll, recency and revision components not separately attributed.",
+      "status": "verified publication",
+      "changes": [
+        {
+          "action": "add",
+          "registration": "BR-08535/2026",
+          "pollster": "Quaest"
+        }
+      ]
+    },
+    {
+      "commit": "05a1f190dcdfecbd8b983258779da7a8a5c9b95b",
+      "staged_at": "2026-10-21T15:03:37.113829+00:00",
+      "verified_at": "2026-10-21T15:08:08.916263+00:00",
+      "as_of": "2026-10-21",
+      "waves": 28,
+      "houses": 17,
+      "flavio_valid_share": 51.11051444805875,
+      "lula_valid_share": 48.88948555194125,
+      "uncalibrated_p_flavio": 0.6672346146815172,
+      "net_share_change_pp": 0.03504789417098664,
+      "movement_attribution": "Net published change only; poll, recency and revision components not separately attributed.",
+      "status": "verified publication",
+      "changes": [
+        {
+          "action": "add",
+          "registration": "BR-06614/2026",
+          "pollster": "Futura"
+        }
+      ]
+    }
+  ],
+  "history_basis": "Release-date reconstruction from the current ledger, not an as-published historical vintage."
 }
