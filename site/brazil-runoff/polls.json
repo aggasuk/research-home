@@ -1,8 +1,8 @@
 {
-  "as_of": "2026-10-23",
+  "as_of": "2026-10-24",
   "first_round_date": "2026-10-04",
   "runoff_date": "2026-10-25",
-  "coverage_note": "Reviewed ledger releases through 2026-10-23. Coverage is not certified exhaustive. Source capture/review times are separate from poll release dates; missing historical receipts remain missing.",
+  "coverage_note": "Reviewed ledger releases through 2026-10-24. Coverage is not certified exhaustive. Source capture/review times are separate from poll release dates; missing historical receipts remain missing.",
   "polls": [
     {
       "pollster": "PoderData",
@@ -328,7 +328,7 @@
       "valid_fraction_assumption": 0.966,
       "wave_key": "BR-00650/2026|runoff|2026-10-10",
       "source_evidence_type": "Reviewed report (PDF)",
-      "source_captured_at": "2026-10-24T02:48:26.078408+00:00",
+      "source_captured_at": "2026-10-24T15:04:21.011183+00:00",
       "source_sha256": "c612de90ca566c240c7dc25f375b40232924899b150732620e9966e22cebc63c",
       "source_review_recorded_at": "2026-10-14T15:03:01.493929+00:00",
       "revision_recorded_at": null
@@ -400,7 +400,7 @@
       "valid_fraction_assumption": 0.94,
       "wave_key": "BR-04258/2026|runoff|2026-10-15",
       "source_evidence_type": "Reviewed report (PDF)",
-      "source_captured_at": "2026-10-24T02:48:26.677849+00:00",
+      "source_captured_at": "2026-10-24T15:04:21.551317+00:00",
       "source_sha256": "71743e3c0d76c2f71060683f641c66e32dc7e33429a9fd2ea4fd9bc20591578d",
       "source_review_recorded_at": "2026-10-16T15:13:46.770495+00:00",
       "revision_recorded_at": null
@@ -436,7 +436,7 @@
       "valid_fraction_assumption": 0.9269999999999999,
       "wave_key": "BR-00652/2026|runoff|2026-10-15",
       "source_evidence_type": "Reviewed report (PDF)",
-      "source_captured_at": "2026-10-24T02:48:30.450829+00:00",
+      "source_captured_at": "2026-10-24T15:04:26.255365+00:00",
       "source_sha256": "97ebef58aae3db7f9d0bdfc5393a571df91c05b98fcdc54dfed8caae5124df9a",
       "source_review_recorded_at": "2026-10-16T15:13:46.770495+00:00",
       "revision_recorded_at": null
@@ -472,7 +472,7 @@
       "valid_fraction_assumption": 0.92,
       "wave_key": "BR-00466/2026|runoff|2026-10-14",
       "source_evidence_type": "Reviewed report (PDF)",
-      "source_captured_at": "2026-10-24T02:48:34.895923+00:00",
+      "source_captured_at": "2026-10-24T15:04:30.789580+00:00",
       "source_sha256": "b86d9106bbdb9deb074f03e57522365ff9d5a7222f16ff0c8f7b36480cdd9b81",
       "source_review_recorded_at": "2026-10-16T18:00:14.225981+00:00",
       "revision_recorded_at": null
@@ -508,7 +508,7 @@
       "valid_fraction_assumption": 0.94,
       "wave_key": "BR-00223/2026|runoff|2026-10-15",
       "source_evidence_type": "Reviewed report (PDF)",
-      "source_captured_at": "2026-10-24T02:50:03.799004+00:00",
+      "source_captured_at": "2026-10-24T15:04:38.064225+00:00",
       "source_sha256": "7b9556512817d8023cc47528677a6d8a89567e459d7acd371d3a8a447d846ffd",
       "source_review_recorded_at": "2026-10-17T15:04:04.706113+00:00",
       "revision_recorded_at": null
@@ -544,7 +544,7 @@
       "valid_fraction_assumption": 0.91,
       "wave_key": "BR-04332/2026|runoff|2026-10-17",
       "source_evidence_type": "Reviewed report (PDF)",
-      "source_captured_at": "2026-10-24T02:50:04.536164+00:00",
+      "source_captured_at": "2026-10-24T15:04:39.091234+00:00",
       "source_sha256": "df9445445768fe30e629a68e13f7eadc38430ee3fd71e471eb2f4314fa9d4cac",
       "source_review_recorded_at": "2026-10-19T00:02:08.657863+00:00",
       "revision_recorded_at": null
@@ -580,7 +580,7 @@
       "valid_fraction_assumption": 0.9740000000000001,
       "wave_key": "BR-02418/2026|runoff|2026-10-18",
       "source_evidence_type": "Reviewed report (PDF)",
-      "source_captured_at": "2026-10-24T02:50:04.983555+00:00",
+      "source_captured_at": "2026-10-24T15:04:39.607869+00:00",
       "source_sha256": "08557d05fbd0ccb40d56937d11bcde76f670fedf3c671827e1494b2213127123",
       "source_review_recorded_at": "2026-10-19T11:05:26.127023+00:00",
       "revision_recorded_at": null
@@ -616,7 +616,7 @@
       "valid_fraction_assumption": 0.924,
       "wave_key": "BR-04499/2026|runoff|2026-10-18",
       "source_evidence_type": "Reviewed report (PDF)",
-      "source_captured_at": "2026-10-24T02:50:07.084997+00:00",
+      "source_captured_at": "2026-10-24T15:04:42.364137+00:00",
       "source_sha256": "f6ee08157b9906a8abd4fca2a7a418b329e8895043019bc871b81f12b1eabb45",
       "source_review_recorded_at": "2026-10-19T11:05:26.127023+00:00",
       "revision_recorded_at": null
@@ -652,7 +652,7 @@
       "valid_fraction_assumption": 0.95,
       "wave_key": "BR-02586/2026|runoff|2026-10-18",
       "source_evidence_type": "Reviewed report (PDF)",
-      "source_captured_at": "2026-10-24T02:50:07.825777+00:00",
+      "source_captured_at": "2026-10-24T15:04:43.255577+00:00",
       "source_sha256": "49d00ff66ff81342274af5c18ec09ae2ef154ab7316136a648bf1a3cfcaea6b2",
       "source_review_recorded_at": "2026-10-19T11:05:26.127023+00:00",
       "revision_recorded_at": null
@@ -688,7 +688,7 @@
       "valid_fraction_assumption": 0.958,
       "wave_key": "BR-06715/2026|runoff|2026-10-17",
       "source_evidence_type": "Reviewed report (PDF)",
-      "source_captured_at": "2026-10-24T02:50:08.827858+00:00",
+      "source_captured_at": "2026-10-24T15:04:44.285262+00:00",
       "source_sha256": "d73076b98fad510b9b0a560cfc4951a490db25fb9e64b1a40b31fbc16a31f4d9",
       "source_review_recorded_at": "2026-10-19T15:13:31.468201+00:00",
       "revision_recorded_at": null
@@ -724,7 +724,7 @@
       "valid_fraction_assumption": 0.95,
       "wave_key": "BR-04454/2026|runoff|2026-10-17",
       "source_evidence_type": "Reviewed report (PDF)",
-      "source_captured_at": "2026-10-24T02:50:09.320577+00:00",
+      "source_captured_at": "2026-10-24T15:04:44.799565+00:00",
       "source_sha256": "caf872b6f09335000172e556861b9ea67e1e73be0f4bb0221d3508877f4e05aa",
       "source_review_recorded_at": "2026-10-20T09:10:51.334531+00:00",
       "revision_recorded_at": null
@@ -760,7 +760,7 @@
       "valid_fraction_assumption": 0.93,
       "wave_key": "BR-02952/2026|runoff|2026-10-19",
       "source_evidence_type": "Reviewed report (PDF)",
-      "source_captured_at": "2026-10-24T02:50:10.257300+00:00",
+      "source_captured_at": "2026-10-24T15:04:45.943183+00:00",
       "source_sha256": "59c23bd15f28c5ef705e352fcdb3ceab1969cff43bb073850bbbc32a343610e0",
       "source_review_recorded_at": "2026-10-20T12:13:49.489532+00:00",
       "revision_recorded_at": null
@@ -868,7 +868,7 @@
       "valid_fraction_assumption": 0.94,
       "wave_key": "BR-08251/2026|runoff|2026-10-19",
       "source_evidence_type": "Reviewed report (PDF)",
-      "source_captured_at": "2026-10-24T02:50:13.546361+00:00",
+      "source_captured_at": "2026-10-24T15:04:49.264853+00:00",
       "source_sha256": "9f99a207468f4a2973cd4fcb9e5768bd2434ea79b60640ebaab2790162d995a3",
       "source_review_recorded_at": "2026-10-21T09:10:01.956772+00:00",
       "revision_recorded_at": null
@@ -904,7 +904,7 @@
       "valid_fraction_assumption": 0.98,
       "wave_key": "BR-04612/2026|runoff|2026-10-20",
       "source_evidence_type": "Reviewed report (PDF)",
-      "source_captured_at": "2026-10-24T02:50:34.448236+00:00",
+      "source_captured_at": "2026-10-24T15:05:16.752426+00:00",
       "source_sha256": "c13626d509203df088661647577ce19565f6e0f98dbfe6feb0f10638ea55cf94",
       "source_review_recorded_at": "2026-10-21T12:09:51.083078+00:00",
       "revision_recorded_at": null
@@ -976,7 +976,7 @@
       "valid_fraction_assumption": 0.9569999999999999,
       "wave_key": "BR-06614/2026|runoff|2026-10-20",
       "source_evidence_type": "Reviewed report (PDF)",
-      "source_captured_at": "2026-10-24T02:50:36.434023+00:00",
+      "source_captured_at": "2026-10-24T15:05:17.617003+00:00",
       "source_sha256": "5841168829064b1503abc0efe738af5e024598ea96967f1b4446597c7919647e",
       "source_review_recorded_at": "2026-10-21T15:03:37.113829+00:00",
       "revision_recorded_at": null
@@ -1012,7 +1012,7 @@
       "valid_fraction_assumption": 0.97,
       "wave_key": "BR-07926/2026|runoff|2026-10-21",
       "source_evidence_type": "Reviewed report (PDF)",
-      "source_captured_at": "2026-10-24T02:50:37.354923+00:00",
+      "source_captured_at": "2026-10-24T15:05:18.623928+00:00",
       "source_sha256": "89e3196b1ca7232168b1e60bcc09980030a026af07eb79571ad470a8ecb70afb",
       "source_review_recorded_at": "2026-10-22T12:03:44.118020+00:00",
       "revision_recorded_at": null
@@ -1084,7 +1084,7 @@
       "valid_fraction_assumption": 0.94,
       "wave_key": "BR-09670/2026|runoff|2026-10-22",
       "source_evidence_type": "Reviewed report (PDF)",
-      "source_captured_at": "2026-10-24T02:50:37.683059+00:00",
+      "source_captured_at": "2026-10-24T15:05:19.465197+00:00",
       "source_sha256": "bde2b746cd00a0847f402e44cdbb059334f16ce15958f7f165c78e065342d5ff",
       "source_review_recorded_at": "2026-10-23T12:10:37.321044+00:00",
       "revision_recorded_at": null
@@ -1156,7 +1156,7 @@
       "valid_fraction_assumption": 0.95,
       "wave_key": "BR-04350/2026|runoff|2026-10-22",
       "source_evidence_type": "Reviewed report (PDF)",
-      "source_captured_at": "2026-10-24T02:52:59.758053+00:00",
+      "source_captured_at": "2026-10-24T15:05:25.334042+00:00",
       "source_sha256": "f366ff06fd1f3cc4be1b9999d8bc4ee1e10b9ce2e264ddc36e3e5add1b280f55",
       "source_review_recorded_at": "2026-10-23T15:18:12.245915+00:00",
       "revision_recorded_at": null
@@ -1192,7 +1192,7 @@
       "valid_fraction_assumption": 0.93,
       "wave_key": "BR-09709/2026|runoff|2026-10-22",
       "source_evidence_type": "Reviewed report (PDF)",
-      "source_captured_at": "2026-10-24T02:53:03.441513+00:00",
+      "source_captured_at": "2026-10-24T15:05:29.074463+00:00",
       "source_sha256": "c548241d08d526ce1ceecc87e64cd1ba989634130ba165b9660fbab4219321d4",
       "source_review_recorded_at": "2026-10-23T15:18:12.245915+00:00",
       "revision_recorded_at": null
@@ -1228,7 +1228,7 @@
       "valid_fraction_assumption": 0.8969999999999999,
       "wave_key": "BR-03259/2026|runoff|2026-10-22",
       "source_evidence_type": "Reviewed report (PDF)",
-      "source_captured_at": "2026-10-24T02:53:04.424596+00:00",
+      "source_captured_at": "2026-10-24T15:05:30.230389+00:00",
       "source_sha256": "8c8d9d2e938116547acc7f825cf6cefd4a3f7a9f0e11c7eb7626945ad3459e7b",
       "source_review_recorded_at": "2026-10-23T18:04:46.069972+00:00",
       "revision_recorded_at": null
@@ -1263,11 +1263,47 @@
       "verification": "secondary",
       "valid_fraction_assumption": 0.977,
       "wave_key": "BR-06070/2026|runoff|2026-10-22",
+      "source_evidence_type": "Reviewed report (PDF)",
+      "source_captured_at": "2026-10-24T15:05:30.415304+00:00",
+      "source_sha256": "827ddd2b769f183c7554f8f33a97e94e2b221a7df8fb9337e9a5f1de9e3204ef",
+      "source_review_recorded_at": "2026-10-24T02:57:43.857943+00:00",
+      "revision_recorded_at": null
+    },
+    {
+      "pollster": "CNT/MDA",
+      "registration": "BR-02136/2026",
+      "field_start": "2026-10-21",
+      "field_end": "2026-10-23",
+      "published_date": "2026-10-24",
+      "sample_n": 2032,
+      "valid_base_n": null,
+      "mode": "In-person: household and intercept interviews",
+      "moe_pct": 2.2,
+      "flavio_total": 46.3,
+      "lula_total": 45.0,
+      "flavio_valid_model": 50.7,
+      "valid_basis": "published valid-vote share",
+      "blank_null_total": 5.8,
+      "undecided_total": 2.9,
+      "report_url": "https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2026/10/Apresentacao-Pesquisa-CNT-de-Opiniao-R173-OUTUBRO26.pdf",
+      "source_url": "https://www.cnnbrasil.com.br/eleicoes/cnt-mda-flavio-tem-507-dos-votos-validos-lula-493/",
+      "notes": "Released 24 October 2026 at 11:03 Brasilia (CNN, updated 11:06). Complete 39-page primary CNT/MDA round 173 report, BR-02136/2026. Actual fieldwork 21-23 October and 2032 interviews in 140 municipalities; the report gives collection shares 4%, 52%, 44% on those days. This supersedes advance announcement/planned sample 2002 and narrower planned field dates; actual report governs. In-person household and intercept interviews, 2.2pp margin at 95% confidence. National electorate age 16+, all five regions, age/sex/income/education quotas and socioeconomic plus declared first-round vote weighting. The first-round attendance adjustment is a weighting description, not an exclusion of nonvoters from the reported full-electorate stimulated runoff; the complete report does not state a likely-voter restriction. Page 6 totals: Flavio 46.3, Lula 45.0, blank/null 5.8, undecided 2.9. Page 8 published valid shares 50.7/49.3 explicitly exclude blank/null and undecided; exact unweighted candidate-valid count is not supplied, so valid_base_n remains null. Published valid percentages retained rather than recomputing rounded total shares. Earlier CNT/MDA wave and every other historical wave retained; existing unrelated source holds unchanged. Registration transcribed from primary report, not independently verified with TSE.",
+      "id": "cnt-mda-2026-10-23",
+      "fieldwork_start": "2026-10-21",
+      "fieldwork_end": "2026-10-23",
+      "release_date": "2026-10-24",
+      "n_total": 2032,
+      "n_valid": null,
+      "flavio_valid": 50.7,
+      "lula_valid": 49.3,
+      "verification": "secondary",
+      "valid_fraction_assumption": 0.9129999999999999,
+      "wave_key": "BR-02136/2026|runoff|2026-10-23",
       "source_evidence_type": "Reviewed source; captured format not recorded in publication receipts"
     }
   ],
-  "source_sha256": "1c81280c73df7cf335ebc3cd46cb8f5d2b269ad8584c30749f3fdb4372beda98",
-  "built_at": "2026-10-24T02:57:43.514383+00:00",
+  "source_sha256": "ce3ca382c0cbc910726941a090341882373c942a1ea1186b3002511c965ecc70",
+  "built_at": "2026-10-24T15:15:36.229970+00:00",
   "schema_version": 1,
   "diagnostics_version": "2026-10-22.1",
   "publication_audit": [
@@ -1795,6 +1831,27 @@
           "action": "add",
           "registration": "BR-03259/2026",
           "pollster": "Vox Brasil"
+        }
+      ]
+    },
+    {
+      "commit": "129616c5b339f4842fb82c1def63122862188969",
+      "staged_at": "2026-10-24T02:57:43.857943+00:00",
+      "verified_at": "2026-10-24T03:01:58.257997+00:00",
+      "as_of": "2026-10-23",
+      "waves": 36,
+      "houses": 18,
+      "flavio_valid_share": 51.05377726654286,
+      "lula_valid_share": 48.94622273345714,
+      "uncalibrated_p_flavio": 0.6609567715314584,
+      "net_share_change_pp": 0.10897233111667504,
+      "movement_attribution": "Net published change only; poll, recency and revision components not separately attributed.",
+      "status": "verified publication",
+      "changes": [
+        {
+          "action": "add",
+          "registration": "BR-06070/2026",
+          "pollster": "Verita"
         }
       ]
     }
