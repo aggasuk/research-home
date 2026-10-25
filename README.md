@@ -1,10 +1,10 @@
 # Research Home
 
-## Brazil runoff polling
+## Archived Brazil runoff polling
 
-The Brazil polls navigation entry opens `brazil-runoff/index.html`; `#brazil-runoff` and `#report/brazil-runoff` are stable shell aliases. The 13 October 2026 saved snapshot includes nine releases across eight pollsters, with seven latest entirely post-first-round waves in the default view. The headline is a descriptive valid-vote average. Win probabilities remain explicitly uncalibrated scenarios with visible shared-error, recency, drift and manual adjustment assumptions.
+The Brazil election process was cancelled at the user's request on 25 October 2026. Brazil has been removed from the canonical Research Home navigation; the former shell aliases fall back to Research. The older Brazil election brief is omitted from the home listing while its dated report and direct link are retained. Do not restore the dashboard link or resume polling updates without a new user request.
 
-Only the reviewed standalone HTML and public normalized polling JSON/CSV are packaged. To replace that snapshot, use `python scripts/update_brazil.py --source PATH/TO/reviewed/dist`, then `python scripts/validate_site.py`, review the scoped diff, and use the established commit/push workflow. The updater asserts that unrelated assets and the saved report payload are unchanged. It performs no source retrieval, market refresh, scheduling or publication itself. The canonical navigation preserves Brazil links during subsequent RV/Trend updates.
+`site/brazil-runoff/index.html` remains directly accessible as a clearly labelled historical archive. Its saved polling JSON/CSV and embedded model are preserved; it reports no election results. The local source-review runner is separately stopped by its reversible cancellation marker. Rates RV, Rates Trend and all unrelated research are unchanged.
 
 ## Country pilot — authoritative sources and India diffusion
 

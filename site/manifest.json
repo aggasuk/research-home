@@ -1,11 +1,11 @@
 {
-  "packagedAt": "2026-10-25T06:04:21.961955+00:00",
+  "packagedAt": "2026-10-25T10:39:12.235699+00:00",
   "libraryBuiltAt": "2026-10-23T12:04:26.927206+08:00",
   "reports": 14,
   "omittedResources": [
     {
       "report": "fx-carry",
-      "resource": "Reproducible model \u00b7 ZIP",
+      "resource": "Reproducible model · ZIP",
       "reason": "Working archive or non-presentation input"
     }
   ],
@@ -37,8 +37,8 @@
     },
     {
       "path": "brazil-runoff/index.html",
-      "bytes": 178113,
-      "sha256": "f6231d0dc35c21f343faa8d23cb78f574a1c318ec3edd9b35fd1e184ed4dd949"
+      "bytes": 178245,
+      "sha256": "dbd8cdd6e12ba0f4500583996829487db676f1008e7a00006066149f0162957b"
     },
     {
       "path": "brazil-runoff/polls.csv",
@@ -57,8 +57,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 739012,
-      "sha256": "abcce542746fa997b275d1ed90d9ea23692a6559a394a227ad5c4ca7c97522bb"
+      "bytes": 738856,
+      "sha256": "517099cc8a1f30a57aa9c04346a84ac1cb24aed95a1e30d87ece3116fedc9850"
     },
     {
       "path": "india.html",
