@@ -22,6 +22,7 @@ def build(rvroot):
     sys.path.insert(0,str(rvroot.parents[1]))
     from outputs.rates_rv_v3.cache import HistoryReader, DEFAULT_CACHE
     from outputs.rates_rv_v3.universe import universe, frame
+    from outputs.rates_rv_v3.market_calendar import expected_closes
     from outputs.rates_rv_v3.models import Fit
     from outputs.rates_rv_v3.qualification import qualify, reconcile_selection, POLICY
     from zoneinfo import ZoneInfo
@@ -52,7 +53,7 @@ def build(rvroot):
             hist=r.get('historical') or {}; close=hist.get('current'); check=r.get('current_check') or {}
             active=[e for e in per_candidate[r['id']] if e['status'] in ['open','entry_pending','exit_pending']]
             observed=[e for e in records.values() if e['candidate_id']==r['id']]
-            compact={k:r.get(k) for k in ['id','model','data_status','active_observed_signal']}
+            compact={k:r.get(k) for k in ['id','model','data_status','active_observed_signal','source_date']}
             compact['qualification']={str(d):qualify(r.get('evidence'),d) for d in [1,-1]}
             compact['table_evidence']={period:{side:{key:sample.get(key) for key in ['trades','win_rate','gross_mean_bp']}
                 for side,sample in values.items() if side in ['long_quote','short_quote']}
@@ -102,7 +103,11 @@ def build(rvroot):
              (r.get('historical') or {}).get('current',{}).get('state') in ['open','entry_pending'] and
              qualify(r.get('evidence'),(r.get('historical') or {}).get('current',{}).get('direction'))['passed']) for r in result['rows'])}
     index['research_observed_at']=research['observed_at'] if research else None
-    index['held_sources']=[{k:r.get(k) for k in ['ticker','status','last']} for r in result['source_manifest'].values() if r.get('last')!=result['cutoff']]
+    required,_,calendars=expected_closes(list(result['source_manifest']),result['cutoff'])
+    index['held_sources']=[{**{k:r.get(k) for k in ['ticker','status','last']},'required_close':required[key]} for key,r in result['source_manifest'].items() if r.get('last') is None or r['last']<required[key]]
+    index['calendar_context']={'JPY_TONA':'Tokyo bank holiday: latest expected actual close '+required['JPY:2'],'policy':'Instrument-specific calendars; cross-market frames use common actual dates without filling.'}
+    index['legacy_structures']=[{'structure_id':sid,'name':'Archived '+sid.replace('_',' ')} for sid in sorted({r['structure_id'] for r in result.get('legacy_model_registry',{}).values()})]
+    index['run_id']=Path(state['latest_run']).parent.name
     files['rv/index.json']=encode(index)
     for name in ['workspace.html','workspace.css','workspace.js']:
         files['rv/'+name]=(TEMPLATE/name).read_bytes()
