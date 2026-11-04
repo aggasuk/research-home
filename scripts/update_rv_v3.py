@@ -125,7 +125,7 @@ def build(rvroot):
         'dataDate':result['cutoff'],'badge':'v3 · gross · 5bp minimum','description':'Daily discovery, persistent tracking and searchable structure reviews.',
         'html':'','source':'reports/rates-rv.html','embeddedUrl':'rv/workspace.html?v='+revision,'resources':[]}
     method={'id':'rates-rv-methodology','title':'Rates RV · framework and methodology','category':'Frameworks',
-        'date':result['observed_at'][:10],'dataDate':result['cutoff'],'badge':'v3 · 246 structures / 614 models',
+        'date':result['observed_at'][:10],'dataDate':result['cutoff'],'badge':'v3 · 234 structures / 581 models',
         'description':'Universe, calculated forwards, three models, entry rules, gross backtests and persistent tracking.',
         'html':methodology,'source':'reports/rates-rv-methodology.html',
         'resources':[{'label':'Legacy v2 model research (cost-inclusive)','url':'rv/models.html'},

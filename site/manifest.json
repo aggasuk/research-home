@@ -1,6 +1,6 @@
 {
-  "packagedAt": "2026-11-04T05:54:33.432765+00:00",
-  "libraryBuiltAt": "2026-11-04T13:51:30.755305+08:00",
+  "packagedAt": "2026-11-04T06:11:30.419212+00:00",
+  "libraryBuiltAt": "2026-11-04T14:09:43.970213+08:00",
   "reports": 14,
   "omittedResources": [
     {
@@ -57,8 +57,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 739298,
-      "sha256": "cb194c75cc9802f464d736a73406ca13088c54122541400e995f8f767689f16c"
+      "bytes": 739446,
+      "sha256": "b7c493b2160c8d4a7e01a27f09d9ca67f393bbf1f1fce54228c77cc4c98adf66"
     },
     {
       "path": "india.html",
@@ -112,8 +112,8 @@
     },
     {
       "path": "reports/rates-rv-methodology.html",
-      "bytes": 9819,
-      "sha256": "605bbf4974252c33772c5b8a61e0506d859d626044dac974e06659e4a96ffc52"
+      "bytes": 9968,
+      "sha256": "8587546e6be9ca7122c1bb5757607e3023eb72076ba1e78db43cfa63c242c86a"
     },
     {
       "path": "reports/rates-rv.html",
@@ -137,8 +137,8 @@
     },
     {
       "path": "rv/index.json",
-      "bytes": 1605046,
-      "sha256": "b7b96480664ad49cdc6bebb40062c9d8717eb7e6de653f256f5f199847d463ae"
+      "bytes": 1551160,
+      "sha256": "0713a743e1cf2986d9f4fe1761946e8c7d3a7a8f56f9d23a16db8983bdef7336"
     },
     {
       "path": "rv/models.html",
@@ -1443,12 +1443,12 @@
     {
       "path": "rv/workspace.html",
       "bytes": 5928,
-      "sha256": "84ede0c9e7e49827b6479962990e86032ee98db35c82fe09c36ef5d6d1c57ed0"
+      "sha256": "4e10b3ce842ea77fb6bcee5339f9bc246060bb4719b03bfe8b20ab68e3f529a5"
     },
     {
       "path": "rv/workspace.js",
-      "bytes": 30602,
-      "sha256": "69dd0e5f170403590132897593cea6dd39d7f44cf4755855da2c12deb15b48c1"
+      "bytes": 30612,
+      "sha256": "cc586250dc33a94ee5e89e179edbc3b6345fba80c258e2c042cc59197abfe6b0"
     },
     {
       "path": "tracker/index.html",
